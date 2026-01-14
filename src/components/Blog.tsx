@@ -4,18 +4,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
 const ARTICLES = [
     {
         title: "Human Pose Comparison and Action Scoring using Deep Learning, OpenCV & Python",
         excerpt: "Pose Estimation is one of the more elegant applications of neural networks and is startlingly accurate and sometimes, seems like...",
-        link: "/blog/human-pose"
+        link: "/blog/human-pose",
+        image: "/images/hp/hp1.jpg"
     },
     {
         title: "Real-Time Image Classification On Android Using Flutter, TFlite",
         excerpt: "Making a smartphone app from scratch might seem a daunting task to most newbies and maybe even seasoned programmers. Enter Flutter....",
-        link: "#"
+        link: "/blog/realtime-image-classification",
+        image: "/images/tflite/tf1.jpg"
     }
 ];
 
@@ -52,8 +55,17 @@ const Blog = () => {
                             transition={{ duration: 0.6, delay: index * 0.2 }}
                             className="group relative border border-white/10 rounded-3xl p-8 hover:border-accent/50 transition-all duration-500 bg-gradient-to-br from-white/5 to-transparent"
                         >
-                            <div className="absolute top-8 right-8 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-300">
+                            <div className="absolute top-8 right-8 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all duration-300 z-10">
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </div>
+
+                            <div className="relative h-56 w-full mb-8 rounded-2xl overflow-hidden">
+                                <Image
+                                    src={article.image}
+                                    alt={article.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
                             </div>
 
                             <h3 className="text-2xl font-bold mb-4 pr-16 group-hover:text-accent transition-colors">

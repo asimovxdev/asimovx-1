@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import { Globe } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -19,9 +20,14 @@ const Navbar = () => {
             transition={{ duration: 0.8 }}
             className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-8 transition-all duration-300"
         >
-            <div className="text-xl font-bold tracking-[0.2em] group cursor-pointer">
-                ASIMOVX <span className="text-accent italic">.</span>
-            </div>
+            <Link href="/" className="flex items-center gap-3 text-xl font-bold tracking-[0.2em] group cursor-pointer">
+                <div className="relative w-10 h-10">
+                    <NextImage src="/logo.svg" alt="Asimovx Logo" fill className="object-contain" />
+                </div>
+                <div>
+                    ASIMOV<span className="text-[#9033FF]">X</span> <span className="text-accent italic">.</span>
+                </div>
+            </Link>
 
             <div className="flex items-center gap-8 xl:gap-12">
                 {/* Desktop Menu */}
@@ -79,7 +85,7 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
-        </motion.nav>
+        </motion.nav >
     );
 };
 

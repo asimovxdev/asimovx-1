@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
+import Link from 'next/link';
 
 const CTA = () => {
     const { t } = useLanguage();
@@ -21,12 +22,12 @@ const CTA = () => {
                 <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto font-light">
                     {t('cta.description')}
                 </p>
-                <button className="group relative px-12 py-5 overflow-hidden rounded-full transition-all border border-accent">
+                <Link href="/contact" className="inline-block group relative px-12 py-5 overflow-hidden rounded-full transition-all border border-accent">
                     <span className="absolute inset-0 bg-accent translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease"></span>
                     <span className="relative z-10 font-bold text-lg text-accent group-hover:text-background transition-colors duration-500">
                         {t('cta.button')}
                     </span>
-                </button>
+                </Link>
             </motion.div>
         </section>
     );

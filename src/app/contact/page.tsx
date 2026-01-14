@@ -108,7 +108,7 @@ export default function Contact() {
 
                         <div className="pt-8 border-t border-white/10">
                             <h4 className="text-sm font-bold tracking-widest uppercase text-slate-500 mb-4">Social Media</h4>
-                            <a href="#" className="inline-flex items-center gap-2 text-white hover:text-accent transition-colors font-medium">
+                            <a href="https://www.linkedin.com/company/asimovx-technologies-ab" className="inline-flex items-center gap-2 text-white hover:text-accent transition-colors font-medium">
                                 <Linkedin className="w-5 h-5" />
                                 LinkedIn
                             </a>

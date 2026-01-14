@@ -42,7 +42,7 @@ const Footer = () => {
                     <div>
                         <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-black dark:text-white mb-8 block">{t('footer.network')}</span>
                         <ul className="space-y-4 text-slate-600 dark:text-slate-500 text-sm">
-                            <li><a href="#" className="hover:text-accent transition-colors italic">LinkedIn</a></li>
+                            <li><a href="https://www.linkedin.com/company/asimovx-technologies-ab" className="hover:text-accent transition-colors italic">LinkedIn</a></li>
                             <li><a href="#" className="hover:text-accent transition-colors italic">Twitter</a></li>
                             <li><a href="#" className="hover:text-accent transition-colors italic">GitHub</a></li>
                         </ul>

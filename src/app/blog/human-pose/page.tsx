@@ -6,6 +6,7 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+
 export default function HumanPoseArticle() {
     return (
         <main className="min-h-screen bg-black text-foreground">
@@ -36,6 +37,17 @@ export default function HumanPoseArticle() {
                         </a>
                     </div>
 
+                    <div className="relative h-[600px] w-full mb-16 rounded-3xl overflow-hidden border border-white/5 shadow-2xl group">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+                        <Image
+                            src="/images/hp/hp1.jpg"
+                            alt="Human Pose Estimation Main"
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
+                            priority
+                        />
+                    </div>
+
                     <div className="prose prose-invert prose-lg max-w-none">
                         <p className="text-xl text-slate-300 leading-relaxed mb-8">
                             Pose Estimation is one of the more elegant applications of neural networks and is startlingly accurate and sometimes, seems like something right out of science fiction.
@@ -62,6 +74,9 @@ export default function HumanPoseArticle() {
                         <p className="text-slate-400 leading-relaxed mb-6">
                             As I stated earlier, Google Mirror uses PoseNet, a deep learning model which specifies 17 points on the human body. I found a good python implementation of it here.
                         </p>
+                        <div className="relative h-[500px] w-full mb-16 rounded-3xl overflow-hidden border border-white/5 shadow-2xl bg-white/5">
+                            <Image src="/images/hp/hp2.jpg" alt="PoseNet Model" fill className="object-contain p-4" />
+                        </div>
 
                         <h2 className="text-3xl font-bold mt-16 mb-6 text-white">Defining Similarity</h2>
                         <p className="text-slate-400 leading-relaxed mb-6">
@@ -73,6 +88,14 @@ export default function HumanPoseArticle() {
                             <li><strong className="text-white">New Bounding Box:</strong> From the model output, we get the co-ordinates of the 17 key-points on a person's body. This information can be used to create a new bounding box which tightly covers the person in the picture.</li>
                             <li><strong className="text-white">Normalization:</strong> In order to account for the size inconsistencies, we perform L2 normalization of the points in order to transform it into a unit vector.</li>
                         </ul>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                            <div className="relative h-[450px] w-full rounded-3xl overflow-hidden border border-white/5 shadow-xl bg-white/5 group hover:border-accent/30 transition-colors">
+                                <Image src="/images/hp/hp3.jpg" alt="Normalization Diagram 1" fill className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
+                            </div>
+                            <div className="relative h-[450px] w-full rounded-3xl overflow-hidden border border-white/5 shadow-xl bg-white/5 group hover:border-accent/30 transition-colors">
+                                <Image src="/images/hp/hp4.jpg" alt="Normalization Diagram 2" fill className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
+                            </div>
+                        </div>
 
                         <h2 className="text-3xl font-bold mt-16 mb-6 text-white">Cosine Similarity</h2>
                         <p className="text-slate-400 leading-relaxed mb-6">
@@ -81,6 +104,14 @@ export default function HumanPoseArticle() {
                         <p className="text-slate-400 leading-relaxed mb-6">
                             The 17 key-points are converted into a vector and plotted in high dimensional space. This vector plotting is compared to another vector plot from our benchmark image. The direction of vectors here are an indication of the similarity of the poses.
                         </p>
+                        <div className="flex flex-col gap-12 mb-16">
+                            <div className="relative h-[350px] w-full rounded-3xl overflow-hidden border border-white/5 shadow-xl bg-white/5 group hover:border-accent/30 transition-colors">
+                                <Image src="/images/hp/hp5.jpg" alt="Cosine Similarity 1" fill className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
+                            </div>
+                            <div className="relative h-[650px] w-full rounded-3xl overflow-hidden border border-white/5 shadow-2xl bg-white/5 group hover:border-accent/30 transition-colors">
+                                <Image src="/images/hp/hp6.jpg" alt="Cosine Similarity 2" fill className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
+                            </div>
+                        </div>
 
                         <h2 className="text-3xl font-bold mt-16 mb-6 text-white">Drawbacks of Initial Approach</h2>
                         <ul className="list-disc list-inside space-y-3 text-slate-400 mb-8">
@@ -92,6 +123,9 @@ export default function HumanPoseArticle() {
                         <p className="text-slate-400 leading-relaxed mb-6">
                             Even though it sounds like a sci-fi method of time travel, it really isn't. It is just a method used in comparing sequences and graphs of different lengths. It matches the different troughs and crests in a graph using one to many matching and such, resulting in synced up frames on its own.
                         </p>
+                        <div className="relative h-[500px] w-full mb-16 rounded-3xl overflow-hidden border border-white/5 shadow-2xl bg-white/5 group">
+                            <Image src="/images/hp/hp7.jpg" alt="Dynamic Time Warping" fill className="object-contain p-4 transition-transform duration-500 group-hover:scale-105" />
+                        </div>
                         <p className="text-slate-400 leading-relaxed mb-6">
                             This method seemed ideal for my use case, as I had similar graphs for each of the 17 key-points as the action was performed. I could then use DTW to compare these graphs and get 17 scores for each of the 17 key-points. An average of these 17 scores could be then taken as the total score.
                         </p>
@@ -103,6 +137,7 @@ export default function HumanPoseArticle() {
                             <li><strong className="text-white">Point Specification:</strong> According to the action to be performed, specific points can be used to increase accuracy</li>
                             <li><strong className="text-white">Feedback System:</strong> Providing feedback to users on which body part's movement needs correction</li>
                         </ul>
+
 
                         <h2 className="text-3xl font-bold mt-16 mb-6 text-white">References</h2>
                         <ul className="space-y-2 text-accent">
