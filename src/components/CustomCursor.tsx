@@ -32,7 +32,7 @@ export default function CustomCursor() {
     }, []);
 
     return (
-        <>
+        <div className="hidden md:block">
             {/* Trail particles */}
             {trail.map((point, index) => (
                 <div
@@ -66,8 +66,8 @@ export default function CustomCursor() {
             >
                 <div
                     className={`rounded-full border-2 transition-all duration-200 ${isPointer
-                            ? 'w-12 h-12 border-accent bg-accent/10'
-                            : 'w-8 h-8 border-accent/60 bg-transparent'
+                        ? 'w-12 h-12 border-accent bg-accent/10'
+                        : 'w-8 h-8 border-accent/60 bg-transparent'
                         }`}
                     style={{
                         boxShadow: isPointer
@@ -120,6 +120,6 @@ export default function CustomCursor() {
                     />
                 </svg>
             </div>
-        </>
+        </div>
     );
 }

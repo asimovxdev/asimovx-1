@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { Globe } from 'lucide-react';
@@ -11,28 +11,29 @@ import { ThemeToggle } from './ThemeToggle';
 
 const Navbar = () => {
     const { language, setLanguage, t } = useLanguage();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
 
     return (
-        <motion.nav
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-8 transition-all duration-300"
-        >
-            <Link href="/" className="flex items-center gap-3 text-xl font-bold tracking-[0.2em] group cursor-pointer">
-                <div className="relative w-10 h-10">
-                    <NextImage src="/logo.svg" alt="Asimovx Logo" fill className="object-contain" />
-                </div>
-                <div>
-                    ASIMOV<span className="text-[#9033FF]">X</span> <span className="text-accent italic">.</span>
-                </div>
-            </Link>
+        <>
+            <motion.nav
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 py-6 md:py-8 transition-all duration-300 bg-background/80 backdrop-blur-md border-b border-white/5"
+            >
+                <Link href="/" className="flex items-center gap-3 text-xl font-bold tracking-[0.2em] group cursor-pointer z-50">
+                    <div className="relative w-8 h-8 md:w-10 md:h-10">
+                        <NextImage src="/logo.svg" alt="Asimovx Logo" fill className="object-contain" />
+                    </div>
+                    <div>
+                        ASIMOV<span className="text-[#9033FF]">X</span> <span className="text-accent italic">.</span>
+                    </div>
+                </Link>
 
-            <div className="flex items-center gap-8 xl:gap-12">
                 {/* Desktop Menu */}
-                <div className="hidden lg:flex items-center gap-8">
-                    <div className="hidden lg:flex space-x-8 xl:space-x-12 text-[10px] font-bold tracking-[0.2em] uppercase text-slate-500 dark:text-slate-400">
+                <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+                    <div className="flex space-x-8 xl:space-x-12 text-[10px] font-bold tracking-[0.2em] uppercase text-slate-500 dark:text-slate-400">
                         <Link href="/" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.home')}</Link>
                         <Link href="/about" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.about')}</Link>
                         <Link href="/services" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.services')}</Link>
@@ -40,52 +41,104 @@ const Navbar = () => {
                         <Link href="/careers" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.careers')}</Link>
                         <Link href="/blog" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.blog')}</Link>
                     </div>
-                </div>
 
-                <div className="flex gap-4 items-center">
-                    {/* Language Switcher */}
-                    <div className="relative mr-2">
-                        <div className="flex flex-col gap-6 mt-12 pl-4 border-l-2 border-white/10 dark:border-white/10 border-black/10">
-                            <div className="flex items-center justify-between pr-4">
-                                <span className="text-sm font-bold tracking-widest uppercase text-slate-500 dark:text-slate-400">Theme</span>
-                                <ThemeToggle />
-                            </div>
-                            <button className="flex items-center gap-3 text-slate-400 dark:text-slate-400 hover:text-black dark:hover:text-white" onClick={() => setIsLangOpen(!isLangOpen)}>
-                                <Globe className="w-5 h-5" />
-                                <span className="text-sm font-bold tracking-widest uppercase">{t('language')} ({language.toUpperCase()})</span>
+                    <div className="flex gap-6 items-center border-l-2 border-white/10 dark:border-white/10 border-black/10 pl-6">
+                        <ThemeToggle />
+
+                        <div className="relative">
+                            <button
+                                className="flex items-center gap-2 text-slate-400 dark:text-slate-400 hover:text-black dark:hover:text-white text-xs font-bold tracking-widest uppercase"
+                                onClick={() => setIsLangOpen(!isLangOpen)}
+                            >
+                                <Globe className="w-4 h-4" />
+                                <span>{language}</span>
                             </button>
+
+                            {isLangOpen && (
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    className="absolute right-0 top-full mt-4 w-32 bg-zinc-900 border border-white/10 rounded-xl shadow-xl overflow-hidden backdrop-blur-xl"
+                                >
+                                    {['EN', 'ES', 'SV'].map((lang) => (
+                                        <button
+                                            key={lang}
+                                            onClick={() => {
+                                                setLanguage(lang as any);
+                                                setIsLangOpen(false);
+                                            }}
+                                            className={`w-full text-left px-4 py-3 text-xs font-bold tracking-widest hover:bg-white/10 transition-colors ${language === lang ? 'text-accent bg-white/5' : 'text-slate-400'}`}
+                                        >
+                                            {lang === 'EN' ? 'English' : lang === 'ES' ? 'Español' : 'Svenska'}
+                                        </button>
+                                    ))}
+                                </motion.div>
+                            )}
                         </div>
 
-                        {isLangOpen && (
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                                animate={{ opacity: 1, scale: 1, y: 0 }}
-                                className="absolute right-0 top-full mt-2 w-32 bg-zinc-900 border border-white/10 rounded-xl shadow-xl z-50 overflow-hidden backdrop-blur-xl"
-                            >
+                        <Link href="/contact">
+                            <button className="px-6 py-2.5 border border-white/10 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-500">
+                                {t('navbar.contact')}
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="lg:hidden text-white z-50 p-2"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    <div className="w-6 h-5 flex flex-col justify-between">
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`} />
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`} />
+                        <span className={`w-full h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+                    </div>
+                </button>
+            </motion.nav>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, x: '100%' }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: '100%' }}
+                        transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                        className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl lg:hidden flex flex-col items-center justify-center gap-8"
+                    >
+                        <div className="flex flex-col items-center gap-8 text-xl font-bold tracking-[0.2em] uppercase">
+                            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.home')}</Link>
+                            <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.about')}</Link>
+                            <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.services')}</Link>
+                            <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.portfolio')}</Link>
+                            <Link href="/blog" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.blog')}</Link>
+                            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.contact')}</Link>
+                        </div>
+
+                        <div className="w-12 h-[1px] bg-white/10" />
+
+                        <div className="flex items-center gap-8">
+                            <ThemeToggle />
+                            <div className="flex gap-4 text-xs font-bold tracking-widest">
                                 {['EN', 'ES', 'SV'].map((lang) => (
                                     <button
                                         key={lang}
                                         onClick={() => {
                                             setLanguage(lang as any);
-                                            setIsLangOpen(false);
+                                            setIsMobileMenuOpen(false);
                                         }}
-                                        className={`w-full text-left px-4 py-3 text-xs font-bold tracking-widest hover:bg-white/10 transition-colors ${language === lang ? 'text-accent bg-white/5' : 'text-slate-400'}`}
+                                        className={`${language === lang ? 'text-accent' : 'text-slate-500'}`}
                                     >
-                                        {lang === 'EN' ? 'English' : lang === 'ES' ? 'Español' : 'Svenska'}
+                                        {lang}
                                     </button>
                                 ))}
-                            </motion.div>
-                        )}
-                    </div>
-
-                    <Link href="/contact">
-                        <button className="px-6 py-3 border border-white/10 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-black transition-all duration-500">
-                            {t('navbar.contact')}
-                        </button>
-                    </Link>
-                </div>
-            </div>
-        </motion.nav >
+                            </div>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </>
     );
 };
 
