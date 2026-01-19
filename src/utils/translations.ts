@@ -201,7 +201,7 @@ export const translations = {
             tagline: "Our Work",
             title: "Selected Projects.",
             description: "A showcase of our pioneering work in artificial intelligence, robotics, and immersive digital experiences.",
-            view_case_study: "View Case Study"
+            view_case_study: "Visit"
         },
         privacy_policy: {
             title: "Privacy",
@@ -433,7 +433,7 @@ export const translations = {
             tagline: "Nuestro Trabajo",
             title: "Proyectos Seleccionados.",
             description: "Una muestra de nuestro trabajo pionero en inteligencia artificial, robótica y experiencias digitales inmersivas.",
-            view_case_study: "Ver Caso de Estudio"
+            view_case_study: "Visitar"
         },
         privacy_policy: {
             title: "Política de",
@@ -665,7 +665,7 @@ export const translations = {
             tagline: "Vårt Arbete",
             title: "Utvalda Projekt.",
             description: "En utställning av vårt banbrytande arbete inom artificiell intelligens, robotik och uppslukande digitala upplevelser.",
-            view_case_study: "Visa Fallstudie"
+            view_case_study: "Besök"
         },
         privacy_policy: {
             title: "Sekretess",
@@ -897,7 +897,7 @@ export const translations = {
             tagline: "Vores Arbejde",
             title: "Udvalgte Projekter.",
             description: "Et udstillingsvindue for vores banebrydende arbejde inden for kunstig intelligens, robotteknologi og fordybende digitale oplevelser.",
-            view_case_study: "Se Case Study"
+            view_case_study: "Besøg"
         },
         privacy_policy: {
             title: "Privatlivs",

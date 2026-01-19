@@ -12,22 +12,81 @@ import { useLanguage } from '@/context/LanguageContext';
 // Dummy portfolio data using generated artifacts
 const PROJECTS = [
     {
-        title: "AI Neural Dashboard",
-        category: "Data Visualization",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2670&auto=format&fit=crop",
-        description: "A comprehensive analytics platform for monitoring neural network performance in real-time."
+        title: "4dots",
+        category: "Custom Customization & Printing",
+        image: "/images/portfolio/4dotss.jpg",
+        description: "A comprehensive customization and printing service offering personalized letterheads, booklets, and canvas prints.",
+        link: "https://4dots.in"
     },
     {
-        title: "Robotics Control Interface",
-        category: "Industrial IoT",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop",
-        description: "Next-generation HMI for controlling precision robotic arms in manufacturing environments."
+        title: "Kontrast",
+        category: "Restaurant & Hospitality",
+        image: "/images/portfolio/kontrast.jpg",
+        description: "A premium Northern Indian dining experience in Malmö, Sweden, featuring authentic Punjabi cuisine.",
+        link: "https://www.kontrastrestaurang.se/"
     },
     {
-        title: "Holographic Data Network",
-        category: "Cybersecurity",
-        image: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?q=80&w=2668&auto=format&fit=crop",
-        description: "Immersive 3D data visualization for tracking global cybersecurity threats and network traffic."
+        title: "SecondskinStyle B2B",
+        category: "E-Commerce & Sportswear",
+        image: "/images/portfolio/secondskin.jpg",
+        description: "Performance-driven sportswear engineered for athletes, emphasizing technical design and sustainable manufacturing.",
+        link: "https://business.secondskinstyle.com/"
+    },
+    {
+        title: "SecondskinStyle",
+        category: "Consumer Sportswear",
+        image: "/images/portfolio/secondskinstyle.jpg",
+        description: "Premium athletic apparel brand focused on comfort, durability, and style for the modern athlete.",
+        link: "https://secondskinstyle.com/"
+    },
+    {
+        title: "PipeTechs",
+        category: "Pipeline Technology",
+        image: "/images/portfolio/pipelines.jpg",
+        description: "Advanced pipeline leak detection systems using acoustic technology for liquid, gas, and sub-sea applications.",
+        link: "https://www.pipetechs.com/"
+    },
+    {
+        title: "Growers Direct",
+        category: "Agriculture & Retail",
+        image: "/images/portfolio/growerdirect.jpg",
+        description: "Family-run nursery offering a wide range of plants, pottery, and expert gardening advice.",
+        link: "https://www.growersdirect.co.nz/"
+    },
+    {
+        title: "Timax-NL",
+        category: "Construction Consulting",
+        image: "/images/portfolio/timax.jpg",
+        description: "Dutch consulting firm specializing in building regulations, energy performance, and sustainable construction.",
+        link: "https://www.timax.nl/"
+    },
+    {
+        title: "Sicci",
+        category: "Chamber of Commerce",
+        image: "/images/portfolio/sicci.jpg",
+        description: "Singapore Indian Chamber of Commerce and Industry, supporting business growth and advocacy since 1924.",
+        link: "https://sicci.com/"
+    },
+    {
+        title: "I C A I",
+        category: "Professional Organization",
+        image: "/images/portfolio/icai.jpg",
+        description: "Singapore Chapter of the Institute of Chartered Accountants of India, fostering professional development.",
+        link: "https://icai.org.sg/"
+    },
+    {
+        title: "Chet's Shoes",
+        category: "E-Commerce & Retail",
+        image: "/images/portfolio/boots.jpg",
+        description: "Family-owned footwear business offering premium work boots, safety shoes, and personalized service since 1947.",
+        link: "https://chetsshoes.com/"
+    },
+    {
+        title: "Personal Finance Sweden",
+        category: "Financial Education",
+        image: "/images/portfolio/personalfinance.jpg",
+        description: "Empowering expats and NRIs in Sweden with knowledge on investing, taxes, and family finance.",
+        link: "https://www.personalfinancesweden.com/"
     }
 ];
 
@@ -78,9 +137,13 @@ export default function Portfolio() {
 
                                 {/* Overlay */}
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <span className="px-6 py-3 border border-white rounded-full text-sm font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors cursor-pointer">
+                                    <Link
+                                        href={project.link}
+                                        target="_blank"
+                                        className="px-6 py-3 border border-white rounded-full text-sm font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-colors cursor-pointer"
+                                    >
                                         {t('portfolio.view_case_study')}
-                                    </span>
+                                    </Link>
                                 </div>
                             </div>
 
