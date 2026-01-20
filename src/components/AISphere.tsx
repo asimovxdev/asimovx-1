@@ -35,7 +35,7 @@ const SphereContent = () => {
 const AISphere = () => {
     return (
         <div className="absolute top-0 right-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-            <Canvas camera={{ position: [0, 0, 5], fov: 45 }} style={{ opacity: 0.7, pointerEvents: 'none' }}>
+            <Canvas camera={{ position: [0, 0, 5], fov: 45 }} style={{ opacity: 0.4, pointerEvents: 'none' }}>
                 <ambientLight intensity={0.8} />
                 <pointLight position={[10, 10, 10]} intensity={1.5} />
                 <pointLight position={[-10, -10, -10]} intensity={1} color="#ec4899" />

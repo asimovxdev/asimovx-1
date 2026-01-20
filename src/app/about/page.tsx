@@ -46,6 +46,31 @@ const TEAM = [
         image: "/images/humans/clifton.jpeg",
         bio: "Designing intuitive and engaging user experiences.",
         links: []
+    },
+    {
+        name: "Thejas V Panicker",
+        role: "DEV LEAD",
+        image: "/images/humans/thejas.jpeg",
+        bio: "Leading development teams to deliver robust and scalable AI solutions.",
+        links: [
+            { icon: Linkedin, url: "https://www.linkedin.com/in/thejasvpanicker/" }
+        ]
+    },
+    {
+        name: "Don Binoy",
+        role: "FULL STACK",
+        image: "/images/humans/don.jpg",
+        bio: "Building end-to-end applications that seamlessly integrate AI capabilities.",
+        links: [
+            { icon: Linkedin, url: "https://www.linkedin.com/in/don-binoy-4050b2224/" }
+        ]
+    },
+    {
+        name: "Surajkumar K S",
+        role: "FULL STACK",
+        image: "/images/humans/suraj.jpg",
+        bio: "Expert in building scalable full-stack applications with modern technologies.",
+        links: []
     }
 ];
 

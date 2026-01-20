@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import CustomCursor from "@/components/CustomCursor";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -41,6 +42,7 @@ export default function RootLayout({
           >
             <div className="noise-overlay" />
             <CustomCursor />
+            <WhatsAppButton />
             {children}
           </ThemeProvider>
         </LanguageProvider>
