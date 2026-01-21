@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Linkedin, Mail, BookOpen } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const TEAM = [
     {
@@ -75,6 +76,7 @@ const TEAM = [
 ];
 
 export default function About() {
+    const { t } = useLanguage();
     return (
         <main className="min-h-screen bg-background text-foreground selection:bg-accent selection:text-background">
             <Navbar />
@@ -88,10 +90,10 @@ export default function About() {
                     className="max-w-4xl"
                 >
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-white">
-                        About <span className="text-accent">Us.</span>
+                        {t('about.hero_title_1')} <span className="text-accent">{t('about.hero_title_2')}</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-400 font-light leading-relaxed mb-12">
-                        We provide industry leading tech consulting to unlock the potential of AI in your business and achieve quantifiable results.
+                        {t('about.hero_description')}
                     </p>
                 </motion.div>
 
@@ -102,15 +104,15 @@ export default function About() {
                     className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12"
                 >
                     <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
-                        <h3 className="text-2xl font-bold mb-4 text-white">Who We Are</h3>
+                        <h3 className="text-2xl font-bold mb-4 text-white">{t('about.who_we_are_title')}</h3>
                         <p className="text-slate-400 leading-relaxed mb-6">
-                            Let us build your next big AI leap to accelerate your business. We combine exceptionally talented teams with optimized tech solutions to deliver specific, measurable outcomes.
+                            {t('about.who_we_are_desc')}
                         </p>
                         <ul className="space-y-2 text-slate-300">
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> Exceptionally Talented Team</li>
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> Optimized tech solutions</li>
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> High-end customer support</li>
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> Quantifiable Results</li>
+                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> {t('about.point_1')}</li>
+                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> {t('about.point_2')}</li>
+                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> {t('about.point_3')}</li>
+                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-accent rounded-full"></span> {t('about.point_4')}</li>
                         </ul>
                     </div>
                 </motion.div>

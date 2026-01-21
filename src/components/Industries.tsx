@@ -77,6 +77,7 @@ const Industries = () => {
                 <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                     className="text-xs font-bold tracking-[0.3em] uppercase text-accent mb-6"
                 >
@@ -85,6 +86,7 @@ const Industries = () => {
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                     className="text-5xl md:text-7xl font-bold tracking-tight mb-8 max-w-4xl text-foreground"
                 >
@@ -94,6 +96,7 @@ const Industries = () => {
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-xl text-slate-500 dark:text-slate-400 font-light max-w-3xl"
                 >
@@ -107,6 +110,7 @@ const Industries = () => {
                         key={index}
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
                         whileHover={{ y: -10 }}
                         transition={{ duration: 0.4, delay: index * 0.05 }}
                         className="group p-8 border border-border rounded-2xl hover:border-accent/30 transition-all duration-300 hover:bg-accent/5"
