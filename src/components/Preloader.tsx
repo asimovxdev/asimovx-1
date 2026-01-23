@@ -8,8 +8,25 @@ export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        // Check if preloader has already been shown in this session
+        const hasSeenPreloader = sessionStorage.getItem("hasSeenPreloader");
+
+        // Also check if coming from internal navigation (even in new tab)
+        // using optional chaining for safety during build/SSR conceptually (though useEffect is client-only)
+        const isInternalNavigation = typeof document !== 'undefined' &&
+            document.referrer &&
+            document.referrer.includes(window.location.host);
+
+        if (hasSeenPreloader || isInternalNavigation) {
+            setIsLoading(false);
+            // Ensure session is marked so refreshes also skip
+            if (!hasSeenPreloader) sessionStorage.setItem("hasSeenPreloader", "true");
+            return;
+        }
+
         const timer = setTimeout(() => {
             setIsLoading(false);
+            sessionStorage.setItem("hasSeenPreloader", "true");
         }, 2500);
 
         return () => clearTimeout(timer);

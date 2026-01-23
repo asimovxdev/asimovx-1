@@ -79,6 +79,7 @@
   --color-border: var(--border);
 
   --font-orbitron: 'Orbitron', sans-serif;
+  --font-serif: var(--font-playfair), serif;
 
   --animate-float: float 6s ease-in-out infinite;
 

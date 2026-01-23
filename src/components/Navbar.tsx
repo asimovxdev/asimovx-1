@@ -35,6 +35,30 @@ const Navbar = () => {
                 <div className="hidden lg:flex items-center gap-8 xl:gap-12">
                     <div className="flex space-x-8 xl:space-x-12 text-[10px] font-bold tracking-[0.2em] uppercase text-slate-500 dark:text-slate-400">
                         <Link href="/" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.home')}</Link>
+
+                        {/* Products Dropdown */}
+                        <div className="relative group">
+                            <button className="hover:text-black dark:hover:text-white transition-colors flex items-center gap-1">
+                                PRODUCTS
+                            </button>
+                            <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300">
+                                <div className="bg-white dark:bg-zinc-900 border border-black/5 dark:border-white/10 p-4 rounded-xl shadow-xl w-max backdrop-blur-xl">
+                                    <Link
+                                        href="/products/housing-association"
+                                        target="_blank"
+                                        className="block p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors group/item"
+                                    >
+                                        <div className="text-sm font-bold text-black dark:text-white mb-1 group-hover/item:text-accent transition-colors">
+                                            Housing Association Tool
+                                        </div>
+                                        <div className="text-[10px] text-slate-500 normal-case tracking-normal max-w-[200px]">
+                                            Digital workspace for BRF boards and residents
+                                        </div>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
                         <Link href="/about" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.about')}</Link>
                         <Link href="/services" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.services')}</Link>
                         <Link href="/portfolio" className="hover:text-black dark:hover:text-white transition-colors">{t('navbar.portfolio')}</Link>
