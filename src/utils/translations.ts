@@ -9,7 +9,8 @@ export const translations = {
             portfolio: "Portfolio",
             careers: "Careers",
             blog: "Blog",
-            contact: "Contact Us"
+            contact: "Contact Us",
+            products: "Products"
         },
         hero: {
             tagline: "Tech Consulting Reimagined",
@@ -355,7 +356,8 @@ export const translations = {
             portfolio: "Portafolio",
             careers: "Carreras",
             blog: "Blog",
-            contact: "Contáctenos"
+            contact: "Contáctenos",
+            products: "Productos"
         },
         hero: {
             tagline: "Consultoría Tecnológica Reinventada",
@@ -701,7 +703,8 @@ export const translations = {
             portfolio: "Portfölj",
             careers: "Karriär",
             blog: "Blogg",
-            contact: "Kontakta Oss"
+            contact: "Kontakta Oss",
+            products: "Produkter"
         },
         hero: {
             tagline: "Teknisk Konsulting På Nytt Sätt",
@@ -1047,7 +1050,8 @@ export const translations = {
             portfolio: "Portefølje",
             careers: "Karriere",
             blog: "Blog",
-            contact: "Kontakt Os"
+            contact: "Kontakt Os",
+            products: "Produkter"
         },
         hero: {
             tagline: "Teknisk Rådgivning Gentänkt",

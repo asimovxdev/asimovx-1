@@ -131,8 +131,9 @@ const Navbar = () => {
                         transition={{ type: "spring", damping: 25, stiffness: 200 }}
                         className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl lg:hidden flex flex-col items-center justify-center gap-8"
                     >
-                        <div className="flex flex-col items-center gap-8 text-xl font-bold tracking-[0.2em] uppercase">
+                        <div className="flex flex-col items-center gap-8 text-xl font-bold tracking-[0.2em] uppercase text-white">
                             <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.home')}</Link>
+                            <Link href="/products/housing-association" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.products')}</Link>
                             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.about')}</Link>
                             <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.services')}</Link>
                             <Link href="/portfolio" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-accent transition-colors">{t('navbar.portfolio')}</Link>
