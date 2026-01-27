@@ -346,6 +346,108 @@ export const translations = {
             what_looking_for: "What We're Looking For",
             preferred_qual: "Preferred Qualifications",
             why_join: "Why Join Us?"
+        },
+        housing_association: {
+            hero: {
+                tagline: "AsimovX Ecosystem",
+                title_1: "Board work,",
+                title_2: "perfected.",
+                description_1: "A premium digital layer for your building.",
+                description_2: "Beautiful. Automated. Effortless."
+            },
+            sticky_scroll: {
+                unified_command: {
+                    title: "Unified Command.",
+                    desc: "Bring your board, residents, and vendors into one shared reality. No more lost emails or WhatsApp threads."
+                },
+                visual_clarity: {
+                    title: "Visual Clarity.",
+                    desc: "See exactly what's happening in your building. From broken lights to budget usage, visualize it all."
+                },
+                future_proof: {
+                    title: "Future Proof.",
+                    desc: "Built on modern infrastructure that grows with you. Secure, fast, and always online."
+                }
+            },
+            core_objective: {
+                title: "The Housing Association Platform",
+                description: "This platform is built to make life easier for Swedish housing associations (BRF) by reducing the everyday workload of board members. Many board members are volunteers, and today they spend far too much time on emails, follow-ups, spreadsheets, and manual coordination.",
+                quote: "The goal is to let board members spend less time on administration and more time on what really matters, improving the living experience for residents.",
+                features: {
+                    chaos: "The platform replaces chaos with one simple, digital workspace that:",
+                    list: [
+                        "Reduces manual work",
+                        "Removes repetitive tasks",
+                        "Keeps everything in one place",
+                        "Prevents information from being lost when boards change"
+                    ]
+                }
+            },
+            living_index: {
+                tagline: "The Suite",
+                title: "Everything in its right place.",
+                description: "A complete operating system for your housing association. Designed for clarity, speed, and control.",
+                features: {
+                    communication: { title: "Communication", desc: "Reach everyone instantly." },
+                    issues: { title: "Issues", desc: "Fix things faster." },
+                    archives: { title: "Archives", desc: "Safe storage." },
+                    booking: { title: "Booking", desc: "Resource management." },
+                    board: { title: "Board", desc: "Operational command." },
+                    residents: { title: "Residents", desc: "Self-service portal." }
+                }
+            },
+            cta: {
+                title_1: "Ready to",
+                title_2: "Elevate?",
+                book_demo: "Book a Demo",
+                view_pricing: "View Pricing"
+            },
+            marquee: {
+                system_online: "System Online",
+                secure: "Secure",
+                connected: "Connected",
+                live: "Live"
+            },
+            dashboard: {
+                network_status: "Network Status",
+                optimal: "Optimal",
+                latency: "Latency",
+                users_live: "3 Users Live",
+                new_alert: "New Alert",
+                alert_msg: "Water pressure warning detected in Building A.",
+                monthly_revenue: "Monthly Revenue",
+                residents: "Residents",
+                open_tasks: "Open Tasks"
+            },
+            booking: {
+                hero: {
+                    title_1: "Book",
+                    title_2: "Smart.",
+                    description: "Fair, transparent, and conflict-free. From Laundry Rooms to Guest Apartments.",
+                    utilization: "Utilization",
+                    conflicts: "Conflicts"
+                },
+                calendar: {
+                    laundry_room: "Laundry Room A",
+                    month: "October"
+                },
+                floating: {
+                    resident_title: "Resident",
+                    laundry: "Laundry A",
+                    confirmed: "Confirmed",
+                    reminders: "Reminders"
+                },
+                lifestyle: {
+                    shared_spaces: {
+                        title: "Shared Spaces.",
+                        desc: "Maximize utilization of common resources without the headache."
+                    },
+                    guest_apartments: {
+                        title: "Guest Apartments.",
+                        desc: "Easy booking flows for overnight guests."
+                    }
+                }
+            }
         }
     },
     ES: {
@@ -693,6 +795,108 @@ export const translations = {
             what_looking_for: "Lo que buscamos",
             preferred_qual: "Cualificaciones Preferidas",
             why_join: "¿Por qué unirse a nosotros?"
+        },
+        housing_association: {
+            hero: {
+                tagline: "Ecosistema AsimovX",
+                title_1: "Trabajo de la junta,",
+                title_2: "perfeccionado.",
+                description_1: "Una capa digital premium para su edificio.",
+                description_2: "Hermoso. Automatizado. Sin esfuerzo."
+            },
+            sticky_scroll: {
+                unified_command: {
+                    title: "Comando Unificado.",
+                    desc: "Lleve a su junta, residentes y proveedores a una realidad compartida. No más correos perdidos o hilos de WhatsApp."
+                },
+                visual_clarity: {
+                    title: "Claridad Visual.",
+                    desc: "Vea exactamente lo que sucede en su edificio. Desde luces rotas hasta uso del presupuesto, visualícelo todo."
+                },
+                future_proof: {
+                    title: "A Prueba de Futuro.",
+                    desc: "Construido sobre infraestructura moderna que crece con usted. Seguro, rápido y siempre en línea."
+                }
+            },
+            core_objective: {
+                title: "La Plataforma de Asociación de Vivienda",
+                description: "Esta plataforma está construida para facilitar la vida de las asociaciones de vivienda suecas (BRF) reduciendo la carga de trabajo diaria de los miembros de la junta. Muchos miembros son voluntarios y hoy pasan demasiado tiempo en correos, seguimientos, hojas de cálculo y coordinación manual.",
+                quote: "El objetivo es permitir que los miembros de la junta pasen menos tiempo en administración y más tiempo en lo que realmente importa, mejorando la experiencia de vida de los residentes.",
+                features: {
+                    chaos: "La plataforma reemplaza el caos con un espacio de trabajo digital simple que:",
+                    list: [
+                        "Reduce el trabajo manual",
+                        "Elimina tareas repetitivas",
+                        "Mantiene todo en un solo lugar",
+                        "Evita que la información se pierda cuando la junta cambia"
+                    ]
+                }
+            },
+            living_index: {
+                tagline: "La Suite",
+                title: "Todo en su lugar correcto.",
+                description: "Un sistema operativo completo para su asociación de vivienda. Diseñado para claridad, velocidad y control.",
+                features: {
+                    communication: { title: "Comunicación", desc: "Llegue a todos al instante." },
+                    issues: { title: "Problemas", desc: "Arregle cosas más rápido." },
+                    archives: { title: "Archivos", desc: "Almacenamiento seguro." },
+                    booking: { title: "Reservas", desc: "Gestión de recursos." },
+                    board: { title: "Junta", desc: "Comando operativo." },
+                    residents: { title: "Residentes", desc: "Portal de autoservicio." }
+                }
+            },
+            cta: {
+                title_1: "¿Listo para",
+                title_2: "Elevar?",
+                book_demo: "Reservar Demo",
+                view_pricing: "Ver Precios"
+            },
+            marquee: {
+                system_online: "Sistema en Línea",
+                secure: "Seguro",
+                connected: "Conectado",
+                live: "En Vivo"
+            },
+            dashboard: {
+                network_status: "Estado de Red",
+                optimal: "Óptimo",
+                latency: "Latencia",
+                users_live: "3 Usuarios",
+                new_alert: "Nueva Alerta",
+                alert_msg: "Advertencia de presión de agua detectada en Edificio A.",
+                monthly_revenue: "Ingresos Mensuales",
+                residents: "Residentes",
+                open_tasks: "Tareas Pendientes"
+            },
+            booking: {
+                hero: {
+                    title_1: "Reserva",
+                    title_2: "Inteligente.",
+                    description: "Justo, transparente y sin conflictos. Desde lavanderías hasta apartamentos de invitados.",
+                    utilization: "Utilización",
+                    conflicts: "Conflictos"
+                },
+                calendar: {
+                    laundry_room: "Lavandería A",
+                    month: "Octubre"
+                },
+                floating: {
+                    resident_title: "Residente",
+                    laundry: "Lavandería A",
+                    confirmed: "Confirmado",
+                    reminders: "Recordatorios"
+                },
+                lifestyle: {
+                    shared_spaces: {
+                        title: "Espacios Compartidos.",
+                        desc: "Maximice la utilización de recursos comunes sin dolores de cabeza."
+                    },
+                    guest_apartments: {
+                        title: "Apartamentos de Invitados.",
+                        desc: "Flujos de reserva fáciles para huéspedes nocturnos."
+                    }
+                }
+            }
         }
     },
     SV: {
@@ -1040,6 +1244,108 @@ export const translations = {
             what_looking_for: "Vad vi letar efter",
             preferred_qual: "Föredragna kvalifikationer",
             why_join: "Varför jobba hos oss?"
+        },
+        housing_association: {
+            hero: {
+                tagline: "AsimovX Ekosystem",
+                title_1: "Styrelsearbete,",
+                title_2: "fulländat.",
+                description_1: "Ett premium digitalt lager för din byggnad.",
+                description_2: "Vackert. Automatiserat. Enkelt."
+            },
+            sticky_scroll: {
+                unified_command: {
+                    title: "Enat Kommando.",
+                    desc: "För samman din styrelse, boende och leverantörer i en gemensam verklighet. Inga fler förlorade e-postmeddelanden eller WhatsApp-trådar."
+                },
+                visual_clarity: {
+                    title: "Visuell Tydlighet.",
+                    desc: "Se exakt vad som händer i din byggnad. Från trasiga lampor till budgetutnyttjande, visualisera allt."
+                },
+                future_proof: {
+                    title: "Framtidssäkrad.",
+                    desc: "Byggd på modern infrastruktur som växer med dig. Säkert, snabbt och alltid online."
+                }
+            },
+            core_objective: {
+                title: "Bostadsrättsföreningens Plattform",
+                description: "Denna plattform är byggd för att underlätta vardagen för svenska bostadsrättsföreningar (BRF) genom att minska den dagliga arbetsbelastningen för styrelsemedlemmar. Många styrelsemedlemmar är frivilliga och lägger idag alldeles för mycket tid på e-post, uppföljningar, kalkylblad och manuell samordning.",
+                quote: "Målet är att låta styrelsemedlemmar lägga mindre tid på administration och mer tid på det som verkligen betyder något, att förbättra boendeupplevelsen.",
+                features: {
+                    chaos: "Plattformen ersätter kaos med en enkel, digital arbetsyta som:",
+                    list: [
+                        "Minskar manuellt arbete",
+                        "Tar bort repetitiva uppgifter",
+                        "Håller allt på ett ställe",
+                        "Förhindrar att information går förlorad när styrelsen byts ut"
+                    ]
+                }
+            },
+            living_index: {
+                tagline: "Sviten",
+                title: "Allt på rätt plats.",
+                description: "Ett komplett operativsystem för din bostadsrättsförening. Designat för tydlighet, snabbhet och kontroll.",
+                features: {
+                    communication: { title: "Kommunikation", desc: "Nå alla direkt." },
+                    issues: { title: "Ärenden", desc: "Åtgärda saker snabbare." },
+                    archives: { title: "Arkiv", desc: "Säker lagring." },
+                    booking: { title: "Bokning", desc: "Resurshantering." },
+                    board: { title: "Styrelse", desc: "Operativt kommando." },
+                    residents: { title: "Boende", desc: "Självserviceportal." }
+                }
+            },
+            cta: {
+                title_1: "Redo att",
+                title_2: "Lyfta?",
+                book_demo: "Boka Demo",
+                view_pricing: "Se Priser"
+            },
+            marquee: {
+                system_online: "System Online",
+                secure: "Säker",
+                connected: "Ansluten",
+                live: "Live"
+            },
+            dashboard: {
+                network_status: "Nätverksstatus",
+                optimal: "Optimal",
+                latency: "Latens",
+                users_live: "3 Användare",
+                new_alert: "Ny Varning",
+                alert_msg: "Vattentrycksvarning upptäckt i Byggnad A.",
+                monthly_revenue: "Månadsintäkt",
+                residents: "Boende",
+                open_tasks: "Öppna Uppgifter"
+            },
+            booking: {
+                hero: {
+                    title_1: "Boka",
+                    title_2: "Smart.",
+                    description: "Rättvist, transparent och konfliktfritt. Från tvättstugor till gästlägenheter.",
+                    utilization: "Utnyttjande",
+                    conflicts: "Konflikter"
+                },
+                calendar: {
+                    laundry_room: "Tvättstuga A",
+                    month: "Oktober"
+                },
+                floating: {
+                    resident_title: "Boende",
+                    laundry: "Tvättstuga A",
+                    confirmed: "Bekräftad",
+                    reminders: "Påminnelser"
+                },
+                lifestyle: {
+                    shared_spaces: {
+                        title: "Gemensamma Utrymmen.",
+                        desc: "Maximera utnyttjandet av gemensamma resurser utan huvudvärk."
+                    },
+                    guest_apartments: {
+                        title: "Gästlägenheter.",
+                        desc: "Enkla bokningsflöden för övernattande gäster."
+                    }
+                }
+            }
         }
     },
     DA: {
@@ -1387,6 +1693,108 @@ export const translations = {
             what_looking_for: "Hvad vi leder efter",
             preferred_qual: "Foretrukne kvalifikationer",
             why_join: "Hvorfor slutte sig til os?"
+        },
+        housing_association: {
+            hero: {
+                tagline: "AsimovX Økosystem",
+                title_1: "Bestyrelsesarbejde,",
+                title_2: "perfektioneret.",
+                description_1: "Et premium digitalt lag til din bygning.",
+                description_2: "Smukt. Automatiseret. Ubesværet."
+            },
+            sticky_scroll: {
+                unified_command: {
+                    title: "Samlet Kommando.",
+                    desc: "Bring din bestyrelse, beboere og leverandører ind i en fælles virkelighed. Ikke flere tabte e-mails eller WhatsApp-tråde."
+                },
+                visual_clarity: {
+                    title: "Visuel Klarhed.",
+                    desc: "Se præcis, hvad der sker i din bygning. Fra ødelagte lys til budgetudnyttelse, visualiser det hele."
+                },
+                future_proof: {
+                    title: "Fremtidssikret.",
+                    desc: "Bygget på moderne infrastruktur, der vokser med dig. Sikkert, hurtigt og altid online."
+                }
+            },
+            core_objective: {
+                title: "Boligforeningsplatformen",
+                description: "Denne platform er bygget til at gøre livet lettere for boligforeninger ved at reducere den daglige arbejdsbyrde for bestyrelsesmedlemmer. Mange bestyrelsesmedlemmer er frivillige og bruger i dag alt for meget tid på e-mails, opfølgninger, regneark og manuel koordinering.",
+                quote: "Målet er at lade bestyrelsesmedlemmer bruge mindre tid på administration og mere tid på det, der virkelig betyder noget, at forbedre beboernes oplevelse.",
+                features: {
+                    chaos: "Platformen erstatter kaos med ét simpelt, digitalt arbejdsrum, der:",
+                    list: [
+                        "Reducerer manuelt arbejde",
+                        "Fjerner gentagne opgaver",
+                        "Holder alt på ét sted",
+                        "Forhindrer information i at gå tabt ved bestyrelsesskift"
+                    ]
+                }
+            },
+            living_index: {
+                tagline: "Suiten",
+                title: "Alt på sin rette plads.",
+                description: "Et komplet operativsystem til din boligforening. Designet til klarhed, hastighed og kontrol.",
+                features: {
+                    communication: { title: "Kommunikation", desc: "Nå alle øjeblikkeligt." },
+                    issues: { title: "Sager", desc: "Løs ting hurtigere." },
+                    archives: { title: "Arkiver", desc: "Sikker opbevaring." },
+                    booking: { title: "Booking", desc: "Ressourcestyring." },
+                    board: { title: "Bestyrelse", desc: "Operativ kommando." },
+                    residents: { title: "Beboere", desc: "Selvbetjeningsportal." }
+                }
+            },
+            cta: {
+                title_1: "Klar til at",
+                title_2: "Løfte?",
+                book_demo: "Book Demo",
+                view_pricing: "Se Priser"
+            },
+            marquee: {
+                system_online: "System Online",
+                secure: "Sikker",
+                connected: "Forbundet",
+                live: "Live"
+            },
+            dashboard: {
+                network_status: "Netværksstatus",
+                optimal: "Optimal",
+                latency: "Latens",
+                users_live: "3 Brugere",
+                new_alert: "Ny Advarsel",
+                alert_msg: "Vandtryksadvarsel registreret i Bygning A.",
+                monthly_revenue: "Månedlig Omsætning",
+                residents: "Beboere",
+                open_tasks: "Åbne Opgaver"
+            },
+            booking: {
+                hero: {
+                    title_1: "Book",
+                    title_2: "Smart.",
+                    description: "Retfærdigt, gennemsigtigt og konfliktfrit. Fra vaskerier til gæstelejligheder.",
+                    utilization: "Udnyttelse",
+                    conflicts: "Konflikter"
+                },
+                calendar: {
+                    laundry_room: "Vaskeri A",
+                    month: "Oktober"
+                },
+                floating: {
+                    resident_title: "Beboer",
+                    laundry: "Vaskeri A",
+                    confirmed: "Bekræftet",
+                    reminders: "Påmindelser"
+                },
+                lifestyle: {
+                    shared_spaces: {
+                        title: "Fællesarealer.",
+                        desc: "Maksimer udnyttelsen af fælles ressourcer uden hovedpine."
+                    },
+                    guest_apartments: {
+                        title: "Gæstelejligheder.",
+                        desc: "Nemme bookingflows for overnattende gæster."
+                    }
+                }
+            }
         }
     }
 };

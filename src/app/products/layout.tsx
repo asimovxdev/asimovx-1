@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
 
 export default function ProductLayout({
     children,
@@ -25,6 +26,7 @@ export default function ProductLayout({
         <div className="min-h-screen bg-neutral-50 text-slate-900 selection:bg-blue-500 selection:text-white">
             {/* We might want a different navigation or header here since the main one is transparent/dark optimized */}
             {/* For now, we'll let the main Navbar persist but content will be light */}
+            <Navbar />
             <div className="pt-24 pb-20">
                 {children}
             </div>

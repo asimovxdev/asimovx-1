@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import {
     CalendarDays,
     ArrowLeft,
@@ -11,6 +12,7 @@ import {
     CalendarCheck,
     User
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale = 1, className = "" }: any) {
     return (
@@ -33,20 +35,15 @@ function FloatingElement({ children, delay = 0, x = 0, y = 0, rotate = 0, scale 
 }
 
 export default function BookingPage() {
+    const { t } = useLanguage();
+
     return (
         <div className="bg-[#F9F8F6] text-[#111] font-sans selection:bg-violet-100 selection:text-violet-900 overflow-x-hidden">
 
+            <Navbar />
+
             {/* Grain Texture */}
             <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.4] mix-blend-multiply bg-[url('https://grainy-gradients.vercel.app/noise.svg')] bg-repeat" />
-
-            <div className="fixed top-8 left-8 z-50">
-                <Link
-                    href="/products/housing-association"
-                    className="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-md rounded-full border border-slate-200 text-sm font-bold tracking-widest uppercase hover:text-violet-600 transition-colors shadow-sm"
-                >
-                    <ArrowLeft className="w-4 h-4" /> Back
-                </Link>
-            </div>
 
             {/* HERO */}
             <section className="min-h-screen relative flex items-center justify-center overflow-hidden px-6 pt-20">
@@ -64,20 +61,20 @@ export default function BookingPage() {
                                 <CalendarDays className="w-10 h-10" />
                             </div>
                             <h1 className="text-5xl md:text-[9rem] font-serif font-medium tracking-tight leading-[0.8] mb-10 text-[#111] -ml-1">
-                                Book <br />
-                                <span className="italic text-violet-600">Smart.</span>
+                                {t('housing_association.booking.hero.title_1')} <br />
+                                <span className="italic text-violet-600">{t('housing_association.booking.hero.title_2')}</span>
                             </h1>
                             <p className="text-2xl text-slate-500 max-w-lg leading-relaxed mb-12 font-light">
-                                Fair, transparent, and conflict-free. <br /> From Laundry Rooms to Guest Apartments.
+                                {t('housing_association.booking.hero.description')}
                             </p>
 
                             <div className="flex gap-4">
                                 <div className="p-4 bg-white/60 rounded-2xl border border-slate-100 backdrop-blur-sm">
-                                    <div className="text-xs font-bold uppercase tracking-widest text-violet-500 mb-1">Utilization</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-violet-500 mb-1">{t('housing_association.booking.hero.utilization')}</div>
                                     <div className="text-3xl font-bold font-serif text-[#111]">85%</div>
                                 </div>
                                 <div className="p-4 bg-white/60 rounded-2xl border border-slate-100 backdrop-blur-sm">
-                                    <div className="text-xs font-bold uppercase tracking-widest text-violet-500 mb-1">Conflicts</div>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-violet-500 mb-1">{t('housing_association.booking.hero.conflicts')}</div>
                                     <div className="text-3xl font-bold font-serif text-[#111]">0%</div>
                                 </div>
                             </div>
@@ -95,8 +92,8 @@ export default function BookingPage() {
                         >
                             <div className="flex justify-between items-end mb-12">
                                 <div>
-                                    <div className="text-5xl font-serif font-medium text-slate-900 mb-2">October</div>
-                                    <div className="text-violet-500 font-medium tracking-wide uppercase text-sm">Laundry Room A</div>
+                                    <div className="text-5xl font-serif font-medium text-slate-900 mb-2">{t('housing_association.booking.calendar.month')}</div>
+                                    <div className="text-violet-500 font-medium tracking-wide uppercase text-sm">{t('housing_association.booking.calendar.laundry_room')}</div>
                                 </div>
                             </div>
                             <div className="grid grid-cols-7 gap-4">
@@ -117,14 +114,14 @@ export default function BookingPage() {
                                     <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"><User className="w-5 h-5" /></div>
                                     <div>
                                         <div className="font-bold text-sm text-[#111]">John D.</div>
-                                        <div className="text-[10px] uppercase tracking-wide text-slate-400">Resident</div>
+                                        <div className="text-[10px] uppercase tracking-wide text-slate-400">{t('housing_association.booking.floating.resident_title')}</div>
                                     </div>
                                 </div>
                                 <div className="p-3 bg-violet-50 rounded-xl mb-2">
-                                    <div className="text-violet-600 font-bold text-sm">Laundry A</div>
+                                    <div className="text-violet-600 font-bold text-sm">{t('housing_association.booking.floating.laundry')}</div>
                                     <div className="text-violet-400 text-xs">18:00 - 20:00</div>
                                 </div>
-                                <div className="text-xs text-center text-green-500 font-bold uppercase tracking-widest mt-2">Confirmed</div>
+                                <div className="text-xs text-center text-green-500 font-bold uppercase tracking-widest mt-2">{t('housing_association.booking.floating.confirmed')}</div>
                             </div>
                         </FloatingElement>
 
@@ -132,7 +129,7 @@ export default function BookingPage() {
                             <div className="p-6 bg-[#111] text-white rounded-[2rem] shadow-2xl flex flex-col items-center justify-center w-48 h-48">
                                 <Clock className="w-10 h-10 text-violet-400 mb-2" />
                                 <div className="text-3xl font-bold">1h</div>
-                                <div className="text-xs opacity-50 uppercase tracking-widest">Reminders</div>
+                                <div className="text-xs opacity-50 uppercase tracking-widest">{t('housing_association.booking.floating.reminders')}</div>
                             </div>
                         </FloatingElement>
                     </div>
@@ -143,19 +140,19 @@ export default function BookingPage() {
             <section className="py-20 px-6">
                 <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 h-[500px]">
                     <div className="h-full rounded-[3rem] overflow-hidden relative group shadow-xl max-h-[400px] md:max-h-full">
-                        <img src="https://images.unsplash.com/photo-1545124132-ad94236e792f?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Laundry Room" />
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Shared Laundry Room" />
                         <div className="absolute inset-0 bg-violet-900/30 mix-blend-multiply" />
                         <div className="absolute bottom-10 left-10 text-white max-w-sm">
-                            <h3 className="text-3xl font-serif mb-2">Shared Spaces.</h3>
-                            <p className="opacity-90">Maximize utilization of common resources without the headache.</p>
+                            <h3 className="text-3xl font-serif mb-2">{t('housing_association.booking.lifestyle.shared_spaces.title')}</h3>
+                            <p className="opacity-90">{t('housing_association.booking.lifestyle.shared_spaces.desc')}</p>
                         </div>
                     </div>
                     <div className="h-full rounded-[3rem] overflow-hidden relative group shadow-xl max-h-[400px] md:max-h-full">
                         <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Guest room" />
                         <div className="absolute inset-0 bg-purple-900/30 mix-blend-multiply" />
                         <div className="absolute bottom-10 left-10 text-white max-w-sm">
-                            <h3 className="text-3xl font-serif mb-2">Guest Apartments.</h3>
-                            <p className="opacity-90">Easy booking flows for overnight guests.</p>
+                            <h3 className="text-3xl font-serif mb-2">{t('housing_association.booking.lifestyle.guest_apartments.title')}</h3>
+                            <p className="opacity-90">{t('housing_association.booking.lifestyle.guest_apartments.desc')}</p>
                         </div>
                     </div>
                 </div>
