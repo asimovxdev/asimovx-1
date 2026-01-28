@@ -350,10 +350,20 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "AsimovX Ecosystem",
-                title_1: "Board work,",
-                title_2: "perfected.",
-                description_1: "A premium digital layer for your building.",
-                description_2: "Beautiful. Automated. Effortless."
+                title: "The Housing Association Platform",
+                description: "This platform is built to make life easier for Swedish housing associations (BRF) by reducing the everyday workload of board members. Many board members are volunteers, and today they spend far too much time on emails, follow-ups, spreadsheets, and manual coordination."
+            },
+            mission: {
+                quote: "The goal is to let board members spend less time on administration and more time on what really matters, improving the living experience for residents.",
+                features: {
+                    chaos: "The platform replaces chaos with one simple, digital workspace that:",
+                    list: [
+                        "Reduces manual work",
+                        "Removes repetitive tasks",
+                        "Keeps everything in one place",
+                        "Prevents information from being lost when boards change"
+                    ]
+                }
             },
             sticky_scroll: {
                 unified_command: {
@@ -369,31 +379,102 @@ export const translations = {
                     desc: "Built on modern infrastructure that grows with you. Secure, fast, and always online."
                 }
             },
-            core_objective: {
-                title: "The Housing Association Platform",
-                description: "This platform is built to make life easier for Swedish housing associations (BRF) by reducing the everyday workload of board members. Many board members are volunteers, and today they spend far too much time on emails, follow-ups, spreadsheets, and manual coordination.",
-                quote: "The goal is to let board members spend less time on administration and more time on what really matters, improving the living experience for residents.",
-                features: {
-                    chaos: "The platform replaces chaos with one simple, digital workspace that:",
-                    list: [
-                        "Reduces manual work",
-                        "Removes repetitive tasks",
-                        "Keeps everything in one place",
-                        "Prevents information from being lost when boards change"
-                    ]
-                }
-            },
+
             living_index: {
                 tagline: "The Suite",
                 title: "Everything in its right place.",
                 description: "A complete operating system for your housing association. Designed for clarity, speed, and control.",
                 features: {
-                    communication: { title: "Communication", desc: "Reach everyone instantly." },
-                    issues: { title: "Issues", desc: "Fix things faster." },
-                    archives: { title: "Archives", desc: "Safe storage." },
-                    booking: { title: "Booking", desc: "Resource management." },
-                    board: { title: "Board", desc: "Operational command." },
-                    residents: { title: "Residents", desc: "Self-service portal." }
+                    communication: {
+                        title: "Communication",
+                        desc: "Reach everyone instantly.",
+                        details: {
+                            main_title: "Unified Voice.",
+                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            list: [
+                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
+                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
+                                { title: "Message Read Status", desc: "Track who has read important notices." },
+                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
+                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                            ]
+                        }
+                    },
+                    issues: {
+                        title: "Issues",
+                        desc: "Resolve problems faster.",
+                        details: {
+                            main_title: "Streamlined Maintenance.",
+                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            list: [
+                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
+                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
+                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
+                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
+                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                            ]
+                        }
+                    },
+                    archives: {
+                        title: "Archives",
+                        desc: "Secure document storage.",
+                        details: {
+                            main_title: "Digital Archive.",
+                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            list: [
+                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
+                                { title: "Smart Search", desc: "Find any document instantly." },
+                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
+                                { title: "Version Control", desc: "Always access the latest version." },
+                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                            ]
+                        }
+                    },
+                    booking: {
+                        title: "Booking",
+                        desc: "Fair shared resources.",
+                        details: {
+                            main_title: "Simple Booking.",
+                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            list: [
+                                { title: "Real-time Availability", desc: "Instant view of free slots." },
+                                { title: "Conflict Free", desc: "System prevents double bookings." },
+                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
+                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
+                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                            ]
+                        }
+                    },
+                    board: {
+                        title: "Board Portal",
+                        desc: "Efficient governance.",
+                        details: {
+                            main_title: "Efficient Board Work.",
+                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            list: [
+                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
+                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
+                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
+                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
+                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                            ]
+                        }
+                    },
+                    residents: {
+                        title: "Resident App",
+                        desc: "Everything in one place.",
+                        details: {
+                            main_title: "Empowered Residents.",
+                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            list: [
+                                { title: "Digital Keys", desc: "Phone access to common areas." },
+                                { title: "Payment History", desc: "View fees and payment status." },
+                                { title: "Community Polls", desc: "Participate in decision making." },
+                                { title: "Car Registry", desc: "Manage parking spots and access." },
+                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                            ]
+                        }
+                    }
                 }
             },
             cta: {
@@ -422,6 +503,7 @@ export const translations = {
                 residents: "Residents",
                 open_tasks: "Open Tasks"
             },
+
             booking: {
                 hero: {
                     title_1: "Book",
@@ -938,10 +1020,20 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "Ecosistema AsimovX",
-                title_1: "Trabajo de la junta,",
-                title_2: "perfeccionado.",
-                description_1: "Una capa digital premium para su edificio.",
-                description_2: "Hermoso. Automatizado. Sin esfuerzo."
+                title: "La Plataforma de Asociación de Vivienda",
+                description: "Esta plataforma está construida para facilitar la vida de las asociaciones de vivienda suecas (BRF) reduciendo la carga de trabajo diaria de los miembros de la junta. Muchos miembros son voluntarios y hoy pasan far too much time on emails, follow-ups, spreadsheets, and manual coordination."
+            },
+            mission: {
+                quote: "El objetivo es permitir que los miembros de la junta pasen menos tiempo en administración y más tiempo en lo que realmente importa, improving the living experience for residents.",
+                features: {
+                    chaos: "La plataforma reemplaza el caos con un espacio de trabajo digital simple que:",
+                    list: [
+                        "Reduce el trabajo manual",
+                        "Elimina tareas repetitivas",
+                        "Mantiene todo en un solo lugar",
+                        "Evita que la información se pierda cuando la junta cambia"
+                    ]
+                }
             },
             sticky_scroll: {
                 unified_command: {
@@ -957,31 +1049,102 @@ export const translations = {
                     desc: "Construido sobre infraestructura moderna que crece con usted. Seguro, rápido y siempre en línea."
                 }
             },
-            core_objective: {
-                title: "La Plataforma de Asociación de Vivienda",
-                description: "Esta plataforma está construida para facilitar la vida de las asociaciones de vivienda suecas (BRF) reduciendo la carga de trabajo diaria de los miembros de la junta. Muchos miembros son voluntarios y hoy pasan far too much time on emails, follow-ups, spreadsheets, and manual coordination.",
-                quote: "El objetivo es permitir que los miembros de la junta pasen menos tiempo en administración y más tiempo en lo que realmente importa, improving the living experience for residents.",
-                features: {
-                    chaos: "La plataforma reemplaza el caos con un espacio de trabajo digital simple que:",
-                    list: [
-                        "Reduce el trabajo manual",
-                        "Elimina tareas repetitivas",
-                        "Mantiene todo en un solo lugar",
-                        "Evita que la información se pierda cuando la junta cambia"
-                    ]
-                }
-            },
+
             living_index: {
                 tagline: "La Suite",
                 title: "Todo en su lugar correcto.",
                 description: "Un sistema operativo completo para su asociación de vivienda. Diseñado para claridad, velocidad y control.",
                 features: {
-                    communication: { title: "Comunicación", desc: "Llegue a todos al instante." },
-                    issues: { title: "Problemas", desc: "Arregle cosas más rápido." },
-                    archives: { title: "Archivos", desc: "Almacenamiento seguro." },
-                    booking: { title: "Reservas", desc: "Gestión de recursos." },
-                    board: { title: "Junta", desc: "Comando operativo." },
-                    residents: { title: "Residentes", desc: "Portal de autoservicio." }
+                    communication: {
+                        title: "Comunicación",
+                        desc: "Llegue a todos al instante.",
+                        details: {
+                            main_title: "Unified Voice.",
+                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            list: [
+                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
+                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
+                                { title: "Message Read Status", desc: "Track who has read important notices." },
+                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
+                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                            ]
+                        }
+                    },
+                    issues: {
+                        title: "Problemas",
+                        desc: "Arregle cosas más rápido.",
+                        details: {
+                            main_title: "Streamlined Maintenance.",
+                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            list: [
+                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
+                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
+                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
+                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
+                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                            ]
+                        }
+                    },
+                    archives: {
+                        title: "Archivos",
+                        desc: "Almacenamiento seguro.",
+                        details: {
+                            main_title: "Digital Archive.",
+                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            list: [
+                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
+                                { title: "Smart Search", desc: "Find any document instantly." },
+                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
+                                { title: "Version Control", desc: "Always access the latest version." },
+                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                            ]
+                        }
+                    },
+                    booking: {
+                        title: "Reservas",
+                        desc: "Gestión de recursos.",
+                        details: {
+                            main_title: "Simple Booking.",
+                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            list: [
+                                { title: "Real-time Availability", desc: "Instant view of free slots." },
+                                { title: "Conflict Free", desc: "System prevents double bookings." },
+                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
+                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
+                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                            ]
+                        }
+                    },
+                    board: {
+                        title: "Junta",
+                        desc: "Comando operativo.",
+                        details: {
+                            main_title: "Efficient Board Work.",
+                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            list: [
+                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
+                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
+                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
+                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
+                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                            ]
+                        }
+                    },
+                    residents: {
+                        title: "Residentes",
+                        desc: "Portal de autoservicio.",
+                        details: {
+                            main_title: "Empowered Residents.",
+                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            list: [
+                                { title: "Digital Keys", desc: "Phone access to common areas." },
+                                { title: "Payment History", desc: "View fees and payment status." },
+                                { title: "Community Polls", desc: "Participate in decision making." },
+                                { title: "Car Registry", desc: "Manage parking spots and access." },
+                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                            ]
+                        }
+                    }
                 }
             },
             cta: {
@@ -1526,10 +1689,20 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "AsimovX Ekosystem",
-                title_1: "Styrelsearbete,",
-                title_2: "fulländat.",
-                description_1: "Ett premium digitalt lager för din byggnad.",
-                description_2: "Vackert. Automatiserat. Enkelt."
+                title: "Bostadsrättsföreningens Plattform",
+                description: "Denna plattform är byggd för att underlätta vardagen för svenska bostadsrättsföreningar (BRF) genom att minska den dagliga arbetsbelastningen för styrelsemedlemmar. Många styrelsemedlemmar är frivilliga och lägger idag alldeles för mycket tid på e-post, uppföljningar, kalkylblad och manuell samordning."
+            },
+            mission: {
+                quote: "Målet är att låta styrelsemedlemmar lägga mindre tid på administration och mer tid på det som verkligen betyder något, att förbättra boendeupplevelsen.",
+                features: {
+                    chaos: "Plattformen ersätter kaos med en enkel, digital arbetsyta som:",
+                    list: [
+                        "Minskar manuellt arbete",
+                        "Tar bort repetitiva uppgifter",
+                        "Håller allt på ett ställe",
+                        "Förhindrar att information går förlorad när styrelsen byts ut"
+                    ]
+                }
             },
             sticky_scroll: {
                 unified_command: {
@@ -1545,31 +1718,102 @@ export const translations = {
                     desc: "Byggd på modern infrastruktur som växer med dig. Säkert, snabbt och alltid online."
                 }
             },
-            core_objective: {
-                title: "Bostadsrättsföreningens Plattform",
-                description: "Denna plattform är byggd för att underlätta vardagen för svenska bostadsrättsföreningar (BRF) genom att minska den dagliga arbetsbelastningen för styrelsemedlemmar. Många styrelsemedlemmar är frivilliga och lägger idag alldeles för mycket tid på e-post, uppföljningar, kalkylblad och manuell samordning.",
-                quote: "Målet är att låta styrelsemedlemmar lägga mindre tid på administration och mer tid på det som verkligen betyder något, att förbättra boendeupplevelsen.",
-                features: {
-                    chaos: "Plattformen ersätter kaos med en enkel, digital arbetsyta som:",
-                    list: [
-                        "Minskar manuellt arbete",
-                        "Tar bort repetitiva uppgifter",
-                        "Håller allt på ett ställe",
-                        "Förhindrar att information går förlorad när styrelsen byts ut"
-                    ]
-                }
-            },
+
             living_index: {
                 tagline: "Sviten",
                 title: "Allt på rätt plats.",
                 description: "Ett komplett operativsystem för din bostadsrättsförening. Designat för tydlighet, snabbhet och kontroll.",
                 features: {
-                    communication: { title: "Kommunikation", desc: "Nå alla direkt." },
-                    issues: { title: "Ärenden", desc: "Åtgärda saker snabbare." },
-                    archives: { title: "Arkiv", desc: "Säker lagring." },
-                    booking: { title: "Bokning", desc: "Resurshantering." },
-                    board: { title: "Styrelse", desc: "Operativt kommando." },
-                    residents: { title: "Boende", desc: "Självserviceportal." }
+                    communication: {
+                        title: "Kommunikation",
+                        desc: "Nå alla direkt.",
+                        details: {
+                            main_title: "Unified Voice.",
+                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            list: [
+                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
+                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
+                                { title: "Message Read Status", desc: "Track who has read important notices." },
+                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
+                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                            ]
+                        }
+                    },
+                    issues: {
+                        title: "Ärenden",
+                        desc: "Åtgärda saker snabbare.",
+                        details: {
+                            main_title: "Streamlined Maintenance.",
+                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            list: [
+                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
+                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
+                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
+                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
+                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                            ]
+                        }
+                    },
+                    archives: {
+                        title: "Arkiv",
+                        desc: "Säker lagring.",
+                        details: {
+                            main_title: "Digital Archive.",
+                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            list: [
+                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
+                                { title: "Smart Search", desc: "Find any document instantly." },
+                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
+                                { title: "Version Control", desc: "Always access the latest version." },
+                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                            ]
+                        }
+                    },
+                    booking: {
+                        title: "Bokning",
+                        desc: "Resurshantering.",
+                        details: {
+                            main_title: "Simple Booking.",
+                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            list: [
+                                { title: "Real-time Availability", desc: "Instant view of free slots." },
+                                { title: "Conflict Free", desc: "System prevents double bookings." },
+                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
+                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
+                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                            ]
+                        }
+                    },
+                    board: {
+                        title: "Styrelse",
+                        desc: "Operativt kommando.",
+                        details: {
+                            main_title: "Efficient Board Work.",
+                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            list: [
+                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
+                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
+                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
+                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
+                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                            ]
+                        }
+                    },
+                    residents: {
+                        title: "Boende",
+                        desc: "Självserviceportal.",
+                        details: {
+                            main_title: "Empowered Residents.",
+                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            list: [
+                                { title: "Digital Keys", desc: "Phone access to common areas." },
+                                { title: "Payment History", desc: "View fees and payment status." },
+                                { title: "Community Polls", desc: "Participate in decision making." },
+                                { title: "Car Registry", desc: "Manage parking spots and access." },
+                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                            ]
+                        }
+                    }
                 }
             },
             cta: {
@@ -2114,10 +2358,20 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "AsimovX Økosystem",
-                title_1: "Bestyrelsesarbejde,",
-                title_2: "perfektioneret.",
-                description_1: "Et premium digitalt lag til din bygning.",
-                description_2: "Smukt. Automatiseret. Ubesværet."
+                title: "Boligforeningsplatformen",
+                description: "Denne platform er bygget til at gøre livet lettere for boligforeninger ved at reducere den daglige arbejdsbyrde for bestyrelsesmedlemmer. Mange bestyrelsesmedlemmer er frivillige og bruger i dag alt for meget tid på e-mails, opfølgninger, regneark og manuel koordinering."
+            },
+            mission: {
+                quote: "Målet er at lade bestyrelsesmedlemmer bruge mindre tid på administration og mere tid på det, der virkelig betyder noget, at forbedre beboernes oplevelse.",
+                features: {
+                    chaos: "Platformen erstatter kaos med ét simpelt, digitalt arbejdsrum, der:",
+                    list: [
+                        "Reducerer manuelt arbejde",
+                        "Fjerner gentagne opgaver",
+                        "Holder alt på ét sted",
+                        "Forhindrer information i at gå tabt ved bestyrelsesskift"
+                    ]
+                }
             },
             sticky_scroll: {
                 unified_command: {
@@ -2133,31 +2387,102 @@ export const translations = {
                     desc: "Bygget på moderne infrastruktur, der vokser med dig. Sikkert, hurtigt og altid online."
                 }
             },
-            core_objective: {
-                title: "Boligforeningsplatformen",
-                description: "Denne platform er bygget til at gøre livet lettere for boligforeninger ved at reducere den daglige arbejdsbyrde for bestyrelsesmedlemmer. Mange bestyrelsesmedlemmer er frivillige og bruger i dag alt for meget tid på e-mails, opfølgninger, regneark og manuel koordinering.",
-                quote: "Målet er at lade bestyrelsesmedlemmer bruge mindre tid på administration og mere tid på det, der virkelig betyder noget, at forbedre beboernes oplevelse.",
-                features: {
-                    chaos: "Platformen erstatter kaos med ét simpelt, digitalt arbejdsrum, der:",
-                    list: [
-                        "Reducerer manuelt arbejde",
-                        "Fjerner gentagne opgaver",
-                        "Holder alt på ét sted",
-                        "Forhindrer information i at gå tabt ved bestyrelsesskift"
-                    ]
-                }
-            },
+
             living_index: {
                 tagline: "Suiten",
                 title: "Alt på sin rette plads.",
                 description: "Et komplet operativsystem til din boligforening. Designet til klarhed, hastighed og kontrol.",
                 features: {
-                    communication: { title: "Kommunikation", desc: "Nå alle øjeblikkeligt." },
-                    issues: { title: "Sager", desc: "Løs ting hurtigere." },
-                    archives: { title: "Arkiver", desc: "Sikker opbevaring." },
-                    booking: { title: "Booking", desc: "Ressourcestyring." },
-                    board: { title: "Bestyrelse", desc: "Operativ kommando." },
-                    residents: { title: "Beboere", desc: "Selvbetjeningsportal." }
+                    communication: {
+                        title: "Kommunikation",
+                        desc: "Nå alle øjeblikkeligt.",
+                        details: {
+                            main_title: "Unified Voice.",
+                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            list: [
+                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
+                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
+                                { title: "Message Read Status", desc: "Track who has read important notices." },
+                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
+                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                            ]
+                        }
+                    },
+                    issues: {
+                        title: "Sager",
+                        desc: "Løs ting hurtigere.",
+                        details: {
+                            main_title: "Streamlined Maintenance.",
+                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            list: [
+                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
+                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
+                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
+                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
+                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                            ]
+                        }
+                    },
+                    archives: {
+                        title: "Arkiver",
+                        desc: "Sikker opbevaring.",
+                        details: {
+                            main_title: "Digital Archive.",
+                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            list: [
+                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
+                                { title: "Smart Search", desc: "Find any document instantly." },
+                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
+                                { title: "Version Control", desc: "Always access the latest version." },
+                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                            ]
+                        }
+                    },
+                    booking: {
+                        title: "Booking",
+                        desc: "Ressourcestyring.",
+                        details: {
+                            main_title: "Simple Booking.",
+                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            list: [
+                                { title: "Real-time Availability", desc: "Instant view of free slots." },
+                                { title: "Conflict Free", desc: "System prevents double bookings." },
+                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
+                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
+                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                            ]
+                        }
+                    },
+                    board: {
+                        title: "Bestyrelse",
+                        desc: "Operativ kommando.",
+                        details: {
+                            main_title: "Efficient Board Work.",
+                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            list: [
+                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
+                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
+                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
+                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
+                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                            ]
+                        }
+                    },
+                    residents: {
+                        title: "Beboere",
+                        desc: "Selvbetjeningsportal.",
+                        details: {
+                            main_title: "Empowered Residents.",
+                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            list: [
+                                { title: "Digital Keys", desc: "Phone access to common areas." },
+                                { title: "Payment History", desc: "View fees and payment status." },
+                                { title: "Community Polls", desc: "Participate in decision making." },
+                                { title: "Car Registry", desc: "Manage parking spots and access." },
+                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                            ]
+                        }
+                    }
                 }
             },
             cta: {
