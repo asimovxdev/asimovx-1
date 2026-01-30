@@ -389,14 +389,14 @@ export const translations = {
                         title: "Communication",
                         desc: "Reach everyone instantly.",
                         details: {
-                            main_title: "Unified Voice.",
-                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            main_title: "Unified Voice",
+                            main_desc: "One central channel for official announcements, updates, and urgent alerts ensuring everyone hears the same message at the same time.",
                             list: [
-                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
-                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
-                                { title: "Message Read Status", desc: "Track who has read important notices." },
-                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
-                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                                { title: "Board-to-Resident Updates", desc: "Clear, one-way communication from the board to residents, keeping information reliable and consistent." },
+                                { title: "Targeted Messaging", desc: "Send messages to all residents or only specific buildings or groups when needed." },
+                                { title: "Read Status Tracking", desc: "See who has read important notices, so nothing critical is missed." },
+                                { title: "Push Notifications", desc: "Instant alerts for time-sensitive or emergency updates." },
+                                { title: "Vendor Communication", desc: "Communicate directly with service providers and external partners from the same platform." }
                             ]
                         }
                     },
@@ -404,14 +404,14 @@ export const translations = {
                         title: "Issues",
                         desc: "Resolve problems faster.",
                         details: {
-                            main_title: "Streamlined Maintenance.",
-                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            main_title: "Streamlined Maintenance",
+                            main_desc: "Report, track, and resolve maintenance issues effortlessly while gaining clear insights into overall building health.",
                             list: [
-                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
-                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
-                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
-                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
-                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                                { title: "Easy Submission", desc: "Residents can report issues in seconds, including photos for better clarity." },
+                                { title: "Auto-Categorization", desc: "Issues are automatically routed to the right person or team." },
+                                { title: "Priority Handling", desc: "Mark urgent problems to ensure faster response and action." },
+                                { title: "Status Tracking", desc: "Follow progress in real time—from reported to resolved." },
+                                { title: "Vendor Assignment", desc: "Assign tasks directly to service partners for quick resolution." }
                             ]
                         }
                     },
@@ -419,14 +419,14 @@ export const translations = {
                         title: "Archives",
                         desc: "Secure document storage.",
                         details: {
-                            main_title: "Digital Archive.",
-                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            main_title: "Digital Archive",
+                            main_desc: "A secure and well-organized space for all your association’s important documents—always accessible when needed.",
                             list: [
-                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
-                                { title: "Smart Search", desc: "Find any document instantly." },
-                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
-                                { title: "Version Control", desc: "Always access the latest version." },
-                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                                { title: "Unlimited Storage", desc: "Store meeting minutes, statutes, contracts, and more without limits." },
+                                { title: "Smart Search", desc: "Find any document instantly using powerful search." },
+                                { title: "Granular Permissions", desc: "Control who can view or manage documents—board members and residents have the right access." },
+                                { title: "Version Control", desc: "Always work with the latest version, with full history preserved." },
+                                { title: "Bank-Grade Security", desc: "Your documents are protected with enterprise-level security." }
                             ]
                         }
                     },
@@ -434,14 +434,14 @@ export const translations = {
                         title: "Booking",
                         desc: "Fair shared resources.",
                         details: {
-                            main_title: "Simple Booking.",
-                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            main_title: "Simple Booking",
+                            main_desc: "Effortlessly manage shared spaces and ensure fair access to laundry rooms, guest apartments, and other common facilities.",
                             list: [
-                                { title: "Real-time Availability", desc: "Instant view of free slots." },
-                                { title: "Conflict Free", desc: "System prevents double bookings." },
-                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
-                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
-                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                                { title: "Real-Time Availability", desc: "See available time slots instantly before booking." },
+                                { title: "Conflict-Free", desc: "The system automatically prevents double bookings." },
+                                { title: "Guest Apartments", desc: "Manage reservations and payments for guest rooms in one place." },
+                                { title: "Usage Rules", desc: "Set fair booking limits and quotas for residents." },
+                                { title: "Automated Reminders", desc: "Residents receive reminders before their booking starts." }
                             ]
                         }
                     },
@@ -449,14 +449,14 @@ export const translations = {
                         title: "Board Portal",
                         desc: "Efficient governance.",
                         details: {
-                            main_title: "Efficient Board Work.",
-                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            main_title: "Efficient Board Work",
+                            main_desc: "A private workspace for board members to work efficiently, with a clear overview of tasks, responsibilities, and decisions.",
                             list: [
-                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
-                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
-                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
-                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
-                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                                { title: "Task Manager", desc: "Track tasks, deadlines, and assigned responsibilities in one place." },
+                                { title: "Digital Protocols", desc: "Create and sign meeting minutes digitally—secure and paper-free." },
+                                { title: "Budget Overview", desc: "Monitor budgets, expenses, and financial status at a glance." },
+                                { title: "Vendor Management", desc: "Keep all contracts, suppliers, and contact details centralized." },
+                                { title: "Secure Collaboration", desc: "A private, secure environment for board-only discussions and documents." }
                             ]
                         }
                     },
@@ -464,14 +464,14 @@ export const translations = {
                         title: "Resident App",
                         desc: "Everything in one place.",
                         details: {
-                            main_title: "Empowered Residents.",
-                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            main_title: "Empowered Residents",
+                            main_desc: "Everything residents need to manage their home life—simple, transparent, and always accessible in one app.",
                             list: [
-                                { title: "Digital Keys", desc: "Phone access to common areas." },
-                                { title: "Payment History", desc: "View fees and payment status." },
-                                { title: "Community Polls", desc: "Participate in decision making." },
-                                { title: "Car Registry", desc: "Manage parking spots and access." },
-                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                                { title: "Digital Keys", desc: "Use your phone to access common areas securely." },
+                                { title: "Payment History", desc: "View monthly fees, invoices, and payment status at any time." },
+                                { title: "Community Polls", desc: "Participate in association decisions and voting digitally." },
+                                { title: "Car Registry", desc: "Manage parking permits and vehicle access easily." },
+                                { title: "Information Hub", desc: "Get instant access to rules, guidelines, and important news." }
                             ]
                         }
                     }
