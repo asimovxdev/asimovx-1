@@ -1059,89 +1059,89 @@ export const translations = {
                         title: "Comunicación",
                         desc: "Llegue a todos al instante.",
                         details: {
-                            main_title: "Unified Voice.",
-                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            main_title: "Voz Unificada",
+                            main_desc: "Un canal central para anuncios oficiales, actualizaciones y alertas urgentes, asegurando que todos escuchen el mismo mensaje al mismo tiempo.",
                             list: [
-                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
-                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
-                                { title: "Message Read Status", desc: "Track who has read important notices." },
-                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
-                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                                { title: "Actualizaciones de la Junta a los Residentes", desc: "Comunicación clara y unidireccional de la junta a los residentes, manteniendo la información confiable y consistente." },
+                                { title: "Mensajería Dirigida", desc: "Envíe mensajes a todos los residentes o solo a edificios o grupos específicos cuando sea necesario." },
+                                { title: "Rastreo de Estado de Lectura", desc: "Vea quién ha leído avisos importantes, para que no se pierda nada crítico." },
+                                { title: "Notificaciones Push", desc: "Alertas instantáneas para actualizaciones urgentes o sensibles al tiempo." },
+                                { title: "Comunicación con Proveedores", desc: "Comuníquese directamente con proveedores de servicios y socios externos desde la misma plataforma." }
                             ]
                         }
                     },
                     issues: {
                         title: "Problemas",
-                        desc: "Arregle cosas más rápido.",
+                        desc: "Resuelva problemas más rápido.",
                         details: {
-                            main_title: "Streamlined Maintenance.",
-                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            main_title: "Mantenimiento Simplificado",
+                            main_desc: "Reporte, rastree y resuelva problemas de mantenimiento sin esfuerzo mientras obtiene información clara sobre la salud general del edificio.",
                             list: [
-                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
-                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
-                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
-                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
-                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                                { title: "Envío Fácil", desc: "Los residentes pueden reportar problemas en segundos, incluyendo fotos para mayor claridad." },
+                                { title: "Categorización Automática", desc: "Los problemas se envían automáticamente a la persona o equipo correcto." },
+                                { title: "Manejo Prioritario", desc: "Marque problemas urgentes para garantizar una respuesta y acción más rápidas." },
+                                { title: "Rastreo de Estado", desc: "Siga el progreso en tiempo real, desde reportado hasta resuelto." },
+                                { title: "Asignación de Proveedores", desc: "Asigne tareas directamente a socios de servicio para una resolución rápida." }
                             ]
                         }
                     },
                     archives: {
                         title: "Archivos",
-                        desc: "Almacenamiento seguro.",
+                        desc: "Almacenamiento seguro de documentos.",
                         details: {
-                            main_title: "Digital Archive.",
-                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            main_title: "Archivo Digital",
+                            main_desc: "Un espacio seguro y bien organizado para todos los documentos importantes de su asociación, siempre accesible cuando se necesite.",
                             list: [
-                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
-                                { title: "Smart Search", desc: "Find any document instantly." },
-                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
-                                { title: "Version Control", desc: "Always access the latest version." },
-                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                                { title: "Almacenamiento Ilimitado", desc: "Almacene actas de reuniones, estatutos, contratos y más sin límites." },
+                                { title: "Búsqueda Inteligente", desc: "Encuentre cualquier documento al instante utilizando una búsqueda potente." },
+                                { title: "Permisos Granulares", desc: "Controle quién puede ver o administrar documentos: los miembros de la junta y los residentes tienen el acceso correcto." },
+                                { title: "Control de Versiones", desc: "Trabaje siempre con la última versión, conservando el historial completo." },
+                                { title: "Seguridad de Grado Bancario", desc: "Sus documentos están protegidos con seguridad de nivel empresarial." }
                             ]
                         }
                     },
                     booking: {
                         title: "Reservas",
-                        desc: "Gestión de recursos.",
+                        desc: "Recursos compartidos justos.",
                         details: {
-                            main_title: "Simple Booking.",
-                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            main_title: "Reservas Simples",
+                            main_desc: "Gestione espacios compartidos sin esfuerzo y asegure un acceso justo a lavanderías, apartamentos de invitados y otras instalaciones comunes.",
                             list: [
-                                { title: "Real-time Availability", desc: "Instant view of free slots." },
-                                { title: "Conflict Free", desc: "System prevents double bookings." },
-                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
-                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
-                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                                { title: "Disponibilidad en Tiempo Real", desc: "Vea los horarios disponibles al instante antes de reservar." },
+                                { title: "Sin Conflictos", desc: "El sistema evita automáticamente las reservas dobles." },
+                                { title: "Apartamentos de Invitados", desc: "Gestione reservas y pagos para habitaciones de huéspedes en un solo lugar." },
+                                { title: "Reglas de Uso", desc: "Establezca límites de reserva y cuotas justas para los residentes." },
+                                { title: "Recordatorios Automáticos", desc: "Los residentes reciben recordatorios antes de que comience su reserva." }
                             ]
                         }
                     },
                     board: {
-                        title: "Junta",
-                        desc: "Comando operativo.",
+                        title: "Portal de la Junta",
+                        desc: "Gobernanza eficiente.",
                         details: {
-                            main_title: "Efficient Board Work.",
-                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            main_title: "Trabajo de Junta Eficiente",
+                            main_desc: "Un espacio de trabajo privado para que los miembros de la junta trabajen de manera eficiente, con una visión clara de tareas, responsabilidades y decisiones.",
                             list: [
-                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
-                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
-                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
-                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
-                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                                { title: "Gestor de Tareas", desc: "Rastree tareas, plazos y responsabilidades asignadas en un solo lugar." },
+                                { title: "Protocolos Digitales", desc: "Cree y firme actas de reuniones digitalmente: seguro y sin papel." },
+                                { title: "Resumen de Presupuesto", desc: "Monitoree presupuestos, gastos y estado financiero de un vistazo." },
+                                { title: "Gestión de Proveedores", desc: "Mantenga todos los contratos, proveedores y detalles de contacto centralizados." },
+                                { title: "Colaboración Segura", desc: "Un entorno privado y seguro para discusiones y documentos exclusivos de la junta." }
                             ]
                         }
                     },
                     residents: {
-                        title: "Residentes",
-                        desc: "Portal de autoservicio.",
+                        title: "App para Residentes",
+                        desc: "Todo en un solo lugar.",
                         details: {
-                            main_title: "Empowered Residents.",
-                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            main_title: "Residentes Empoderados",
+                            main_desc: "Todo lo que los residentes necesitan para gestionar su vida en el hogar: simple, transparente y siempre accesible en una sola aplicación.",
                             list: [
-                                { title: "Digital Keys", desc: "Phone access to common areas." },
-                                { title: "Payment History", desc: "View fees and payment status." },
-                                { title: "Community Polls", desc: "Participate in decision making." },
-                                { title: "Car Registry", desc: "Manage parking spots and access." },
-                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                                { title: "Llaves Digitales", desc: "Use su teléfono para acceder a áreas comunes de forma segura." },
+                                { title: "Historial de Pagos", desc: "Vea tarifas mensuales, facturas y estado de pago en cualquier momento." },
+                                { title: "Encuestas Comunitarias", desc: "Participe digitalmente en las decisiones y votaciones de la asociación." },
+                                { title: "Registro de Vehículos", desc: "Gestione permisos de estacionamiento y acceso de vehículos fácilmente." },
+                                { title: "Centro de Información", desc: "Obtenga acceso instantáneo a reglas, pautas y noticias importantes." }
                             ]
                         }
                     }
@@ -1728,89 +1728,89 @@ export const translations = {
                         title: "Kommunikation",
                         desc: "Nå alla direkt.",
                         details: {
-                            main_title: "Unified Voice.",
-                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            main_title: "Enad Röst",
+                            main_desc: "En central kanal för officiella meddelanden, uppdateringar och brådskande varningar som säkerställer att alla hör samma budskap samtidigt.",
                             list: [
-                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
-                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
-                                { title: "Message Read Status", desc: "Track who has read important notices." },
-                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
-                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                                { title: "Uppdateringar från Styrelse till Boende", desc: "Tydlig, enkelriktad kommunikation från styrelsen till de boende, vilket håller informationen pålitlig och konsekvent." },
+                                { title: "Riktade Meddelanden", desc: "Skicka meddelanden till alla boende eller endast specifika byggnader eller grupper vid behov." },
+                                { title: "Lässtatusspårning", desc: "Se vem som har läst viktiga meddelanden, så att inget kritiskt missas." },
+                                { title: "Push-notiser", desc: "Omedelbara varningar för tidskänsliga eller akuta uppdateringar." },
+                                { title: "Leverantörskommunikation", desc: "Kommunicera direkt med tjänsteleverantörer och externa partners från samma plattform." }
                             ]
                         }
                     },
                     issues: {
                         title: "Ärenden",
-                        desc: "Åtgärda saker snabbare.",
+                        desc: "Lös problem snabbare.",
                         details: {
-                            main_title: "Streamlined Maintenance.",
-                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            main_title: "Strömlinjeformat Underhåll",
+                            main_desc: "Rapportera, spåra och lös underhållsproblem enkelt samtidigt som du får tydliga insikter om byggnadens allmänna hälsa.",
                             list: [
-                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
-                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
-                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
-                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
-                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                                { title: "Enkel Inlämning", desc: "Boende kan rapportera problem på sekunder, inklusive bilder för bättre tydlighet." },
+                                { title: "Auto-Kategorisering", desc: "Ärenden dirigeras automatiskt till rätt person eller team." },
+                                { title: "Prioriterad Hantering", desc: "Markera brådskande problem för att säkerställa snabbare respons och åtgärd." },
+                                { title: "Statusspårning", desc: "Följ utvecklingen i realtid—från rapporterad till löst." },
+                                { title: "Leverantörstilldelning", desc: "Tilldela uppgifter direkt till servicepartners för snabb lösning." }
                             ]
                         }
                     },
                     archives: {
                         title: "Arkiv",
-                        desc: "Säker lagring.",
+                        desc: "Säker dokumentlagring.",
                         details: {
-                            main_title: "Digital Archive.",
-                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            main_title: "Digitalt Arkiv",
+                            main_desc: "Ett säkert och välorganiserat utrymme för alla föreningens viktiga dokument—alltid tillgängligt när det behövs.",
                             list: [
-                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
-                                { title: "Smart Search", desc: "Find any document instantly." },
-                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
-                                { title: "Version Control", desc: "Always access the latest version." },
-                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                                { title: "Obegränsad Lagring", desc: "Lagra mötesprotokoll, stadgar, kontrakt och mer utan begränsningar." },
+                                { title: "Smart Sökning", desc: "Hitta vilket dokument som helst direkt med kraftfull sökning." },
+                                { title: "Detaljerade Behörigheter", desc: "Kontrollera vem som kan se eller hantera dokument—styrelsemedlemmar och boende har rätt åtkomst." },
+                                { title: "Versionskontroll", desc: "Arbeta alltid med den senaste versionen, med full historik bevarad." },
+                                { title: "Säkerhet i Bankklass", desc: "Dina dokument är skyddade med säkerhet på företagsnivå." }
                             ]
                         }
                     },
                     booking: {
                         title: "Bokning",
-                        desc: "Resurshantering.",
+                        desc: "Rättvisa delade resurser.",
                         details: {
-                            main_title: "Simple Booking.",
-                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            main_title: "Enkel Bokning",
+                            main_desc: "Hantera gemensamma utrymmen enkelt och säkerställ rättvis tillgång till tvättstugor, gästlägenheter och andra gemensamma faciliteter.",
                             list: [
-                                { title: "Real-time Availability", desc: "Instant view of free slots." },
-                                { title: "Conflict Free", desc: "System prevents double bookings." },
-                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
-                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
-                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                                { title: "Realtidstillgänglighet", desc: "Se lediga tider direkt innan du bokar." },
+                                { title: "Konfliktfri", desc: "Systemet förhindrar automatiskt dubbelbokningar." },
+                                { title: "Gästlägenheter", desc: "Hantera bokningar och betalningar för gästrum på ett ställe." },
+                                { title: "Användningsregler", desc: "Ställ in rättvisa bokningsgränser och kvoter för boende." },
+                                { title: "Automatiserade Påminnelser", desc: "Boende får påminnelser innan deras bokning börjar." }
                             ]
                         }
                     },
                     board: {
-                        title: "Styrelse",
-                        desc: "Operativt kommando.",
+                        title: "Styrelseportal",
+                        desc: "Effektiv styrning.",
                         details: {
-                            main_title: "Efficient Board Work.",
-                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            main_title: "Effektivt Styrelsearbete",
+                            main_desc: "En privat arbetsyta för styrelsemedlemmar att arbeta effektivt, med en tydlig översikt över uppgifter, ansvar och beslut.",
                             list: [
-                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
-                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
-                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
-                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
-                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                                { title: "Uppgiftshanterare", desc: "Spåra uppgifter, deadlines och tilldelade ansvar på ett ställe." },
+                                { title: "Digitala Protokoll", desc: "Skapa och signera mötesprotokoll digitalt—säkert och papperslöst." },
+                                { title: "Budgetöversikt", desc: "Övervaka budgetar, utgifter och finansiell status på ett ögonblick." },
+                                { title: "Leverantörshantering", desc: "Håll alla kontrakt, leverantörer och kontaktuppgifter centraliserade." },
+                                { title: "Säker Samarbet", desc: "En privat, säker miljö för endast styrelsediskussioner och dokument." }
                             ]
                         }
                     },
                     residents: {
-                        title: "Boende",
-                        desc: "Självserviceportal.",
+                        title: "Boendeapp",
+                        desc: "Allt på ett ställe.",
                         details: {
-                            main_title: "Empowered Residents.",
-                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            main_title: "Bemyndigade Boende",
+                            main_desc: "Allt boende behöver för att hantera sitt hemliv—enkelt, transparent och alltid tillgängligt i en app.",
                             list: [
-                                { title: "Digital Keys", desc: "Phone access to common areas." },
-                                { title: "Payment History", desc: "View fees and payment status." },
-                                { title: "Community Polls", desc: "Participate in decision making." },
-                                { title: "Car Registry", desc: "Manage parking spots and access." },
-                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                                { title: "Digitala Nycklar", desc: "Använd din telefon för att få tillgång till gemensamma utrymmen säkert." },
+                                { title: "Betalningshistorik", desc: "Se månadsavgifter, fakturor och betalingsstatus när som helst." },
+                                { title: "Gemenskapspollar", desc: "Delta i föreningens beslut och omröstningar digitalt." },
+                                { title: "Bilregister", desc: "Hantera parkeringstillstånd och fordonstillgång enkelt." },
+                                { title: "Informationshubb", desc: "Få omedelbar tillgång till regler, riktlinjer och viktiga nyheter." }
                             ]
                         }
                     }
@@ -2397,29 +2397,29 @@ export const translations = {
                         title: "Kommunikation",
                         desc: "Nå alle øjeblikkeligt.",
                         details: {
-                            main_title: "Unified Voice.",
-                            main_desc: "Speak once, reach everyone. A dedicated channel for announcements, updates, and urgent alerts.",
+                            main_title: "Forenede Stemme",
+                            main_desc: "En central kanal til officielle meddelelser, opdateringer og hastende advarsler, der sikrer, at alle hører den samme besked på samme tid.",
                             list: [
-                                { title: "Board to Resident Flow", desc: "Official, one-way communication channel." },
-                                { title: "Targeted Messages", desc: "Send to all or selected buildings." },
-                                { title: "Message Read Status", desc: "Track who has read important notices." },
-                                { title: "Push Notifications", desc: "Alerts for urgent time-sensitive updates." },
-                                { title: "Vendor Communication", desc: "Direct communication with external partners." }
+                                { title: "Opdateringer fra Bestyrelse til Beboere", desc: "Klar, envejskommunikation fra bestyrelsen til beboerne, der holder informationen pålidelig og konsekvent." },
+                                { title: "Målrettede Beskeder", desc: "Send beskeder til alle beboere eller kun specifikke bygninger eller grupper efter behov." },
+                                { title: "Læsestatus Sporing", desc: "Se, hvem der har læst vigtige meddelelser, så intet kritisk bliver overset." },
+                                { title: "Push Notifikationer", desc: "Øjeblikkelige advarsler for tidssensitive eller akutte opdateringer." },
+                                { title: "Leverandørkommunikation", desc: "Kommuniker direkte med tjenesteudbydere og eksterne partnere fra samme platform." }
                             ]
                         }
                     },
                     issues: {
                         title: "Sager",
-                        desc: "Løs ting hurtigere.",
+                        desc: "Løs problemer hurtigere.",
                         details: {
-                            main_title: "Streamlined Maintenance.",
-                            main_desc: "Report, track, and resolve issues efficiently. detailed insights into building health.",
+                            main_title: "Strømlinet Vedligeholdelse",
+                            main_desc: "Rapporter, spor og løs vedligeholdelsesproblemer uden besvær, mens du får klar indsigt i bygningens generelle sundhed.",
                             list: [
-                                { title: "Easy Submission", desc: "Report issues in seconds with photos." },
-                                { title: "Auto-Categorization", desc: "Smart routing to the right person." },
-                                { title: "Priority Handling", desc: "Mark urgent issues for immediate action." },
-                                { title: "Status Tracking", desc: "Real-time updates on resolution progress." },
-                                { title: "Vendor Assignment", desc: "Directly assign tasks to partners." }
+                                { title: "Nem Indsendelse", desc: "Beboere kan rapportere problemer på sekunder, inklusive fotos for bedre klarhed." },
+                                { title: "Auto-Kategorisering", desc: "Problemer dirigeres automatisk til den rette person eller team." },
+                                { title: "Prioriteret Håndtering", desc: "Marker hastende problemer for at sikre hurtigere respons og handling." },
+                                { title: "Status Sporing", desc: "Følg fremskridt i realtid—fra rapporteret til løst." },
+                                { title: "Leverandørtildeling", desc: "Tildel opgaver direkte til servicepartnere for hurtig løsning." }
                             ]
                         }
                     },
@@ -2427,59 +2427,59 @@ export const translations = {
                         title: "Arkiver",
                         desc: "Sikker opbevaring.",
                         details: {
-                            main_title: "Digital Archive.",
-                            main_desc: "Secure, accessible, and organized storage for all your association's important documents.",
+                            main_title: "Digitalt Arkiv",
+                            main_desc: "Et sikkert og velorganiseret rum for alle foreningens vigtige dokumenter—altid tilgængeligt, når det er nødvendigt.",
                             list: [
-                                { title: "Unlimited Storage", desc: "Store minutes, statutes, and contracts." },
-                                { title: "Smart Search", desc: "Find any document instantly." },
-                                { title: "Granular Permissions", desc: "Control access for Board vs Residents." },
-                                { title: "Version Control", desc: "Always access the latest version." },
-                                { title: "Bank-Grade Security", desc: "Encrypted storage for sensitive data." }
+                                { title: "Ubegrænset Opbevaring", desc: "Gem møde referater, vedtægter, kontrakter og mere uden begrænsninger." },
+                                { title: "Smart Søgning", desc: "Find ethvert dokument øjeblikkeligt ved hjælp af kraftfuld søgning." },
+                                { title: "Granulære Tilladelser", desc: "Kontroller, hvem der kan se eller administrere dokumenter—bestyrelsesmedlemmer og beboere har den rette adgang." },
+                                { title: "Versionskontrol", desc: "Arbejd altid med den nyeste version, med fuld historik bevaret." },
+                                { title: "Sikkerhed i Bankklasse", desc: "Dine dokumenter er beskyttet med sikkerhed på virksomhedsniveau." }
                             ]
                         }
                     },
                     booking: {
                         title: "Booking",
-                        desc: "Ressourcestyring.",
+                        desc: "Retfærdige delte ressourcer.",
                         details: {
-                            main_title: "Simple Booking.",
-                            main_desc: "Manage shared spaces effortlessly. ensure fair access to laundry, guest rooms, and more.",
+                            main_title: "Enkel Booking",
+                            main_desc: "Administrer fællesarealer uden besvær og sikre retfærdig adgang til vaskerier, gæstelejligheder og andre fælles faciliteter.",
                             list: [
-                                { title: "Real-time Availability", desc: "Instant view of free slots." },
-                                { title: "Conflict Free", desc: "System prevents double bookings." },
-                                { title: "Guest Apartments", desc: "Manage rentals and payments." },
-                                { title: "Usage Rules", desc: "Set fair quotas for residents." },
-                                { title: "Automated Reminders", desc: "Notifications before booking starts." }
+                                { title: "Realtidstilgængelighed", desc: "Se ledige tider øjeblikkeligt før booking." },
+                                { title: "Konfliktfri", desc: "Systemet forhindrer automatisk dobbeltbookinger." },
+                                { title: "Gæstelejligheder", desc: "Administrer reservationer og betalinger for gæsteværelser ét sted." },
+                                { title: "Brugsregler", desc: "Indstil retfærdige bookinggrænser og kvoter for beboere." },
+                                { title: "Automatiske Påmindelser", desc: "Beboere modtager påmindelser, før deres booking starter." }
                             ]
                         }
                     },
                     board: {
-                        title: "Bestyrelse",
-                        desc: "Operativ kommando.",
+                        title: "Bestyrelsesportal",
+                        desc: "Effektiv ledelse.",
                         details: {
-                            main_title: "Efficient Board Work.",
-                            main_desc: "A private workspace to get more done in less time. clear overview of tasks and responsibilities.",
+                            main_title: "Effektivt Bestyrelsesarbejde",
+                            main_desc: "Et privat arbejdsrum for bestyrelsesmedlemmer til at arbejde effektivt, med et klart overblik over opgaver, ansvar og beslutninger.",
                             list: [
-                                { title: "Task Manager", desc: "Track deadlines and responsibilities." },
-                                { title: "Digital Protocol", desc: "Sign meeting minutes digitally." },
-                                { title: "Budget Overview", desc: "Keep track of finances and expenses." },
-                                { title: "Vendor Management", desc: "Centralized contracts and contacts." },
-                                { title: "Secure Collaboration", desc: "Private workspace for members." }
+                                { title: "Opgavestyring", desc: "Spor opgaver, deadlines og tildelt ansvar ét sted." },
+                                { title: "Digitale Protokoller", desc: "Opret og underskriv møde referater digitalt—sikkert og papirløst." },
+                                { title: "Budgetoversigt", desc: "Overvåg budgetter, udgifter og finansiel status med et øjekast." },
+                                { title: "Leverandørstyring", desc: "Hold alle kontrakter, leverandører og kontaktoplysninger centraliseret." },
+                                { title: "Sikkert Samarbejde", desc: "Et privat, sikkert miljø for kun bestyrelsesdiskussioner og dokumenter." }
                             ]
                         }
                     },
                     residents: {
-                        title: "Beboere",
-                        desc: "Selvbetjeningsportal.",
+                        title: "Beboerapp",
+                        desc: "Alt på ét sted.",
                         details: {
-                            main_title: "Empowered Residents.",
-                            main_desc: "Give residents control over their home life. everything they need in one simple app.",
+                            main_title: "Bemyndigede Beboere",
+                            main_desc: "Alt, hvad beboere har brug for til at styre deres hjemliv—enkelt, gennemsigtigt og altid tilgængeligt i én app.",
                             list: [
-                                { title: "Digital Keys", desc: "Phone access to common areas." },
-                                { title: "Payment History", desc: "View fees and payment status." },
-                                { title: "Community Polls", desc: "Participate in decision making." },
-                                { title: "Car Registry", desc: "Manage parking spots and access." },
-                                { title: "Information Hub", desc: "Access guidelines and news instantly." }
+                                { title: "Digitale Nøgler", desc: "Brug din telefon til at få adgang til fællesarealer sikkert." },
+                                { title: "Betalingshistorik", desc: "Se månedlige gebyrer, fakturaer og betalingsstatus til enhver tid." },
+                                { title: "Fællesskabsafstemninger", desc: "Deltag digitalt i foreningens beslutninger og afstemninger." },
+                                { title: "Bilregister", desc: "Administrer parkeringstilladelser og køretøjsadgang nemt." },
+                                { title: "Informationshub", desc: "Få øjeblikkelig adgang til regler, retningslinjer og vigtige nyheder." }
                             ]
                         }
                     }
