@@ -104,7 +104,7 @@ export default function BookDemoModal({ isOpen, onClose }: BookDemoModalProps) {
                                     <div className="mb-8">
                                         <h2 className="text-3xl font-serif text-white mb-2">Book a Demo</h2>
                                         <p className="text-slate-400 text-sm">
-                                            See how our platform can transform your housing association.
+                                            See how BrfNext can transform your housing association.
                                         </p>
                                     </div>
 

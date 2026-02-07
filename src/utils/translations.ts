@@ -361,7 +361,7 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "AsimovX Ecosystem",
-                title: "The Housing Association Platform",
+                title: "BrfNext",
                 description: "This platform is built to make life easier for Swedish housing associations (BRF) by reducing the everyday workload of board members. Many board members are volunteers, and today they spend far too much time on emails, follow-ups, spreadsheets, and manual coordination."
             },
             mission: {
@@ -1042,7 +1042,7 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "Ecosistema AsimovX",
-                title: "La Plataforma de Asociación de Vivienda",
+                title: "BrfNext",
                 description: "Esta plataforma está construida para facilitar la vida de las asociaciones de vivienda suecas (BRF) reduciendo la carga de trabajo diaria de los miembros de la junta. Muchos miembros son voluntarios y hoy pasan far too much time on emails, follow-ups, spreadsheets, and manual coordination."
             },
             mission: {
@@ -1722,7 +1722,7 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "AsimovX Ekosystem",
-                title: "Bostadsrättsföreningens Plattform",
+                title: "BrfNext",
                 description: "Denna plattform är byggd för att underlätta vardagen för svenska bostadsrättsföreningar (BRF) genom att minska den dagliga arbetsbelastningen för styrelsemedlemmar. Många styrelsemedlemmar är frivilliga och lägger idag alldeles för mycket tid på e-post, uppföljningar, kalkylblad och manuell samordning."
             },
             mission: {
@@ -2402,7 +2402,7 @@ export const translations = {
         housing_association: {
             hero: {
                 tagline: "AsimovX Økosystem",
-                title: "Boligforeningsplatformen",
+                title: "BrfNext",
                 description: "Denne platform er bygget til at gøre livet lettere for boligforeninger ved at reducere den daglige arbejdsbyrde for bestyrelsesmedlemmer. Mange bestyrelsesmedlemmer er frivillige og bruger i dag alt for meget tid på e-mails, opfølgninger, regneark og manuel koordinering."
             },
             mission: {

@@ -49,7 +49,7 @@ const Navbar = () => {
                                         className="block p-3 hover:bg-black/5 dark:hover:bg-white/5 rounded-lg transition-colors group/item"
                                     >
                                         <div className="text-sm font-bold text-black dark:text-white mb-1 group-hover/item:text-accent transition-colors">
-                                            Housing Association Tool
+                                            BrfNext
                                         </div>
                                         <div className="text-[10px] text-slate-500 normal-case tracking-normal max-w-[200px]">
                                             Digital workspace for BRF boards and residents
