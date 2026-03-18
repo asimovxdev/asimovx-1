@@ -26,6 +26,13 @@ const TEAM = [
         links: []
     },
     {
+        name: "Rebecca Magnusson",
+        role: "HEAD OF SALES",
+        image: "/images/humans/rebecca.jpeg",
+        bio: "Driving global sales strategy and revenue growth through strategic AI partnerships and enterprise solutions.",
+        links: []
+    },
+    {
         name: "Deepa Subramanian",
         role: "Head of Pre-Sales",
         image: "/images/humans/deepa.jpeg",
@@ -39,13 +46,6 @@ const TEAM = [
         role: "HEAD OF MARKETING",
         image: "/images/humans/vignesh.jpeg",
         bio: "Crafting compelling narratives that showcase the transformative power of our AI solutions.",
-        links: []
-    },
-    {
-        name: "Clifton Benjamin",
-        role: "UI/UX",
-        image: "/images/humans/clifton.jpeg",
-        bio: "Designing intuitive and engaging user experiences.",
         links: []
     },
     {
@@ -71,6 +71,13 @@ const TEAM = [
         role: "FULL STACK",
         image: "/images/humans/suraj.jpg",
         bio: "Expert in building scalable full-stack applications with modern technologies.",
+        links: []
+    },
+    {
+        name: "Clifton Benjamin",
+        role: "UI/UX",
+        image: "/images/humans/clifton.jpeg",
+        bio: "Designing intuitive and engaging user experiences.",
         links: []
     }
 ];
