@@ -21,13 +21,13 @@ export default function Contact() {
         {
             country: t('contact_page.locations.spain'),
             address: ["Calle de Sequillo 20", "Madrid", "Spain 28017"],
-            email: "liju.ps@asimovx.se",
+            email: "liju.prabhavathy@asimovx.se",
             phones: ["+34634266903"]
         },
         {
             country: t('contact_page.locations.latvia'),
             address: ["Burtnieku iela 1", "Riga,", "Latvia, LV-1006"],
-            email: "liju.ps@asimovx.se",
+            email: "liju.prabhavathy@asimovx.se",
             phones: ["+371 22477016"]
         }
     ];
