@@ -26,13 +26,6 @@ const TEAM = [
         links: []
     },
     {
-        name: "Rebecca Magnusson",
-        role: "HEAD OF SALES",
-        image: "/images/humans/rebecca.jpeg",
-        bio: "Driving global sales strategy and revenue growth through strategic AI partnerships and enterprise solutions.",
-        links: []
-    },
-    {
         name: "Deepa Subramanian",
         role: "Head of Pre-Sales",
         image: "/images/humans/deepa.jpeg",
@@ -71,6 +64,20 @@ const TEAM = [
         role: "FULL STACK",
         image: "/images/humans/suraj.jpg",
         bio: "Expert in building scalable full-stack applications with modern technologies.",
+        links: []
+    },
+    {
+        name: "Adithyan M",
+        role: "FULL STACK",
+        image: "/images/humans/adithyan.jpeg",
+        bio: "Building robust and scalable full-stack applications with modern technologies.",
+        links: []
+    },
+    {
+        name: "Bijo K Binoy",
+        role: "FULL STACK",
+        image: "/images/humans/bijo.jpg",
+        bio: "Building robust and scalable full-stack applications with modern technologies.",
         links: []
     },
     {
