@@ -14,6 +14,20 @@ export default function Portfolio() {
 
     const PROJECTS = [
         {
+            title: t('portfolio_page.projects.estrella.title'),
+            category: t('portfolio_page.projects.estrella.category'),
+            image: "/images/portfolio/estrella.png",
+            description: t('portfolio_page.projects.estrella.desc'),
+            link: "https://www.estrella-academy.com/"
+        },
+        {
+            title: t('portfolio_page.projects.lkp.title'),
+            category: t('portfolio_page.projects.lkp.category'),
+            image: "/images/portfolio/lkp.jpeg",
+            description: t('portfolio_page.projects.lkp.desc'),
+            link: "https://www.littleknownplanet.com/"
+        },
+        {
             title: t('portfolio_page.projects.p4dots.title'),
             category: t('portfolio_page.projects.p4dots.category'),
             image: "/images/portfolio/4dotss.jpg",

@@ -327,7 +327,9 @@ export const translations = {
                 sicci: { title: "Sicci", category: "Chamber of Commerce", desc: "Singapore Indian Chamber of Commerce and Industry, supporting business growth and advocacy since 1924." },
                 icai: { title: "I C A I", category: "Professional Organization", desc: "Singapore Chapter of the Institute of Chartered Accountants of India, fostering professional development." },
                 chets: { title: "Chet's Shoes", category: "E-Commerce & Retail", desc: "Family-owned footwear business offering premium work boots, safety shoes, and personalized service since 1947." },
-                finance: { title: "Personal Finance Sweden", category: "Financial Education", desc: "Empowering expats and NRIs in Sweden with knowledge on investing, taxes, and family finance." }
+                finance: { title: "Personal Finance Sweden", category: "Financial Education", desc: "Empowering expats and NRIs in Sweden with knowledge on investing, taxes, and family finance." },
+                estrella: { title: "Estrella Academy", category: "LMS", desc: "A comprehensive Learning Management System for modern education." },
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "An Airbnb-style platform for unique stays and experiences." }
             }
         },
         careers_page: {
@@ -1008,7 +1010,9 @@ export const translations = {
                 sicci: { title: "Sicci", category: "Cámara de Comercio", desc: "Cámara de Comercio e Industria India de Singapur, apoyando el crecimiento empresarial." },
                 icai: { title: "I C A I", category: "Organización Profesional", desc: "Capítulo de Singapur del Instituto de Contadores Públicos de la India." },
                 chets: { title: "Chet's Shoes", category: "E-Commerce y Venta Minorista", desc: "Empresa familiar de calzado que ofrece botas de trabajo premium y zapatos de seguridad." },
-                finance: { title: "Finanzas Personales Suecia", category: "Financial Education", desc: "Empoderando a expatriados y NRI en Suecia con conocimientos sobre inversiones e impuestos." }
+                finance: { title: "Finanzas Personales Suecia", category: "Financial Education", desc: "Empoderando a expatriados y NRI en Suecia con conocimientos sobre inversiones e impuestos." },
+                estrella: { title: "Estrella Academy", category: "LMS", desc: "Un completo sistema de gestión de aprendizaje para la educación moderna." },
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "Una plataforma estilo Airbnb para estancias y experiencias únicas." }
             }
         },
         careers_page: {
@@ -1688,7 +1692,9 @@ export const translations = {
                 sicci: { title: "Sicci", category: "Handelskammare", desc: "Singapore Indian Chamber of Commerce and Industry, stöder affärstillväxt." },
                 icai: { title: "I C A I", category: "Professionell Organisation", desc: "Singapore-kapitlet för Institute of Chartered Accountants of India." },
                 chets: { title: "Chet's Shoes", category: "E-handel och Detaljhandel", desc: "Familjeägt skoföretag som erbjuder premiumarbetsstövlar och skyddsskor." },
-                finance: { title: "Privatekonomi Sverige", category: "Finansiell Utbildning", desc: "Stärka expats och NRI i Sverige med kunskap om investeringar och skatter." }
+                finance: { title: "Privatekonomi Sverige", category: "Finansiell Utbildning", desc: "Stärka expats och NRI i Sverige med kunskap om investeringar och skatter." },
+                estrella: { title: "Estrella Academy", category: "LMS", desc: "Ett omfattande Learning Management System för modern utbildning." },
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "En plattform i Airbnb-stil för unika vistelser och upplevelser." }
             }
         },
         careers_page: {
@@ -2368,7 +2374,9 @@ export const translations = {
                 sicci: { title: "Sicci", category: "Handelskammer", desc: "Singapore Indian Chamber of Commerce and Industry, der støtter forretningsvækst." },
                 icai: { title: "I C A I", category: "Professionel Organisation", desc: "Singapore-afdelingen af Institute of Chartered Accountants of India." },
                 chets: { title: "Chet's Shoes", category: "E-Commerce og Detailhandel", desc: "Familiejet fodtøjsvirksomhed, der tilbyder premium arbejdsstøvler og sikkerhedssko." },
-                finance: { title: "Privatøkonomi Sverige", category: "Finansiel Uddannelse", desc: "Styrkelse af expats og NRI'er i Sverige med viden om investering, skat og familiefinans." }
+                finance: { title: "Privatøkonomi Sverige", category: "Finansiel Uddannelse", desc: "Styrkelse af expats og NRI'er i Sverige med viden om investering, skat og familiefinans." },
+                estrella: { title: "Estrella Academy", category: "LMS", desc: "Et omfattende Learning Management System til moderne uddannelse." },
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "En Airbnb-lignende platform til unikke ophold og oplevelser." }
             }
         },
         careers_page: {
