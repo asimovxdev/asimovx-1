@@ -18,7 +18,7 @@ export default function Portfolio() {
             category: t('portfolio_page.projects.kalyanakath.category'),
             image: "/images/portfolio/kalyanakath.jpg",
             description: t('portfolio_page.projects.kalyanakath.desc'),
-            link: "#"
+            link: "https://invitation-cards-nine.vercel.app/"
         },
         {
             title: t('portfolio_page.projects.estrella.title'),
