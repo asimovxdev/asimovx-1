@@ -329,7 +329,8 @@ export const translations = {
                 chets: { title: "Chet's Shoes", category: "E-Commerce & Retail", desc: "Family-owned footwear business offering premium work boots, safety shoes, and personalized service since 1947." },
                 finance: { title: "Personal Finance Sweden", category: "Financial Education", desc: "Empowering expats and NRIs in Sweden with knowledge on investing, taxes, and family finance." },
                 estrella: { title: "Estrella Academy", category: "LMS", desc: "A comprehensive Learning Management System for modern education." },
-                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "An Airbnb-style platform for unique stays and experiences." }
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "An Airbnb-style platform for unique stays and experiences." },
+                kalyanakath: { title: "Kalyanakath", category: "E-Commerce & Wedding", desc: "A platform for ordering customized wedding cards and related services." }
             }
         },
         careers_page: {
@@ -1012,7 +1013,8 @@ export const translations = {
                 chets: { title: "Chet's Shoes", category: "E-Commerce y Venta Minorista", desc: "Empresa familiar de calzado que ofrece botas de trabajo premium y zapatos de seguridad." },
                 finance: { title: "Finanzas Personales Suecia", category: "Financial Education", desc: "Empoderando a expatriados y NRI en Suecia con conocimientos sobre inversiones e impuestos." },
                 estrella: { title: "Estrella Academy", category: "LMS", desc: "Un completo sistema de gestión de aprendizaje para la educación moderna." },
-                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "Una plataforma estilo Airbnb para estancias y experiencias únicas." }
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "Una plataforma estilo Airbnb para estancias y experiencias únicas." },
+                kalyanakath: { title: "Kalyanakath", category: "E-Commerce y Bodas", desc: "Una plataforma para pedir tarjetas de boda personalizadas y servicios relacionados." }
             }
         },
         careers_page: {
@@ -1694,7 +1696,8 @@ export const translations = {
                 chets: { title: "Chet's Shoes", category: "E-handel och Detaljhandel", desc: "Familjeägt skoföretag som erbjuder premiumarbetsstövlar och skyddsskor." },
                 finance: { title: "Privatekonomi Sverige", category: "Finansiell Utbildning", desc: "Stärka expats och NRI i Sverige med kunskap om investeringar och skatter." },
                 estrella: { title: "Estrella Academy", category: "LMS", desc: "Ett omfattande Learning Management System för modern utbildning." },
-                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "En plattform i Airbnb-stil för unika vistelser och upplevelser." }
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "En plattform i Airbnb-stil för unika vistelser och upplevelser." },
+                kalyanakath: { title: "Kalyanakath", category: "E-Handel & Bröllop", desc: "En plattform för att beställa anpassade bröllopskort och relaterade tjänster." }
             }
         },
         careers_page: {
@@ -2376,7 +2379,8 @@ export const translations = {
                 chets: { title: "Chet's Shoes", category: "E-Commerce og Detailhandel", desc: "Familiejet fodtøjsvirksomhed, der tilbyder premium arbejdsstøvler og sikkerhedssko." },
                 finance: { title: "Privatøkonomi Sverige", category: "Finansiel Uddannelse", desc: "Styrkelse af expats og NRI'er i Sverige med viden om investering, skat og familiefinans." },
                 estrella: { title: "Estrella Academy", category: "LMS", desc: "Et omfattende Learning Management System til moderne uddannelse." },
-                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "En Airbnb-lignende platform til unikke ophold og oplevelser." }
+                lkp: { title: "Little Known Planet", category: "Booking Platform", desc: "En Airbnb-lignende platform til unikke ophold og oplevelser." },
+                kalyanakath: { title: "Kalyanakath", category: "E-Handel & Bryllup", desc: "En platform til bestilling af tilpassede bryllupskort og relaterede tjenester." }
             }
         },
         careers_page: {

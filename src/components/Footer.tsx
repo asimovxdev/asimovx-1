@@ -1,9 +1,9 @@
 import React from 'react';
-import { MapPin, Phone } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const Footer = () => {
-    const { t } = useLanguage();
+    const { t, isIndia } = useLanguage();
 
     return (
         <footer className="bg-background text-foreground pt-44 pb-20 px-6 md:px-24 border-t border-white/5 dark:border-white/5 border-black/5">
@@ -24,17 +24,32 @@ const Footer = () => {
                         <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-black dark:text-white mb-8 block">{t('footer.contact')}</span>
                         <div className="space-y-6">
                             <div>
-                                <h4 className="text-lg font-bold mb-3 text-accent">{t('footer.sweden')}</h4>
-                                <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                    Asimovx Technologies AB<br />
-                                    Snövits väg 64D<br />
-                                    Trelleborg, 231 32<br />
-                                    {t('footer.sweden')}
-                                </p>
-                                <a href="tel:+46733205536" className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-accent transition-colors mt-3">
-                                    <Phone className="w-4 h-4" />
-                                    +46 733205536
-                                </a>
+                                <h4 className="text-lg font-bold mb-3 text-accent">{isIndia ? "India" : t('footer.sweden')}</h4>
+                                {!isIndia && (
+                                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                        Asimovx Technologies AB<br />
+                                        Snövits väg 64D<br />
+                                        Trelleborg, 231 32<br />
+                                        {t('footer.sweden')}
+                                    </p>
+                                )}
+                                {isIndia ? (
+                                    <>
+                                        <a href="mailto:vinil@asimovx.se" className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-accent transition-colors mt-3">
+                                            <Mail className="w-4 h-4" />
+                                            vinil@asimovx.se
+                                        </a>
+                                        <a href="tel:+919740025497" className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-accent transition-colors mt-3">
+                                            <Phone className="w-4 h-4" />
+                                            +91 97400 25497
+                                        </a>
+                                    </>
+                                ) : (
+                                    <a href="tel:+46733205536" className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-accent transition-colors mt-3">
+                                        <Phone className="w-4 h-4" />
+                                        +46 733205536
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </div>

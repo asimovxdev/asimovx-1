@@ -14,6 +14,13 @@ export default function Portfolio() {
 
     const PROJECTS = [
         {
+            title: t('portfolio_page.projects.kalyanakath.title'),
+            category: t('portfolio_page.projects.kalyanakath.category'),
+            image: "/images/portfolio/kalyanakath.jpg",
+            description: t('portfolio_page.projects.kalyanakath.desc'),
+            link: "#"
+        },
+        {
             title: t('portfolio_page.projects.estrella.title'),
             category: t('portfolio_page.projects.estrella.category'),
             image: "/images/portfolio/estrella.png",

@@ -79,13 +79,6 @@ const TEAM = [
         image: "/images/humans/bijo.jpg",
         bio: "Building robust and scalable full-stack applications with modern technologies.",
         links: []
-    },
-    {
-        name: "Clifton Benjamin",
-        role: "UI/UX",
-        image: "/images/humans/clifton.jpeg",
-        bio: "Designing intuitive and engaging user experiences.",
-        links: []
     }
 ];
 
