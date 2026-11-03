@@ -6,9 +6,20 @@ import { COUNTRY_CODES } from '@/constants/phoneCodes';
 interface BookDemoModalProps {
     isOpen: boolean;
     onClose: () => void;
+    productName?: string;
+    productDescription?: string;
+    organizationLabel?: string;
+    organizationPlaceholder?: string;
 }
 
-export default function BookDemoModal({ isOpen, onClose }: BookDemoModalProps) {
+export default function BookDemoModal({
+    isOpen,
+    onClose,
+    productName = "BrfNext",
+    productDescription = "See how BrfNext can transform your housing association.",
+    organizationLabel = "Organization / Association Name",
+    organizationPlaceholder = "e.g. Grand Bistro or BRF Asimov"
+}: BookDemoModalProps) {
     const [formData, setFormData] = useState({
         association: '',
         name: '',
@@ -104,20 +115,20 @@ export default function BookDemoModal({ isOpen, onClose }: BookDemoModalProps) {
                                     <div className="mb-8">
                                         <h2 className="text-3xl font-serif text-white mb-2">Book a Demo</h2>
                                         <p className="text-slate-400 text-sm">
-                                            See how BrfNext can transform your housing association.
+                                            {productDescription}
                                         </p>
                                     </div>
 
                                     <form onSubmit={handleSubmit} className="space-y-4">
                                         <div>
-                                            <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">Association / BRF Name</label>
+                                            <label className="block text-xs font-bold uppercase tracking-widest text-slate-500 mb-1">{organizationLabel}</label>
                                             <input
                                                 type="text"
                                                 required
                                                 value={formData.association}
                                                 onChange={e => setFormData({ ...formData, association: e.target.value })}
                                                 className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-white/30 transition-colors"
-                                                placeholder="e.g. BRF Asimov"
+                                                placeholder={organizationPlaceholder}
                                             />
                                         </div>
 

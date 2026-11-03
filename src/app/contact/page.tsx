@@ -15,7 +15,7 @@ export default function Contact() {
         {
             country: t('contact_page.locations.sweden'),
             address: ["Asimovx Technologies AB", "Snövits väg 64D,", "Trelleborg 231 32 Sweden"],
-            email: "vinil.valsan@asimovx.se",
+            email: "sales@asimovx.se",
             phones: ["+46 722122262", "+46 733205536"]
         },
         {

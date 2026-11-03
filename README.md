@@ -118,4 +118,4 @@ Ready to run Asimovx locally? Follow these steps:
 
 🇸🇪 **Sweden** | 🇪🇸 **Spain** | 🇱🇻 **Latvia**
 
-📧 [vinil.valsan@asimovx.se](mailto:vinil.valsan@asimovx.se)
+📧 [sales@asimovx.se](mailto:sales@asimovx.se)
