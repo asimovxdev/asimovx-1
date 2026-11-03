@@ -35,7 +35,7 @@ export default function NextGenWorkforcePage() {
             {/* HERO — Photorealistic Sky BG + 3D Rotated Multi-Screen Display */}
             {/* EXACT MATCH to uploaded reference (media_1793692041153_24cfec2e.png) */}
             {/* =========================================================== */}
-            <section className="relative overflow-hidden pt-28 sm:pt-32 md:pt-36 pb-16 md:pb-28">
+            <section className="relative overflow-hidden pt-24 sm:pt-32 md:pt-36 pb-14 sm:pb-16 md:pb-28">
                 
                 {/* 1. PHOTOREALISTIC SKY BACKGROUND (Soft, lowered opacity for an ethereal, subtle look) */}
                 <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -102,7 +102,7 @@ export default function NextGenWorkforcePage() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="flex items-center justify-center mb-16"
                     >
-                        {/* Primary Button: Vibrant Violet Pill with Glow & Shimmer */}
+                        {/* Primary Button: Vibrant Violet Pill with Glow & Shimmer (Exact original dimensions restored) */}
                         <button
                             onClick={() => setIsDemoModalOpen(true)}
                             className="relative group px-9 py-4 rounded-full bg-gradient-to-r from-[#7C3AED] via-[#6D28D9] to-[#5B21B6] text-white font-semibold text-[15px] tracking-tight transition-all duration-300 shadow-[0_14px_32px_-6px_rgba(124,58,237,0.55),0_4px_12px_rgba(124,58,237,0.3)] hover:shadow-[0_18px_40px_-4px_rgba(124,58,237,0.65)] hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2.5 overflow-hidden"
@@ -121,11 +121,11 @@ export default function NextGenWorkforcePage() {
                         initial={{ opacity: 0, y: 45, scale: 0.94 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 1.0, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                        className="relative max-w-5xl mx-auto pt-4"
+                        className="relative max-w-5xl mx-auto pt-2 sm:pt-4"
                         style={{ perspective: "1300px" }}
                     >
                         {/* Soft ambient violet shadow pool under the 3D screens */}
-                        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[85%] h-[90px] bg-[#6D28D9]/25 blur-[70px] rounded-full pointer-events-none" />
+                        <div className="absolute -bottom-8 sm:-bottom-10 left-1/2 -translate-x-1/2 w-[85%] h-[70px] sm:h-[90px] bg-[#6D28D9]/25 blur-[50px] sm:blur-[70px] rounded-full pointer-events-none" />
 
                         <div className="relative flex items-center justify-center">
 
@@ -157,37 +157,33 @@ export default function NextGenWorkforcePage() {
                                 </div>
                             </div>
 
-                            {/* MAIN FOREGROUND 3D SCREEN — admin.jpeg (As requested: "the image admin use it like the image a bit 3d rotated") */}
+                            {/* MAIN FOREGROUND 3D SCREEN — admin.jpeg (Responsive 3D: subtle tilt on mobile for crystal clarity, full dynamic tilt on desktop) */}
                             <div
-                                style={{
-                                    transform: "rotateX(12deg) rotateY(-5deg) rotateZ(0.8deg)",
-                                    transformStyle: "preserve-3d"
-                                }}
-                                className="relative z-10 w-full md:w-[88%] lg:w-[92%] rounded-[28px] sm:rounded-[36px] bg-[#0c0d10] p-2.5 sm:p-3.5 pb-0 border border-slate-700/90 shadow-[0_45px_120px_-15px_rgba(15,23,42,0.45),0_25px_60px_-15px_rgba(109,40,217,0.30)] ring-1 ring-white/20 transition-transform duration-700 hover:scale-[1.01]"
+                                className="relative z-10 w-full md:w-[88%] lg:w-[92%] rounded-2xl sm:rounded-[36px] bg-[#0c0d10] p-1.5 sm:p-3.5 pb-0 border border-slate-700/90 shadow-[0_20px_50px_-10px_rgba(15,23,42,0.45),0_15px_30px_-10px_rgba(109,40,217,0.30)] md:shadow-[0_45px_120px_-15px_rgba(15,23,42,0.45),0_25px_60px_-15px_rgba(109,40,217,0.30)] ring-1 ring-white/20 transition-transform duration-700 hover:scale-[1.01] [transform:rotateX(4deg)_rotateY(-2deg)_rotateZ(0.4deg)] md:[transform:rotateX(12deg)_rotateY(-5deg)_rotateZ(0.8deg)] [transform-style:preserve-3d]"
                             >
                                 {/* Tablet Header Bar with Camera Dot */}
-                                <div className="relative h-7 sm:h-8 bg-[#16181d] rounded-t-[20px] sm:rounded-t-[28px] flex items-center justify-between px-4 border-b border-black/50">
-                                    <div className="flex items-center gap-2">
-                                        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56] inline-block" />
-                                        <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e] inline-block" />
-                                        <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f] inline-block" />
+                                <div className="relative h-6 sm:h-8 bg-[#16181d] rounded-t-[14px] sm:rounded-t-[28px] flex items-center justify-between px-2.5 sm:px-4 border-b border-black/50">
+                                    <div className="flex items-center gap-1.5 sm:gap-2">
+                                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#ff5f56] inline-block" />
+                                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#ffbd2e] inline-block" />
+                                        <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-[#27c93f] inline-block" />
                                     </div>
 
                                     {/* Center Camera Notch Dot */}
-                                    <div className="absolute left-1/2 -translate-x-1/2 top-2 flex items-center justify-center">
-                                        <div className="w-2 h-2 rounded-full bg-[#050507] ring-1 ring-white/20" />
+                                    <div className="hidden xs:flex absolute left-1/2 -translate-x-1/2 top-1.5 sm:top-2 items-center justify-center">
+                                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#050507] ring-1 ring-white/20" />
                                     </div>
 
-                                    <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">
-                                        <Lock className="w-2.5 h-2.5 text-[#A78BFA]" />
-                                        <span>admin.asimovx.se/workforce</span>
+                                    <div className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-0.5 rounded-full bg-white/5 border border-white/10 text-[9px] sm:text-[10px] font-mono text-slate-300">
+                                        <Lock className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-[#A78BFA]" />
+                                        <span className="truncate max-w-[125px] sm:max-w-none">admin.asimovx.se</span>
                                     </div>
                                 </div>
 
                                 {/* Main Screen Content: admin.jpeg */}
                                 <div
                                     onClick={() => setSelectedPreviewImg('/images/workforce/admin.jpeg')}
-                                    className="relative bg-slate-950 overflow-hidden cursor-pointer group rounded-b-[20px] sm:rounded-b-[28px]"
+                                    className="relative bg-slate-950 overflow-hidden cursor-pointer group rounded-b-[14px] sm:rounded-b-[28px]"
                                 >
                                     <img
                                         src="/images/workforce/admin.jpeg"
@@ -200,9 +196,9 @@ export default function NextGenWorkforcePage() {
 
                                     {/* Expand Trigger */}
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/95 backdrop-blur px-4 py-2 rounded-xl text-xs font-bold text-slate-900 shadow-2xl flex items-center gap-2">
+                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/95 backdrop-blur px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold text-slate-900 shadow-2xl flex items-center gap-2">
                                             <Maximize2 className="w-3.5 h-3.5 text-[#7C3AED]" />
-                                            <span>Click to inspect high-resolution administration dashboard</span>
+                                            <span>Click to inspect high-resolution dashboard</span>
                                         </div>
                                     </div>
                                 </div>
@@ -214,28 +210,27 @@ export default function NextGenWorkforcePage() {
 
                 </div>
 
-                {/* Trust pill strip — seamless transition into content */}
-                <div className="relative z-10 border-t border-[#DDD6FE]/60 bg-white/80 backdrop-blur-md mt-16">
-                    <div className="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-slate-600 font-medium">
-                        <span className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[#8B5CF6]" />
-                            Initial Market: <strong className="text-slate-800 ml-1">Sweden (SEK)</strong>
-                        </span>
-                        <span className="text-[#C4B5FD]">|</span>
-                        <span className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[#7C3AED]" />
-                            Timezone: <strong className="text-slate-800 ml-1">Europe/Stockholm</strong>
-                        </span>
-                        <span className="text-[#C4B5FD]">|</span>
-                        <span className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[#6D28D9]" />
-                            Multi-tenant with <strong className="text-slate-800 ml-1">backend-enforced tenant isolation</strong>
-                        </span>
-                        <span className="text-[#C4B5FD]">|</span>
-                        <span className="flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-[#5B21B6]" />
-                            Languages: <strong className="text-slate-800 ml-1">English & Swedish</strong>
-                        </span>
+                {/* Trust pill strip — clean responsive grid on mobile, sleek inline bar on desktop */}
+                <div className="relative z-10 border-t border-[#DDD6FE]/60 bg-white/85 backdrop-blur-md mt-12 sm:mt-16">
+                    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4">
+                        <div className="grid grid-cols-2 md:flex md:flex-wrap items-center justify-center gap-2 sm:gap-6 lg:gap-8 text-[11px] sm:text-xs text-slate-600 font-medium">
+                            <div className="flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-0 rounded-xl bg-violet-50/50 md:bg-transparent border border-violet-100/70 md:border-0 text-center">
+                                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#8B5CF6] shrink-0" />
+                                <span>Market: <strong className="text-slate-800">Sweden (SEK)</strong></span>
+                            </div>
+                            <div className="flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-0 rounded-xl bg-violet-50/50 md:bg-transparent border border-violet-100/70 md:border-0 text-center">
+                                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#7C3AED] shrink-0" />
+                                <span>TZ: <strong className="text-slate-800">Stockholm</strong></span>
+                            </div>
+                            <div className="flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-0 rounded-xl bg-violet-50/50 md:bg-transparent border border-violet-100/70 md:border-0 text-center col-span-2 md:col-auto">
+                                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#6D28D9] shrink-0" />
+                                <span>Security: <strong className="text-slate-800">Isolated Multi-Tenant</strong></span>
+                            </div>
+                            <div className="flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 sm:p-0 rounded-xl bg-violet-50/50 md:bg-transparent border border-violet-100/70 md:border-0 text-center col-span-2 md:col-auto">
+                                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#5B21B6] shrink-0" />
+                                <span>Languages: <strong className="text-slate-800">English & Swedish</strong></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -274,8 +269,7 @@ export default function NextGenWorkforcePage() {
                         <div className="rounded-2xl border border-[#EDE9FE] bg-white overflow-hidden shadow-[0_4px_18px_-4px_rgba(109,40,217,0.1)] hover:shadow-[0_12px_32px_-6px_rgba(109,40,217,0.18)] hover:border-[#C4B5FD] transition-all group">
                             <div
                                 onClick={() => setSelectedPreviewImg('/images/workforce/rest.jpeg')}
-                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#FAF9FF]"
-                                style={{ height: "180px" }}
+                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#FAF9FF] h-[160px] xs:h-[180px]"
                             >
                                 <img
                                     src="/images/workforce/rest.jpeg"
@@ -283,8 +277,8 @@ export default function NextGenWorkforcePage() {
                                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
-                            <div className="p-5">
-                                <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#7C3AED] mb-1.5">Live Restaurant Operations</p>
+                            <div className="p-4 sm:p-5">
+                                <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#7C3AED] mb-1">Live Restaurant Operations</p>
                                 <h3 className="font-bold text-slate-900 text-sm leading-snug">Restaurant Workforce Platform</h3>
                                 <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">Multi-department operational workspace connecting Front-of-House, Bar, and Kitchen.</p>
                             </div>
@@ -294,20 +288,19 @@ export default function NextGenWorkforcePage() {
                         <div className="rounded-2xl border-2 border-[#7C3AED] bg-white overflow-hidden shadow-[0_8px_32px_-6px_rgba(109,40,217,0.25)] group">
                             <div
                                 onClick={() => setSelectedPreviewImg('/images/workforce/sheduling.jpeg')}
-                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#F5F3FF]"
-                                style={{ height: "180px" }}
+                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#F5F3FF] h-[160px] xs:h-[180px]"
                             >
                                 <img
                                     src="/images/workforce/sheduling.jpeg"
                                     alt="Weekly Scheduling Grid"
                                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                                 />
-                                <div className="absolute top-2.5 right-2.5 bg-[#7C3AED] text-white text-[9px] font-bold px-2.5 py-1 rounded-full">
+                                <div className="absolute top-2.5 right-2.5 bg-[#7C3AED] text-white text-[9px] font-bold px-2.5 py-1 rounded-full shadow-sm">
                                     Core Feature
                                 </div>
                             </div>
-                            <div className="p-5">
-                                <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#7C3AED] mb-1.5">Weekly Scheduling</p>
+                            <div className="p-4 sm:p-5">
+                                <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#7C3AED] mb-1">Weekly Scheduling</p>
                                 <h3 className="font-bold text-slate-900 text-sm leading-snug">Department Scheduling Grid</h3>
                                 <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">Weekly rosters across Kitchen, Bar, Service, Cleaning — with full overnight shift support.</p>
                             </div>
@@ -317,8 +310,7 @@ export default function NextGenWorkforcePage() {
                         <div className="rounded-2xl border border-[#EDE9FE] bg-white overflow-hidden shadow-[0_4px_18px_-4px_rgba(109,40,217,0.1)] hover:shadow-[0_12px_32px_-6px_rgba(109,40,217,0.18)] hover:border-[#C4B5FD] transition-all group">
                             <div
                                 onClick={() => setSelectedPreviewImg('/images/workforce/emp.jpeg')}
-                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#FAF9FF]"
-                                style={{ height: "180px" }}
+                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#FAF9FF] h-[160px] xs:h-[180px]"
                             >
                                 <img
                                     src="/images/workforce/emp.jpeg"
@@ -326,8 +318,8 @@ export default function NextGenWorkforcePage() {
                                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
-                            <div className="p-5">
-                                <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#7C3AED] mb-1.5">Employee Portal</p>
+                            <div className="p-4 sm:p-5">
+                                <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#7C3AED] mb-1">Employee Portal</p>
                                 <h3 className="font-bold text-slate-900 text-sm leading-snug">Mobile Self-Service Portal</h3>
                                 <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">View schedules, clock in/out, log breaks, request leave and set availability — from any device.</p>
                             </div>
@@ -366,8 +358,31 @@ export default function NextGenWorkforcePage() {
                         </p>
                     </div>
 
+                    {/* Mobile Quick-Step Segmented Bar (Mobile phones only; iPad & Desktop show full grid) */}
+                    <div className="md:hidden flex items-center gap-1.5 p-1 rounded-2xl bg-white border border-[#DDD6FE] shadow-sm mb-6 overflow-x-auto no-scrollbar">
+                        {[
+                            { num: "01", name: "Super Admin" },
+                            { num: "02", name: "Owner" },
+                            { num: "03", name: "Manager" },
+                            { num: "04", name: "Employee" }
+                        ].map((step, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setActiveStep(idx)}
+                                className={`flex-1 min-w-[76px] py-2 px-1.5 rounded-xl text-center text-[10px] font-mono font-bold transition-all ${
+                                    activeStep === idx
+                                        ? "bg-[#7C3AED] text-white shadow-md shadow-violet-500/25"
+                                        : "text-slate-600 hover:bg-[#F5F3FF]"
+                                }`}
+                            >
+                                <span className="block text-[9px] opacity-80">{step.num}</span>
+                                <span className="truncate block">{step.name}</span>
+                            </button>
+                        ))}
+                    </div>
+
                     {/* CONNECTED INTERACTIVE PIPELINE CARDS */}
-                    <div className="relative mb-12">
+                    <div className="relative mb-8 sm:mb-12">
                         
                         {/* Glowing connector beam behind the cards (desktop) */}
                         <div className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#7C3AED]/20 via-[#8B5CF6]/40 to-[#4C1D95]/20 pointer-events-none z-0">
@@ -378,7 +393,7 @@ export default function NextGenWorkforcePage() {
                         </div>
 
                         {/* 4 Interactive Step Cards */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 relative z-10">
                             {[
                                 {
                                     step: "Step 1",
@@ -433,11 +448,11 @@ export default function NextGenWorkforcePage() {
                                         key={i}
                                         onClick={() => setActiveStep(i)}
                                         onMouseEnter={() => setActiveStep(i)}
-                                        whileHover={{ y: -6 }}
+                                        whileHover={{ y: -4 }}
                                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                                        className={`rounded-3xl p-6 flex flex-col justify-between cursor-pointer transition-all duration-300 relative ${
+                                        className={`rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between cursor-pointer transition-all duration-300 relative ${
                                             isActive
-                                                ? "bg-gradient-to-b from-white via-[#FAF9FF] to-white border-2 border-[#7C3AED] shadow-[0_20px_45px_-10px_rgba(124,58,237,0.22)] ring-4 ring-[#7C3AED]/10 -translate-y-2"
+                                                ? "bg-gradient-to-b from-white via-[#FAF9FF] to-white border-2 border-[#7C3AED] shadow-[0_16px_36px_-10px_rgba(124,58,237,0.22)] ring-4 ring-[#7C3AED]/10 -translate-y-1 sm:-translate-y-2"
                                                 : "bg-white/90 backdrop-blur-sm border border-[#EDE9FE] shadow-[0_4px_20px_-4px_rgba(109,40,217,0.06)] hover:border-[#C4B5FD] hover:shadow-[0_12px_32px_-6px_rgba(109,40,217,0.12)]"
                                         }`}
                                     >
@@ -448,12 +463,12 @@ export default function NextGenWorkforcePage() {
 
                                         <div>
                                             {/* Header with Step Node & Icon */}
-                                            <div className="flex items-center justify-between mb-5">
+                                            <div className="flex items-center justify-between mb-4 sm:mb-5">
                                                 <div className="flex items-center gap-2">
-                                                    <span className={`w-8 h-8 rounded-xl flex items-center justify-center font-mono font-bold text-xs text-white shadow-sm bg-gradient-to-br ${item.gradient}`}>
+                                                    <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center font-mono font-bold text-xs text-white shadow-sm bg-gradient-to-br ${item.gradient}`}>
                                                         {item.stepNum}
                                                     </span>
-                                                    <span className={`text-[11px] font-mono font-semibold px-2.5 py-0.5 rounded-full border ${
+                                                    <span className={`text-[10px] sm:text-[11px] font-mono font-semibold px-2 sm:px-2.5 py-0.5 rounded-full border ${
                                                         isActive 
                                                             ? "bg-[#F5F3FF] border-[#DDD6FE] text-[#6D28D9]" 
                                                             : "bg-slate-50 border-slate-200 text-slate-500"
@@ -462,7 +477,7 @@ export default function NextGenWorkforcePage() {
                                                     </span>
                                                 </div>
 
-                                                <div className={`w-9 h-9 rounded-xl flex items-center justify-center transition-colors ${
+                                                <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors ${
                                                     isActive 
                                                         ? "bg-[#7C3AED] text-white shadow-md shadow-violet-500/30" 
                                                         : "bg-[#F5F3FF] text-[#7C3AED] border border-[#EDE9FE]"
@@ -472,7 +487,7 @@ export default function NextGenWorkforcePage() {
                                             </div>
 
                                             {/* Title & Description */}
-                                            <h3 className={`font-bold text-base leading-snug mb-2.5 transition-colors ${
+                                            <h3 className={`font-bold text-sm sm:text-base leading-snug mb-2 sm:mb-2.5 transition-colors ${
                                                 isActive ? "text-[#5B21B6]" : "text-[#0A0D14]"
                                             }`}>
                                                 {item.role}
@@ -483,8 +498,8 @@ export default function NextGenWorkforcePage() {
                                         </div>
 
                                         {/* Bottom Tag Bar */}
-                                        <div className="pt-4 mt-6 border-t border-[#F5F3FF] flex items-center justify-between">
-                                            <div className="flex items-center gap-1.5 text-[11px] font-mono font-semibold text-[#6D28D9]">
+                                        <div className="pt-3.5 sm:pt-4 mt-4 sm:mt-6 border-t border-[#F5F3FF] flex items-center justify-between">
+                                            <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono font-semibold text-[#6D28D9]">
                                                 <CheckCircle2 className={`w-3.5 h-3.5 ${isActive ? "text-[#7C3AED]" : "text-[#A78BFA]"}`} />
                                                 <span>{item.tag}</span>
                                             </div>
@@ -499,7 +514,7 @@ export default function NextGenWorkforcePage() {
                     </div>
 
                     {/* LIVE WORKFLOW INSPECTOR CONSOLE (Animated dynamic deep-dive panel) */}
-                    <div className="rounded-3xl bg-white border border-[#DDD6FE]/80 shadow-[0_16px_50px_-12px_rgba(109,40,217,0.12)] p-6 md:p-8 relative overflow-hidden">
+                    <div className="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD6FE]/80 shadow-[0_16px_50px_-12px_rgba(109,40,217,0.12)] p-4 sm:p-6 md:p-8 relative overflow-hidden">
                         
                         {/* Top glowing ambient accent bar */}
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#4C1D95]" />
@@ -620,12 +635,11 @@ export default function NextGenWorkforcePage() {
                             initial={{ opacity: 0, y: 24 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="rounded-3xl bg-[#FAF9FF] border border-[#DDD6FE] overflow-hidden shadow-[0_6px_28px_-6px_rgba(109,40,217,0.12)] hover:shadow-[0_14px_40px_-8px_rgba(109,40,217,0.2)] transition-all"
+                            className="rounded-2xl sm:rounded-3xl bg-[#FAF9FF] border border-[#DDD6FE] overflow-hidden shadow-[0_6px_28px_-6px_rgba(109,40,217,0.12)] hover:shadow-[0_14px_40px_-8px_rgba(109,40,217,0.2)] transition-all"
                         >
                             <div
                                 onClick={() => setSelectedPreviewImg('/images/workforce/sheduling.jpeg')}
-                                className="relative cursor-pointer group overflow-hidden"
-                                style={{ height: "260px" }}
+                                className="relative cursor-pointer group overflow-hidden h-[180px] xs:h-[220px] sm:h-[260px]"
                             >
                                 <img
                                     src="/images/workforce/sheduling.jpeg"
@@ -633,14 +647,14 @@ export default function NextGenWorkforcePage() {
                                     className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-600"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#4C1D95]/30 via-transparent to-transparent" />
-                                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full border border-[#DDD6FE] text-[10px] font-mono font-bold text-[#5B21B6] flex items-center gap-1.5">
+                                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-[#DDD6FE] text-[9px] sm:text-[10px] font-mono font-bold text-[#5B21B6] flex items-center gap-1.5 shadow-sm">
                                     <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] animate-pulse" />
-                                    Weekly Department Scheduling Grid
+                                    <span>Weekly Scheduling Grid</span>
                                 </div>
                             </div>
-                            <div className="p-7">
-                                <h3 className="text-lg font-extrabold text-[#0A0A0A] mb-2.5">Weekly Department-Based Scheduling</h3>
-                                <ul className="space-y-2 text-xs text-slate-600">
+                            <div className="p-5 sm:p-7">
+                                <h3 className="text-base sm:text-lg font-extrabold text-[#0A0A0A] mb-2 sm:mb-2.5">Weekly Department-Based Scheduling</h3>
+                                <ul className="space-y-2 text-[11px] sm:text-xs text-slate-600">
                                     <li className="flex items-start gap-2.5">
                                         <CheckCircle2 className="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5" />
                                         <span>Drag-and-drop or grid scheduling grouped by department (Kitchen, Bar, Service, Cleaning, etc.).</span>
@@ -654,7 +668,7 @@ export default function NextGenWorkforcePage() {
                                         <span>Draft, Published, and Archived workflow states with audit tracking.</span>
                                     </li>
                                 </ul>
-                                <div className="flex flex-wrap gap-2 mt-5">
+                                <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
                                     {["Kitchen", "Bar", "Service", "Cleaning"].map(t => (
                                         <span key={t} className="px-2.5 py-1 rounded-md bg-white border border-[#DDD6FE] text-[10px] font-mono text-[#5B21B6] font-semibold">{t}</span>
                                     ))}
@@ -668,12 +682,11 @@ export default function NextGenWorkforcePage() {
                             initial={{ opacity: 0, y: 24 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="rounded-3xl bg-[#FAF9FF] border border-[#DDD6FE] overflow-hidden shadow-[0_6px_28px_-6px_rgba(109,40,217,0.12)] hover:shadow-[0_14px_40px_-8px_rgba(109,40,217,0.2)] transition-all"
+                            className="rounded-2xl sm:rounded-3xl bg-[#FAF9FF] border border-[#DDD6FE] overflow-hidden shadow-[0_6px_28px_-6px_rgba(109,40,217,0.12)] hover:shadow-[0_14px_40px_-8px_rgba(109,40,217,0.2)] transition-all"
                         >
                             <div
                                 onClick={() => setSelectedPreviewImg('/images/workforce/admin.jpeg')}
-                                className="relative cursor-pointer group overflow-hidden"
-                                style={{ height: "260px" }}
+                                className="relative cursor-pointer group overflow-hidden h-[180px] xs:h-[220px] sm:h-[260px]"
                             >
                                 <img
                                     src="/images/workforce/admin.jpeg"
@@ -681,14 +694,14 @@ export default function NextGenWorkforcePage() {
                                     className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-600"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#4C1D95]/30 via-transparent to-transparent" />
-                                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full border border-[#DDD6FE] text-[10px] font-mono font-bold text-[#5B21B6] flex items-center gap-1.5">
+                                <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border border-[#DDD6FE] text-[9px] sm:text-[10px] font-mono font-bold text-[#5B21B6] flex items-center gap-1.5 shadow-sm">
                                     <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] animate-pulse" />
-                                    Administration Control Center
+                                    <span>Administration Control</span>
                                 </div>
                             </div>
-                            <div className="p-7">
-                                <h3 className="text-lg font-extrabold text-[#0A0A0A] mb-2.5">Timesheet Reconciliation & Payroll Export</h3>
-                                <ul className="space-y-2 text-xs text-slate-600">
+                            <div className="p-5 sm:p-7">
+                                <h3 className="text-base sm:text-lg font-extrabold text-[#0A0A0A] mb-2 sm:mb-2.5">Timesheet Reconciliation & Payroll Export</h3>
+                                <ul className="space-y-2 text-[11px] sm:text-xs text-slate-600">
                                     <li className="flex items-start gap-2.5">
                                         <CheckCircle2 className="w-4 h-4 text-[#7C3AED] shrink-0 mt-0.5" />
                                         <span>Side-by-side comparison of planned vs. actual minutes, unpaid break deductions, and calculated payable time.</span>
@@ -702,7 +715,7 @@ export default function NextGenWorkforcePage() {
                                         <span>Payroll-ready export generation (CSV/Excel) for Swedish payroll systems.</span>
                                     </li>
                                 </ul>
-                                <div className="flex flex-wrap gap-2 mt-5">
+                                <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-5">
                                     {["CSV Export", "Excel Ready", "OB Rates", "Fortnox & Visma"].map(t => (
                                         <span key={t} className="px-2.5 py-1 rounded-md bg-white border border-[#DDD6FE] text-[10px] font-mono text-[#5B21B6] font-semibold">{t}</span>
                                     ))}
@@ -743,11 +756,10 @@ export default function NextGenWorkforcePage() {
                             transition={{ duration: 0.45 }}
                             className="rounded-2xl bg-white border border-[#EDE9FE] overflow-hidden shadow-[0_4px_16px_-4px_rgba(109,40,217,0.08)] hover:border-[#A78BFA] hover:shadow-[0_12px_32px_-8px_rgba(109,40,217,0.18)] transition-all flex flex-col"
                         >
-                            <div className="p-4 pb-0">
+                            <div className="p-3.5 sm:p-4 pb-0">
                                 <div
                                     onClick={() => setSelectedPreviewImg('/images/workforce/emp.jpeg')}
-                                    className="relative overflow-hidden rounded-xl cursor-pointer group bg-[#FAF9FF] border border-[#EDE9FE]"
-                                    style={{ height: "140px" }}
+                                    className="relative overflow-hidden rounded-xl cursor-pointer group bg-[#FAF9FF] border border-[#EDE9FE] h-[130px] sm:h-[140px]"
                                 >
                                     <img
                                         src="/images/workforce/emp.jpeg"
@@ -756,17 +768,17 @@ export default function NextGenWorkforcePage() {
                                     />
                                 </div>
                             </div>
-                            <div className="p-6 flex flex-col gap-3 flex-1">
-                                <div className="w-9 h-9 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED]">
+                            <div className="p-4 sm:p-6 flex flex-col gap-2.5 sm:gap-3 flex-1">
+                                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED]">
                                     <Clock className="w-4 h-4" />
                                 </div>
-                                <h3 className="font-bold text-slate-900 text-base">Digital Time & Attendance</h3>
+                                <h3 className="font-bold text-slate-900 text-sm sm:text-base">Digital Time & Attendance</h3>
                                 <p className="text-xs text-slate-600 leading-relaxed flex-1">
                                     Live clock-in, break start/end, and clock-out tracking. Strict preservation of raw attendance alongside scheduled shifts — scheduled shifts are never overwritten.
                                 </p>
-                                <div className="pt-4 border-t border-[#F5F3FF] text-xs font-bold text-[#5B21B6] flex items-center gap-1.5">
+                                <div className="pt-3 sm:pt-4 border-t border-[#F5F3FF] text-[11px] sm:text-xs font-bold text-[#5B21B6] flex items-center gap-1.5">
                                     <ShieldCheck className="w-3.5 h-3.5 text-[#7C3AED]" />
-                                    No Overwrites · Raw Preservation
+                                    <span>No Overwrites · Raw Preservation</span>
                                 </div>
                             </div>
                         </motion.div>
@@ -779,29 +791,28 @@ export default function NextGenWorkforcePage() {
                             transition={{ duration: 0.45, delay: 0.08 }}
                             className="rounded-2xl bg-white border-2 border-[#7C3AED] overflow-hidden shadow-[0_8px_28px_-6px_rgba(109,40,217,0.25)] flex flex-col"
                         >
-                            <div className="p-4 pb-0">
+                            <div className="p-3.5 sm:p-4 pb-0">
                                 <div
                                     onClick={() => setSelectedPreviewImg('/images/workforce/rest.jpeg')}
-                                    className="relative overflow-hidden rounded-xl cursor-pointer group bg-[#F5F3FF] border border-[#DDD6FE]"
-                                    style={{ height: "140px" }}
+                                    className="relative overflow-hidden rounded-xl cursor-pointer group bg-[#F5F3FF] border border-[#DDD6FE] h-[130px] sm:h-[140px]"
                                 >
                                     <img
                                         src="/images/workforce/rest.jpeg"
                                         alt="Availability & Leave Management"
                                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                                     />
-                                    <div className="absolute top-2 right-2 bg-[#7C3AED] text-white text-[9px] font-bold px-2 py-0.5 rounded-full">Most Used</div>
+                                    <div className="absolute top-2 right-2 bg-[#7C3AED] text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow-sm">Most Used</div>
                                 </div>
                             </div>
-                            <div className="p-6 flex flex-col gap-3 flex-1">
-                                <div className="w-9 h-9 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED]">
+                            <div className="p-4 sm:p-6 flex flex-col gap-2.5 sm:gap-3 flex-1">
+                                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED]">
                                     <UserCheck className="w-4 h-4" />
                                 </div>
-                                <h3 className="font-bold text-slate-900 text-base">Availability & Leave Management</h3>
+                                <h3 className="font-bold text-slate-900 text-sm sm:text-base">Availability & Leave Management</h3>
                                 <p className="text-xs text-slate-600 leading-relaxed flex-1">
                                     Employee availability submissions (preferred/unavailable dates and times). Formal leave requests (vacation, sick leave, parental leave) with approval pipelines.
                                 </p>
-                                <div className="pt-4 border-t border-[#EDE9FE] flex flex-wrap gap-1.5">
+                                <div className="pt-3 sm:pt-4 border-t border-[#EDE9FE] flex flex-wrap gap-1.5">
                                     {["Vacation", "Sick Leave", "Parental Leave"].map(t => (
                                         <span key={t} className="px-2 py-0.5 rounded bg-[#F5F3FF] border border-[#DDD6FE] text-[9px] font-mono text-[#5B21B6] font-bold">{t}</span>
                                     ))}
@@ -817,39 +828,37 @@ export default function NextGenWorkforcePage() {
                             transition={{ duration: 0.45, delay: 0.16 }}
                             className="rounded-2xl bg-white border border-[#EDE9FE] overflow-hidden shadow-[0_4px_16px_-4px_rgba(109,40,217,0.08)] hover:border-[#A78BFA] hover:shadow-[0_12px_32px_-8px_rgba(109,40,217,0.18)] transition-all flex flex-col"
                         >
-                            <div className="p-4 pb-0">
-                                <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#4C1D95] to-[#6D28D9] border border-[#6D28D9] flex items-center justify-center"
-                                    style={{ height: "140px" }}
-                                >
-                                    <div className="relative w-20 h-20 flex items-center justify-center"
+                            <div className="p-3.5 sm:p-4 pb-0">
+                                <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#4C1D95] to-[#6D28D9] border border-[#6D28D9] flex items-center justify-center h-[130px] sm:h-[140px]">
+                                    <div className="relative w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center"
                                         style={{ transformStyle: "preserve-3d", transform: "rotateX(30deg)" }}
                                     >
-                                        <div className="absolute w-20 h-20 rounded-full border border-[#A78BFA]/50" />
-                                        <div className="absolute w-14 h-14 rounded-full border border-[#C4B5FD]/30 border-dashed" />
+                                        <div className="absolute w-16 h-16 sm:w-20 sm:h-20 rounded-full border border-[#A78BFA]/50" />
+                                        <div className="absolute w-11 h-11 sm:w-14 sm:h-14 rounded-full border border-[#C4B5FD]/30 border-dashed" />
                                         <motion.div
                                             animate={{ rotate: 360 }}
                                             transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
                                             className="absolute inset-0"
                                         >
-                                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#A78BFA] ring-2 ring-[#DDD6FE]/50 shadow-[0_0_12px_rgba(167,139,250,0.8)]" />
+                                            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#A78BFA] ring-2 ring-[#DDD6FE]/50 shadow-[0_0_12px_rgba(167,139,250,0.8)]" />
                                         </motion.div>
-                                        <div className="relative z-10 w-8 h-8 rounded-full bg-white/15 border border-white/30 flex items-center justify-center">
-                                            <Database className="w-4 h-4 text-white" />
+                                        <div className="relative z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/15 border border-white/30 flex items-center justify-center">
+                                            <Database className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                                         </div>
                                     </div>
-                                    <div className="absolute bottom-3 right-3 text-[9px] font-mono font-bold text-white/70">Strict Tenant Isolation</div>
+                                    <div className="absolute bottom-2.5 right-2.5 text-[9px] font-mono font-bold text-white/70">Strict Tenant Isolation</div>
                                 </div>
                             </div>
-                            <div className="p-6 flex flex-col gap-3 flex-1">
-                                <div className="w-9 h-9 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED]">
+                            <div className="p-4 sm:p-6 flex flex-col gap-2.5 sm:gap-3 flex-1">
+                                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED]">
                                     <Lock className="w-4 h-4" />
                                 </div>
-                                <h3 className="font-bold text-slate-900 text-base">Multi-Tenant Security & Localization</h3>
+                                <h3 className="font-bold text-slate-900 text-sm sm:text-base">Multi-Tenant Security & Localization</h3>
                                 <p className="text-xs text-slate-600 leading-relaxed flex-1">
                                     Strict backend-enforced tenant isolation. Built-in multi-language support (Swedish sv and English en).
                                 </p>
-                                <div className="pt-4 border-t border-[#F5F3FF] text-xs font-bold text-[#5B21B6] flex items-center justify-between">
-                                    <span>Swedish (sv) & English (en)</span>
+                                <div className="pt-3 sm:pt-4 border-t border-[#F5F3FF] text-[11px] sm:text-xs font-bold text-[#5B21B6] flex items-center justify-between">
+                                    <span>Swedish & English</span>
                                     <span className="text-[#6D28D9]">Strict Isolation</span>
                                 </div>
                             </div>
@@ -893,14 +902,14 @@ export default function NextGenWorkforcePage() {
                         </div>
 
                         {/* Specification info cards */}
-                        <div className="space-y-4">
+                        <div className="space-y-3 sm:space-y-4">
                             {[
                                 { label: "Initial Market", value: "Sweden (SEK) — Timezone: Europe/Stockholm — Multi-language: English & Swedish", icon: <Globe className="w-4 h-4" /> },
                                 { label: "Core Product Architecture", value: "Platform → Organization (Tenant) → Location → Department → Employee. Multi-tenant modular monolith with backend-enforced tenant isolation.", icon: <Layers className="w-4 h-4" /> },
                                 { label: "Specification Reference", value: "Detailed in the Master PRD and AGENTS.md. Production hospitality spec.", icon: <CheckCircle2 className="w-4 h-4" /> },
                             ].map((item, i) => (
-                                <div key={i} className="flex gap-4 p-5 rounded-2xl border border-[#EDE9FE] bg-[#FAF9FF]">
-                                    <div className="w-8 h-8 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED] shrink-0">
+                                <div key={i} className="flex gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-[#EDE9FE] bg-[#FAF9FF]">
+                                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED] shrink-0">
                                         {item.icon}
                                     </div>
                                     <div>
@@ -920,13 +929,13 @@ export default function NextGenWorkforcePage() {
             {selectedPreviewImg && (
                 <div
                     onClick={() => setSelectedPreviewImg(null)}
-                    className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 cursor-pointer"
+                    className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 cursor-pointer"
                 >
                     <div
-                        className="max-w-6xl max-h-[90vh] overflow-auto rounded-3xl bg-white p-2 shadow-2xl"
+                        className="max-w-6xl max-h-[90vh] overflow-auto rounded-2xl sm:rounded-3xl bg-white p-1.5 sm:p-2 shadow-2xl"
                         onClick={e => e.stopPropagation()}
                     >
-                        <img src={selectedPreviewImg} alt="Preview" className="w-full h-auto rounded-2xl" />
+                        <img src={selectedPreviewImg} alt="Preview" className="w-full h-auto rounded-xl sm:rounded-2xl" />
                     </div>
                 </div>
             )}

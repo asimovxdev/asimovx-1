@@ -41,14 +41,14 @@ export default function WorkforceNavbar() {
                 className="fixed top-3 sm:top-4 left-0 right-0 z-50 px-4 sm:px-8 pointer-events-none"
             >
                 {/* Floating Frosted Glass Navbar Island */}
-                <div className="max-w-[1360px] mx-auto rounded-full bg-white/80 backdrop-blur-xl border border-[#DDD6FE]/80 shadow-[0_8px_32px_rgba(109,40,217,0.08)] py-2.5 sm:py-3 px-5 sm:px-8 flex items-center justify-between pointer-events-auto">
+                <div className="max-w-[1360px] mx-auto rounded-full bg-white/85 backdrop-blur-xl border border-[#DDD6FE]/80 shadow-[0_8px_32px_rgba(109,40,217,0.08)] py-2 sm:py-3 px-3.5 sm:px-8 flex items-center justify-between pointer-events-auto">
 
                     {/* Logo (Same AsimovX Logo) */}
-                    <Link href="/" className="flex items-center gap-2.5 group cursor-pointer z-50">
-                        <div className="relative w-7 h-7 sm:w-8 sm:h-8">
+                    <Link href="/" className="flex items-center gap-2 group cursor-pointer z-50 shrink-0">
+                        <div className="relative w-6 h-6 sm:w-8 sm:h-8">
                             <NextImage src="/logo.svg" alt="Asimovx Logo" fill className="object-contain" />
                         </div>
-                        <div className="text-sm sm:text-base font-bold tracking-[0.18em] text-slate-950">
+                        <div className="text-[13px] sm:text-base font-bold tracking-[0.16em] sm:tracking-[0.18em] text-slate-950">
                             ASIMOV<span className="text-[#7C3AED]">X</span> <span className="text-[#7C3AED] italic">.</span>
                         </div>
                     </Link>
@@ -178,8 +178,8 @@ export default function WorkforceNavbar() {
                             )}
                         </div>
 
-                        {/* Contact CTA Button (Same original action in floating violet style) */}
-                        <Link href="/contact">
+                        {/* Contact CTA Button (Hidden on tiny screens to avoid overcrowding; prominently in mobile drawer) */}
+                        <Link href="/contact" className="hidden sm:inline-flex">
                             <button className="px-5 py-2 rounded-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-[10px] font-bold tracking-[0.18em] uppercase transition-all shadow-[0_6px_18px_-3px_rgba(124,58,237,0.4)] hover:scale-[1.02] active:scale-[0.98]">
                                 {t('navbar.contact')}
                             </button>
@@ -187,7 +187,7 @@ export default function WorkforceNavbar() {
 
                         {/* Mobile Menu Hamburger */}
                         <button
-                            className="lg:hidden text-slate-900 p-1.5 rounded-lg hover:bg-[#F5F3FF] transition-colors ml-1"
+                            className="lg:hidden text-slate-900 p-1.5 rounded-full hover:bg-[#F5F3FF] active:bg-[#EDE9FE] transition-colors"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                             aria-label="Toggle Menu"
                         >
@@ -197,7 +197,7 @@ export default function WorkforceNavbar() {
 
                 </div>
 
-                {/* Mobile Menu Overlay (Same exact items) */}
+                {/* Mobile Menu Overlay */}
                 <AnimatePresence>
                     {isMobileMenuOpen && (
                         <motion.div
@@ -205,39 +205,57 @@ export default function WorkforceNavbar() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: -10, scale: 0.98 }}
                             transition={{ duration: 0.2 }}
-                            className="lg:hidden mt-3 max-w-sm mx-auto rounded-3xl bg-white/95 backdrop-blur-xl border border-[#DDD6FE] p-6 shadow-2xl space-y-4 pointer-events-auto"
+                            className="lg:hidden mt-2.5 w-full max-w-[calc(100vw-2rem)] sm:max-w-md mx-auto rounded-[28px] bg-white/95 backdrop-blur-2xl border border-[#DDD6FE] p-5 shadow-[0_25px_60px_-15px_rgba(109,40,217,0.25)] space-y-4 pointer-events-auto max-h-[82vh] overflow-y-auto"
                         >
-                            <nav className="flex flex-col space-y-2 text-xs font-bold tracking-[0.16em] uppercase text-slate-700">
+                            <nav className="flex flex-col space-y-1 text-xs font-bold tracking-[0.16em] uppercase text-slate-700">
                                 <Link
                                     href="/"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="px-3 py-2 rounded-xl hover:bg-[#F5F3FF] hover:text-[#7C3AED] transition-colors"
+                                    className={`px-3.5 py-2.5 rounded-xl transition-colors ${pathname === '/' ? 'bg-[#F5F3FF] text-[#7C3AED]' : 'hover:bg-[#F5F3FF] hover:text-[#7C3AED]'}`}
                                 >
                                     {t('navbar.home')}
                                 </Link>
 
-                                <div className="space-y-1.5 pl-3 border-l-2 border-[#DDD6FE] my-1">
-                                    <span className="text-[10px] text-[#7C3AED] font-bold block mb-1">PRODUCTS</span>
+                                {/* Products Section */}
+                                <div className="p-2.5 rounded-2xl bg-[#FAF9FF] border border-[#EDE9FE] my-1 space-y-2">
+                                    <div className="flex items-center justify-between px-1">
+                                        <span className="text-[10px] text-[#7C3AED] font-mono font-bold tracking-widest">PRODUCTS</span>
+                                        <span className="text-[9px] bg-violet-100 text-[#6D28D9] px-2 py-0.5 rounded-full font-bold">SOLUTIONS</span>
+                                    </div>
                                     <Link
                                         href="/products/workforce"
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="block px-2 py-1.5 text-xs normal-case font-bold text-[#6D28D9] hover:bg-[#F5F3FF] rounded-lg"
+                                        className={`block p-2.5 rounded-xl transition-all ${
+                                            pathname?.includes('/workforce') || pathname?.includes('/restaurant-workforce')
+                                                ? 'bg-white shadow-sm border border-[#DDD6FE] text-[#6D28D9]'
+                                                : 'text-slate-800 hover:bg-white'
+                                        }`}
                                     >
-                                        Next-Gen Workforce
+                                        <div className="text-xs font-bold normal-case tracking-normal">Next-Gen Workforce</div>
+                                        <div className="text-[10px] text-slate-500 font-normal normal-case tracking-normal mt-0.5">
+                                            Workforce platform built specifically for restaurants & hospitality
+                                        </div>
                                     </Link>
                                     <Link
                                         href="/products/housing-association"
                                         onClick={() => setIsMobileMenuOpen(false)}
-                                        className="block px-2 py-1.5 text-xs normal-case font-bold text-slate-700 hover:bg-[#F5F3FF] rounded-lg"
+                                        className={`block p-2.5 rounded-xl transition-all ${
+                                            pathname?.includes('/housing-association')
+                                                ? 'bg-white shadow-sm border border-[#DDD6FE] text-[#6D28D9]'
+                                                : 'text-slate-800 hover:bg-white'
+                                        }`}
                                     >
-                                        BrfNext
+                                        <div className="text-xs font-bold normal-case tracking-normal">BrfNext</div>
+                                        <div className="text-[10px] text-slate-500 font-normal normal-case tracking-normal mt-0.5">
+                                            Digital workspace for Swedish housing associations
+                                        </div>
                                     </Link>
                                 </div>
 
                                 <Link
                                     href="/about"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="px-3 py-2 rounded-xl hover:bg-[#F5F3FF] hover:text-[#7C3AED] transition-colors"
+                                    className={`px-3.5 py-2.5 rounded-xl transition-colors ${pathname === '/about' ? 'bg-[#F5F3FF] text-[#7C3AED]' : 'hover:bg-[#F5F3FF] hover:text-[#7C3AED]'}`}
                                 >
                                     {t('navbar.about')}
                                 </Link>
@@ -245,7 +263,7 @@ export default function WorkforceNavbar() {
                                 <Link
                                     href="/services"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="px-3 py-2 rounded-xl hover:bg-[#F5F3FF] hover:text-[#7C3AED] transition-colors"
+                                    className={`px-3.5 py-2.5 rounded-xl transition-colors ${pathname === '/services' ? 'bg-[#F5F3FF] text-[#7C3AED]' : 'hover:bg-[#F5F3FF] hover:text-[#7C3AED]'}`}
                                 >
                                     {t('navbar.services')}
                                 </Link>
@@ -253,7 +271,7 @@ export default function WorkforceNavbar() {
                                 <Link
                                     href="/portfolio"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="px-3 py-2 rounded-xl hover:bg-[#F5F3FF] hover:text-[#7C3AED] transition-colors"
+                                    className={`px-3.5 py-2.5 rounded-xl transition-colors ${pathname === '/portfolio' ? 'bg-[#F5F3FF] text-[#7C3AED]' : 'hover:bg-[#F5F3FF] hover:text-[#7C3AED]'}`}
                                 >
                                     {t('navbar.portfolio')}
                                 </Link>
@@ -261,7 +279,7 @@ export default function WorkforceNavbar() {
                                 <Link
                                     href="/careers"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="px-3 py-2 rounded-xl hover:bg-[#F5F3FF] hover:text-[#7C3AED] transition-colors"
+                                    className={`px-3.5 py-2.5 rounded-xl transition-colors ${pathname === '/careers' ? 'bg-[#F5F3FF] text-[#7C3AED]' : 'hover:bg-[#F5F3FF] hover:text-[#7C3AED]'}`}
                                 >
                                     {t('navbar.careers')}
                                 </Link>
@@ -269,19 +287,19 @@ export default function WorkforceNavbar() {
                                 <Link
                                     href="/blog"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="px-3 py-2 rounded-xl hover:bg-[#F5F3FF] hover:text-[#7C3AED] transition-colors"
+                                    className={`px-3.5 py-2.5 rounded-xl transition-colors ${pathname === '/blog' ? 'bg-[#F5F3FF] text-[#7C3AED]' : 'hover:bg-[#F5F3FF] hover:text-[#7C3AED]'}`}
                                 >
                                     {t('navbar.blog')}
                                 </Link>
                             </nav>
 
-                            <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                                <div className="flex items-center gap-1.5 p-1 rounded-full bg-[#F5F3FF] border border-[#DDD6FE] text-xs font-mono font-bold">
+                            <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                                <div className="flex items-center justify-center gap-1.5 p-1 rounded-full bg-[#F5F3FF] border border-[#DDD6FE] text-xs font-mono font-bold">
                                     {['EN', 'ES', 'SV', 'DA'].map((lang) => (
                                         <button
                                             key={lang}
                                             onClick={() => setLanguage(lang as any)}
-                                            className={`px-2.5 py-1 rounded-full ${language === lang ? "bg-[#7C3AED] text-white" : "text-slate-600"}`}
+                                            className={`px-3 py-1 rounded-full transition-all ${language === lang ? "bg-[#7C3AED] text-white shadow-sm" : "text-slate-600 hover:text-slate-900"}`}
                                         >
                                             {lang}
                                         </button>
@@ -291,7 +309,7 @@ export default function WorkforceNavbar() {
                                 <Link
                                     href="/contact"
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className="px-4 py-2 rounded-full bg-[#7C3AED] text-white text-[10px] font-bold tracking-wider uppercase"
+                                    className="w-full sm:w-auto text-center px-5 py-2.5 rounded-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-[11px] font-bold tracking-wider uppercase shadow-md shadow-violet-500/20 active:scale-95 transition-all"
                                 >
                                     {t('navbar.contact')}
                                 </Link>

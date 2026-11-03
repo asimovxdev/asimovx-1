@@ -13,7 +13,7 @@ export default function ProductLayout({
 }) {
     const { setTheme } = useTheme();
     const pathname = usePathname();
-    const isWorkforce = pathname === "/products/workforce";
+    const isWorkforce = pathname === "/products/workforce" || pathname === "/products/restaurant-workforce";
 
     useEffect(() => {
         setTheme("light");
