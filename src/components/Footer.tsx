@@ -35,9 +35,9 @@ const Footer = () => {
                                 )}
                                 {isIndia ? (
                                     <>
-                                        <a href="mailto:vinil@asimovx.se" className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-accent transition-colors mt-3">
+                                        <a href="mailto:sales@asimovx.se" className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-accent transition-colors mt-3">
                                             <Mail className="w-4 h-4" />
-                                            vinil@asimovx.se
+                                            sales@asimovx.se
                                         </a>
                                         <a href="tel:+919740025497" className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-accent transition-colors mt-3">
                                             <Phone className="w-4 h-4" />
