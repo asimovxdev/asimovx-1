@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
@@ -14,19 +14,83 @@ import {
     FileSpreadsheet,
     Lock,
     ChevronRight,
-    Maximize2,
     Database,
     UserCheck,
     Sliders,
     Layers,
     Globe,
+    Volume2,
+    VolumeX,
 } from "lucide-react";
 import BookDemoModal from "@/components/BookDemoModal";
 
 export default function NextGenWorkforcePage() {
     const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
-    const [selectedPreviewImg, setSelectedPreviewImg] = useState<string | null>(null);
     const [activeStep, setActiveStep] = useState(0);
+    const [isMuted, setIsMuted] = useState(false); // Default to unmuted as requested
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    // Auto-play when scrolled into view (unmuted by default), stop/pause when scrolled past
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+
+        // Ensure default unmuted state
+        video.muted = false;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // User scrolled to the video position -> Auto play with audio unmuted
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.catch(() => {
+                                // If browser autoplay policy strictly demands user gesture before playing sound,
+                                // temporarily mute so video starts rolling, then unmute on first user tap/click
+                                video.muted = true;
+                                setIsMuted(true);
+                                video.play().catch(() => {});
+                            });
+                        }
+                    } else {
+                        // User scrolled past completely -> Pause playback
+                        video.pause();
+                    }
+                });
+            },
+            {
+                threshold: 0.3, // Triggers when 30% of the video is in viewport
+            }
+        );
+
+        observer.observe(video);
+
+        // Once the user interacts with the page (click/tap), ensure audio is unmuted
+        const handleUserGesture = () => {
+            if (videoRef.current && videoRef.current.muted) {
+                videoRef.current.muted = false;
+                setIsMuted(false);
+            }
+        };
+
+        window.addEventListener("click", handleUserGesture, { once: true });
+        window.addEventListener("touchstart", handleUserGesture, { once: true });
+
+        return () => {
+            observer.disconnect();
+            window.removeEventListener("click", handleUserGesture);
+            window.removeEventListener("touchstart", handleUserGesture);
+        };
+    }, []);
+
+    const toggleMute = () => {
+        if (videoRef.current) {
+            const nextMuted = !videoRef.current.muted;
+            videoRef.current.muted = nextMuted;
+            setIsMuted(nextMuted);
+        }
+    };
 
     return (
         <div className="bg-white text-[#0A0A0A] min-h-screen selection:bg-violet-200 selection:text-violet-900" style={{ fontFamily: "'Plus Jakarta Sans', var(--font-geist-sans), -apple-system, BlinkMacSystemFont, sans-serif" }}>
@@ -135,8 +199,7 @@ export default function NextGenWorkforcePage() {
                                     transform: "rotateX(14deg) rotateY(-14deg) rotateZ(-3deg) translateZ(-40px)",
                                     transformStyle: "preserve-3d"
                                 }}
-                                className="hidden md:block absolute -left-12 lg:-left-20 top-4 lg:top-8 w-[72%] rounded-[28px] bg-[#0c0d10] p-3 pb-0 border border-slate-700/80 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.45)] ring-1 ring-white/10 opacity-90 transition-transform duration-700 hover:scale-[1.01] hover:opacity-100 z-0 cursor-pointer"
-                                onClick={() => setSelectedPreviewImg('/images/workforce/rest.jpeg')}
+                                className="hidden md:block absolute -left-12 lg:-left-20 top-4 lg:top-8 w-[72%] rounded-[28px] bg-[#0c0d10] p-3 pb-0 border border-slate-700/80 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.45)] ring-1 ring-white/10 opacity-90 transition-transform duration-700 hover:scale-[1.01] hover:opacity-100 z-0"
                             >
                                 {/* Header */}
                                 <div className="h-6 bg-[#16181d] rounded-t-[18px] flex items-center justify-between px-3 border-b border-black/40">
@@ -182,25 +245,16 @@ export default function NextGenWorkforcePage() {
 
                                 {/* Main Screen Content: admin.jpeg */}
                                 <div
-                                    onClick={() => setSelectedPreviewImg('/images/workforce/admin.jpeg')}
-                                    className="relative bg-slate-950 overflow-hidden cursor-pointer group rounded-b-[14px] sm:rounded-b-[28px]"
+                                    className="relative bg-slate-950 overflow-hidden rounded-b-[14px] sm:rounded-b-[28px]"
                                 >
                                     <img
                                         src="/images/workforce/admin.jpeg"
                                         alt="Next-Gen Workforce Administration Control Center"
-                                        className="w-full h-auto max-h-[500px] object-cover object-top block transition-transform duration-700 group-hover:scale-[1.015]"
+                                        className="w-full h-auto max-h-[500px] object-cover object-top block transition-transform duration-700"
                                     />
 
                                     {/* Glass reflection */}
                                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.04] to-white/[0.08] pointer-events-none" />
-
-                                    {/* Expand Trigger */}
-                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                                        <div className="opacity-0 group-hover:opacity-100 transition-opacity bg-white/95 backdrop-blur px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold text-slate-900 shadow-2xl flex items-center gap-2">
-                                            <Maximize2 className="w-3.5 h-3.5 text-[#7C3AED]" />
-                                            <span>Click to inspect high-resolution dashboard</span>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
@@ -268,8 +322,7 @@ export default function NextGenWorkforcePage() {
                         {/* Card: Live Restaurant Platform */}
                         <div className="rounded-2xl border border-[#EDE9FE] bg-white overflow-hidden shadow-[0_4px_18px_-4px_rgba(109,40,217,0.1)] hover:shadow-[0_12px_32px_-6px_rgba(109,40,217,0.18)] hover:border-[#C4B5FD] transition-all group">
                             <div
-                                onClick={() => setSelectedPreviewImg('/images/workforce/rest.jpeg')}
-                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#FAF9FF] h-[160px] xs:h-[180px]"
+                                className="relative overflow-hidden border-b border-[#EDE9FE] bg-[#FAF9FF] h-[160px] xs:h-[180px]"
                             >
                                 <img
                                     src="/images/workforce/rest.jpeg"
@@ -287,8 +340,7 @@ export default function NextGenWorkforcePage() {
                         {/* Card: Scheduling screenshot — center highlighted like ref */}
                         <div className="rounded-2xl border-2 border-[#7C3AED] bg-white overflow-hidden shadow-[0_8px_32px_-6px_rgba(109,40,217,0.25)] group">
                             <div
-                                onClick={() => setSelectedPreviewImg('/images/workforce/sheduling.jpeg')}
-                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#F5F3FF] h-[160px] xs:h-[180px]"
+                                className="relative overflow-hidden border-b border-[#EDE9FE] bg-[#F5F3FF] h-[160px] xs:h-[180px]"
                             >
                                 <img
                                     src="/images/workforce/sheduling.jpeg"
@@ -309,8 +361,7 @@ export default function NextGenWorkforcePage() {
                         {/* Card: Employee portal screenshot */}
                         <div className="rounded-2xl border border-[#EDE9FE] bg-white overflow-hidden shadow-[0_4px_18px_-4px_rgba(109,40,217,0.1)] hover:shadow-[0_12px_32px_-6px_rgba(109,40,217,0.18)] hover:border-[#C4B5FD] transition-all group">
                             <div
-                                onClick={() => setSelectedPreviewImg('/images/workforce/emp.jpeg')}
-                                className="relative overflow-hidden cursor-pointer border-b border-[#EDE9FE] bg-[#FAF9FF] h-[160px] xs:h-[180px]"
+                                className="relative overflow-hidden border-b border-[#EDE9FE] bg-[#FAF9FF] h-[160px] xs:h-[180px]"
                             >
                                 <img
                                     src="/images/workforce/emp.jpeg"
@@ -326,6 +377,126 @@ export default function NextGenWorkforcePage() {
                         </div>
 
                     </div>
+                </div>
+            </section>
+
+
+            {/* =========================================================== */}
+            {/* PRODUCT OVERVIEW VIDEO WALKTHROUGH SECTION                  */}
+            {/* =========================================================== */}
+            <section className="py-20 md:py-28 bg-[#FAF9FF] border-t border-slate-100 relative overflow-hidden">
+                {/* Ambient glow behind cinema container */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#6D28D9]/15 blur-[120px] rounded-full pointer-events-none" />
+
+                <div className="max-w-[1300px] mx-auto px-6 lg:px-10 relative z-10">
+                    
+                    {/* Centered Heading */}
+                    <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#DDD6FE] shadow-sm mb-4">
+                            <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
+                            <span className="text-[11px] font-mono uppercase tracking-[0.2em] font-semibold text-[#5B21B6]">
+                                Product Overview & Live Demo
+                            </span>
+                        </div>
+                        <h2
+                            className="font-extrabold tracking-[-0.035em] text-[#0A0D14] leading-[1.05] mb-4"
+                            style={{ fontSize: "clamp(2rem, 4.5vw, 3.2rem)" }}
+                        >
+                            See Next-Gen Workforce in Action.
+                        </h2>
+                        <p className="text-base text-slate-600 leading-relaxed text-balance">
+                            Watch an end-to-end walkthrough exploring department scheduling, live punch clock tracking, exception approvals, and Swedish payroll reconciliation.
+                        </p>
+                    </div>
+
+                    {/* Cinema Bezel Container */}
+                    <div className="max-w-5xl mx-auto">
+                        <div className="relative rounded-[24px] sm:rounded-[32px] bg-[#0c0d10] p-2 sm:p-3.5 pb-0 border border-slate-700/80 shadow-[0_35px_100px_-20px_rgba(109,40,217,0.35),0_20px_45px_-10px_rgba(15,23,42,0.4)] ring-1 ring-white/10">
+                            
+                            {/* Browser/Window Header */}
+                            <div className="h-7 sm:h-9 bg-[#16181d] rounded-t-[18px] sm:rounded-t-[24px] flex items-center justify-between px-3 sm:px-4 border-b border-black/50">
+                                <div className="flex items-center gap-2">
+                                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                                </div>
+                                <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300">
+                                    <Lock className="w-2.5 h-2.5 text-[#A78BFA]" />
+                                    <span>demo.asimovx.se/product-overview</span>
+                                </div>
+                                <span className="text-[9px] font-mono text-[#A78BFA] font-bold uppercase tracking-wider hidden sm:inline">1080p HD Walkthrough</span>
+                            </div>
+
+                            {/* Video Player with Scroll-Triggered Autoplay and Mute/Unmute Control */}
+                            <div className="relative overflow-hidden rounded-b-[18px] sm:rounded-b-[24px] bg-black group">
+                                <video
+                                    ref={videoRef}
+                                    src="/images/workforce/project-overview.mp4#t=0.001"
+                                    controls
+                                    playsInline
+                                    muted={isMuted}
+                                    preload="auto"
+                                    poster="/images/workforce/video-thumbnail.jpg"
+                                    className="w-full h-auto aspect-video object-cover block"
+                                />
+
+                                {/* Floating Sound Toggle Pill */}
+                                <button
+                                    type="button"
+                                    onClick={toggleMute}
+                                    className="absolute bottom-16 right-4 sm:bottom-18 sm:right-6 z-20 px-3 py-1.5 rounded-full bg-black/80 hover:bg-black/95 backdrop-blur-md border border-white/20 text-white text-xs font-medium flex items-center gap-1.5 transition-all shadow-lg active:scale-95 cursor-pointer"
+                                    title={isMuted ? "Click to unmute sound" : "Click to mute"}
+                                >
+                                    {isMuted ? (
+                                        <>
+                                            <VolumeX className="w-3.5 h-3.5 text-violet-400" />
+                                            <span className="text-[11px] font-mono">Unmute Sound</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
+                                            <span className="text-[11px] font-mono">Sound On</span>
+                                        </>
+                                    )}
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Feature Badges below video */}
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+                            <div className="p-4 rounded-2xl bg-white border border-[#EDE9FE] shadow-sm flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED] shrink-0 font-mono font-bold text-xs">
+                                    01
+                                </div>
+                                <div>
+                                    <p className="text-xs font-bold text-slate-900">Department Rostering</p>
+                                    <p className="text-[11px] text-slate-500">Live multi-location shift scheduling grid</p>
+                                </div>
+                            </div>
+
+                            <div className="p-4 rounded-2xl bg-white border border-[#EDE9FE] shadow-sm flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED] shrink-0 font-mono font-bold text-xs">
+                                    02
+                                </div>
+                                <div>
+                                    <p className="text-xs font-bold text-slate-900">Attendance & Breaks</p>
+                                    <p className="text-[11px] text-slate-500">Raw timestamp log & anomaly detection</p>
+                                </div>
+                            </div>
+
+                            <div className="p-4 rounded-2xl bg-white border border-[#EDE9FE] shadow-sm flex items-center gap-3">
+                                <div className="w-8 h-8 rounded-xl bg-[#F5F3FF] border border-[#DDD6FE] flex items-center justify-center text-[#7C3AED] shrink-0 font-mono font-bold text-xs">
+                                    03
+                                </div>
+                                <div>
+                                    <p className="text-xs font-bold text-slate-900">Deterministic Payroll</p>
+                                    <p className="text-[11px] text-slate-500">OB supplement rates & Visma/Fortnox export</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </section>
 
@@ -638,8 +809,7 @@ export default function NextGenWorkforcePage() {
                             className="rounded-2xl sm:rounded-3xl bg-[#FAF9FF] border border-[#DDD6FE] overflow-hidden shadow-[0_6px_28px_-6px_rgba(109,40,217,0.12)] hover:shadow-[0_14px_40px_-8px_rgba(109,40,217,0.2)] transition-all"
                         >
                             <div
-                                onClick={() => setSelectedPreviewImg('/images/workforce/sheduling.jpeg')}
-                                className="relative cursor-pointer group overflow-hidden h-[180px] xs:h-[220px] sm:h-[260px]"
+                                className="relative group overflow-hidden h-[180px] xs:h-[220px] sm:h-[260px]"
                             >
                                 <img
                                     src="/images/workforce/sheduling.jpeg"
@@ -685,8 +855,7 @@ export default function NextGenWorkforcePage() {
                             className="rounded-2xl sm:rounded-3xl bg-[#FAF9FF] border border-[#DDD6FE] overflow-hidden shadow-[0_6px_28px_-6px_rgba(109,40,217,0.12)] hover:shadow-[0_14px_40px_-8px_rgba(109,40,217,0.2)] transition-all"
                         >
                             <div
-                                onClick={() => setSelectedPreviewImg('/images/workforce/admin.jpeg')}
-                                className="relative cursor-pointer group overflow-hidden h-[180px] xs:h-[220px] sm:h-[260px]"
+                                className="relative group overflow-hidden h-[180px] xs:h-[220px] sm:h-[260px]"
                             >
                                 <img
                                     src="/images/workforce/admin.jpeg"
@@ -758,8 +927,7 @@ export default function NextGenWorkforcePage() {
                         >
                             <div className="p-3.5 sm:p-4 pb-0">
                                 <div
-                                    onClick={() => setSelectedPreviewImg('/images/workforce/emp.jpeg')}
-                                    className="relative overflow-hidden rounded-xl cursor-pointer group bg-[#FAF9FF] border border-[#EDE9FE] h-[130px] sm:h-[140px]"
+                                    className="relative overflow-hidden rounded-xl group bg-[#FAF9FF] border border-[#EDE9FE] h-[130px] sm:h-[140px]"
                                 >
                                     <img
                                         src="/images/workforce/emp.jpeg"
@@ -793,8 +961,7 @@ export default function NextGenWorkforcePage() {
                         >
                             <div className="p-3.5 sm:p-4 pb-0">
                                 <div
-                                    onClick={() => setSelectedPreviewImg('/images/workforce/rest.jpeg')}
-                                    className="relative overflow-hidden rounded-xl cursor-pointer group bg-[#F5F3FF] border border-[#DDD6FE] h-[130px] sm:h-[140px]"
+                                    className="relative overflow-hidden rounded-xl group bg-[#F5F3FF] border border-[#DDD6FE] h-[130px] sm:h-[140px]"
                                 >
                                     <img
                                         src="/images/workforce/rest.jpeg"
@@ -924,21 +1091,6 @@ export default function NextGenWorkforcePage() {
                 </div>
             </section>
 
-
-            {/* Lightbox Modal */}
-            {selectedPreviewImg && (
-                <div
-                    onClick={() => setSelectedPreviewImg(null)}
-                    className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 cursor-pointer"
-                >
-                    <div
-                        className="max-w-6xl max-h-[90vh] overflow-auto rounded-2xl sm:rounded-3xl bg-white p-1.5 sm:p-2 shadow-2xl"
-                        onClick={e => e.stopPropagation()}
-                    >
-                        <img src={selectedPreviewImg} alt="Preview" className="w-full h-auto rounded-xl sm:rounded-2xl" />
-                    </div>
-                </div>
-            )}
 
             <BookDemoModal
                 isOpen={isDemoModalOpen}
