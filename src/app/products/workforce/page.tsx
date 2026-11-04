@@ -50,7 +50,7 @@ export default function NextGenWorkforcePage() {
                                 // temporarily mute so video starts rolling, then unmute on first user tap/click
                                 video.muted = true;
                                 setIsMuted(true);
-                                video.play().catch(() => {});
+                                video.play().catch(() => { });
                             });
                         }
                     } else {
@@ -100,16 +100,16 @@ export default function NextGenWorkforcePage() {
             {/* EXACT MATCH to uploaded reference (media_1793692041153_24cfec2e.png) */}
             {/* =========================================================== */}
             <section className="relative overflow-hidden pt-24 sm:pt-32 md:pt-36 pb-14 sm:pb-16 md:pb-28">
-                
+
                 {/* 1. PHOTOREALISTIC SKY BACKGROUND (Soft, lowered opacity for an ethereal, subtle look) */}
                 <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                    <img 
+                    <img
                         src="/images/workforce/sky-bg.jpg"
                         alt="Sky Background"
                         className="w-full h-full object-cover object-top opacity-40 md:opacity-45"
                     />
                     {/* Subtle transparent overlay ensuring text contrast, then fading to pure white at bottom */}
-                    <div 
+                    <div
                         className="absolute inset-0"
                         style={{
                             background: "linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.0) 30%, rgba(255,255,255,0.4) 65%, rgba(255,255,255,0.95) 85%, #ffffff 100%)"
@@ -389,7 +389,7 @@ export default function NextGenWorkforcePage() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#6D28D9]/15 blur-[120px] rounded-full pointer-events-none" />
 
                 <div className="max-w-[1300px] mx-auto px-6 lg:px-10 relative z-10">
-                    
+
                     {/* Centered Heading */}
                     <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-[#DDD6FE] shadow-sm mb-4">
@@ -412,7 +412,7 @@ export default function NextGenWorkforcePage() {
                     {/* Cinema Bezel Container */}
                     <div className="max-w-5xl mx-auto">
                         <div className="relative rounded-[24px] sm:rounded-[32px] bg-[#0c0d10] p-2 sm:p-3.5 pb-0 border border-slate-700/80 shadow-[0_35px_100px_-20px_rgba(109,40,217,0.35),0_20px_45px_-10px_rgba(15,23,42,0.4)] ring-1 ring-white/10">
-                            
+
                             {/* Browser/Window Header */}
                             <div className="h-7 sm:h-9 bg-[#16181d] rounded-t-[18px] sm:rounded-t-[24px] flex items-center justify-between px-3 sm:px-4 border-b border-black/50">
                                 <div className="flex items-center gap-2">
@@ -431,7 +431,7 @@ export default function NextGenWorkforcePage() {
                             <div className="relative overflow-hidden rounded-b-[18px] sm:rounded-b-[24px] bg-black group">
                                 <video
                                     ref={videoRef}
-                                    src="/images/workforce/project-overview.mp4#t=0.001"
+                                    src="/images/workforce/project-overview.av1#t=0.001"
                                     controls
                                     playsInline
                                     muted={isMuted}
@@ -506,7 +506,7 @@ export default function NextGenWorkforcePage() {
             {/* Dynamic, animated, high-end multi-tier architecture showcase */}
             {/* =========================================================== */}
             <section id="roles" className="py-24 md:py-32 bg-gradient-to-b from-[#FAF9FF] via-[#FFFFFF] to-[#FAF9FF] border-t border-slate-100 relative overflow-hidden">
-                
+
                 {/* Ambient glow blobs */}
                 <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-[#DDD6FE]/20 blur-[130px] rounded-full pointer-events-none -z-0" />
 
@@ -540,11 +540,10 @@ export default function NextGenWorkforcePage() {
                             <button
                                 key={idx}
                                 onClick={() => setActiveStep(idx)}
-                                className={`flex-1 min-w-[76px] py-2 px-1.5 rounded-xl text-center text-[10px] font-mono font-bold transition-all ${
-                                    activeStep === idx
+                                className={`flex-1 min-w-[76px] py-2 px-1.5 rounded-xl text-center text-[10px] font-mono font-bold transition-all ${activeStep === idx
                                         ? "bg-[#7C3AED] text-white shadow-md shadow-violet-500/25"
                                         : "text-slate-600 hover:bg-[#F5F3FF]"
-                                }`}
+                                    }`}
                             >
                                 <span className="block text-[9px] opacity-80">{step.num}</span>
                                 <span className="truncate block">{step.name}</span>
@@ -554,10 +553,10 @@ export default function NextGenWorkforcePage() {
 
                     {/* CONNECTED INTERACTIVE PIPELINE CARDS */}
                     <div className="relative mb-8 sm:mb-12">
-                        
+
                         {/* Glowing connector beam behind the cards (desktop) */}
                         <div className="hidden lg:block absolute top-[44px] left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-[#7C3AED]/20 via-[#8B5CF6]/40 to-[#4C1D95]/20 pointer-events-none z-0">
-                            <div 
+                            <div
                                 className="h-full bg-gradient-to-r from-transparent via-[#7C3AED] to-transparent w-32 animate-pulse"
                                 style={{ transform: `translateX(${activeStep * 100}%)`, transition: "transform 0.5s ease" }}
                             />
@@ -621,11 +620,10 @@ export default function NextGenWorkforcePage() {
                                         onMouseEnter={() => setActiveStep(i)}
                                         whileHover={{ y: -4 }}
                                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                                        className={`rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between cursor-pointer transition-all duration-300 relative ${
-                                            isActive
+                                        className={`rounded-2xl sm:rounded-3xl p-5 sm:p-6 flex flex-col justify-between cursor-pointer transition-all duration-300 relative ${isActive
                                                 ? "bg-gradient-to-b from-white via-[#FAF9FF] to-white border-2 border-[#7C3AED] shadow-[0_16px_36px_-10px_rgba(124,58,237,0.22)] ring-4 ring-[#7C3AED]/10 -translate-y-1 sm:-translate-y-2"
                                                 : "bg-white/90 backdrop-blur-sm border border-[#EDE9FE] shadow-[0_4px_20px_-4px_rgba(109,40,217,0.06)] hover:border-[#C4B5FD] hover:shadow-[0_12px_32px_-6px_rgba(109,40,217,0.12)]"
-                                        }`}
+                                            }`}
                                     >
                                         {/* Active card indicator glow */}
                                         {isActive && (
@@ -639,28 +637,25 @@ export default function NextGenWorkforcePage() {
                                                     <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-xl flex items-center justify-center font-mono font-bold text-xs text-white shadow-sm bg-gradient-to-br ${item.gradient}`}>
                                                         {item.stepNum}
                                                     </span>
-                                                    <span className={`text-[10px] sm:text-[11px] font-mono font-semibold px-2 sm:px-2.5 py-0.5 rounded-full border ${
-                                                        isActive 
-                                                            ? "bg-[#F5F3FF] border-[#DDD6FE] text-[#6D28D9]" 
+                                                    <span className={`text-[10px] sm:text-[11px] font-mono font-semibold px-2 sm:px-2.5 py-0.5 rounded-full border ${isActive
+                                                            ? "bg-[#F5F3FF] border-[#DDD6FE] text-[#6D28D9]"
                                                             : "bg-slate-50 border-slate-200 text-slate-500"
-                                                    }`}>
+                                                        }`}>
                                                         {item.step}
                                                     </span>
                                                 </div>
 
-                                                <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors ${
-                                                    isActive 
-                                                        ? "bg-[#7C3AED] text-white shadow-md shadow-violet-500/30" 
+                                                <div className={`w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center transition-colors ${isActive
+                                                        ? "bg-[#7C3AED] text-white shadow-md shadow-violet-500/30"
                                                         : "bg-[#F5F3FF] text-[#7C3AED] border border-[#EDE9FE]"
-                                                }`}>
+                                                    }`}>
                                                     <IconComponent className="w-4 h-4" />
                                                 </div>
                                             </div>
 
                                             {/* Title & Description */}
-                                            <h3 className={`font-bold text-sm sm:text-base leading-snug mb-2 sm:mb-2.5 transition-colors ${
-                                                isActive ? "text-[#5B21B6]" : "text-[#0A0D14]"
-                                            }`}>
+                                            <h3 className={`font-bold text-sm sm:text-base leading-snug mb-2 sm:mb-2.5 transition-colors ${isActive ? "text-[#5B21B6]" : "text-[#0A0D14]"
+                                                }`}>
                                                 {item.role}
                                             </h3>
                                             <p className="text-xs text-slate-600 leading-relaxed font-normal">
@@ -686,7 +681,7 @@ export default function NextGenWorkforcePage() {
 
                     {/* LIVE WORKFLOW INSPECTOR CONSOLE (Animated dynamic deep-dive panel) */}
                     <div className="rounded-2xl sm:rounded-3xl bg-white border border-[#DDD6FE]/80 shadow-[0_16px_50px_-12px_rgba(109,40,217,0.12)] p-4 sm:p-6 md:p-8 relative overflow-hidden">
-                        
+
                         {/* Top glowing ambient accent bar */}
                         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#7C3AED] via-[#8B5CF6] to-[#4C1D95]" />
 
