@@ -140,10 +140,10 @@ export default function NextGenWorkforcePage() {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.55, delay: 0.08 }}
-                        className="text-4xl sm:text-6xl md:text-7xl lg:text-[4.9rem] font-extrabold tracking-[-0.04em] text-[#0A0D14] leading-[1.04] mb-6 max-w-4xl mx-auto"
+                        className="text-[25px] sm:text-5xl md:text-7xl lg:text-[3.9rem] font-extrabold tracking-[-0.04em] text-[#0A0D14] leading-[1.04] mb-6 max-w-4xl mx-auto"
                     >
-                        Cloud-based SaaS workforce management{" "}
-                        <br className="hidden sm:inline" />
+                        AI-powered Cloud-based SaaS workforce management{" "}
+                        <br className=" " />
                         <span className="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#6D28D9] via-[#7C3AED] to-[#8B5CF6] pr-1">
                             for restaurants.
                         </span>
